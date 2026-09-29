@@ -1,14 +1,19 @@
 const searchInput = document.getElementById("searchInput");
-const chips = [...document.querySelectorAll(".chip")];
-const cards = [...document.querySelectorAll(".project-card")];
+const searchPanel = document.getElementById("searchPanel");
+const searchToggle = document.getElementById("searchToggle");
+const searchClose = document.getElementById("searchClose");
+const filters = [...document.querySelectorAll(".filter")];
+const rows = [...document.querySelectorAll(".project-row")];
 const emptyState = document.getElementById("emptyState");
 const resultCount = document.getElementById("resultCount");
-const siteHeader = document.getElementById("siteHeader");
 const randomProjectButton = document.getElementById("randomProjectButton");
+const siteHeader = document.getElementById("siteHeader");
+const hoverOrb = document.getElementById("hoverOrb");
+const heroWord = document.getElementById("heroWord");
+
 const projectDialog = document.getElementById("projectDialog");
 const dialogClose = document.getElementById("dialogClose");
-const featuredCard = document.querySelector(".featured-card");
-
+const dialogIntro = document.querySelector(".dialog-intro");
 const dialogNumber = document.getElementById("dialogNumber");
 const dialogCategory = document.getElementById("dialogCategory");
 const dialogTitle = document.getElementById("dialogTitle");
@@ -23,6 +28,7 @@ let activeCategory = "all";
 const projects = {
   entryway: {
     number: "01",
+    color: "#ff6b3d",
     category: "Domácnosť",
     title: "Mini odkladacia stanica pri dverách",
     lead: "Úzka polička s miestom na kľúče, okuliare a poštu. Zaberie minimum priestoru a odstráni klasické ranné hľadanie.",
@@ -46,6 +52,7 @@ const projects = {
   },
   sandpaper: {
     number: "02",
+    color: "#d9ff46",
     category: "Dielňa",
     title: "Stojan na brúsny papier zo zvyškov dreva",
     lead: "Jednoduchý dielenský organizér, v ktorom má každá zrnitosť vlastnú priehradku. Žiadne prehrabávanie medzi P80 a P240.",
@@ -70,6 +77,7 @@ const projects = {
   },
   herbs: {
     number: "03",
+    color: "#78d69d",
     category: "Záhrada",
     title: "Kompaktný stojan na bylinky",
     lead: "Vertikálny stojan pre tri menšie nádoby. Hodí sa tam, kde je málo miesta, ale dosť svetla.",
@@ -94,6 +102,7 @@ const projects = {
   },
   cables: {
     number: "04",
+    color: "#ffb0c3",
     category: "Tvorenie",
     title: "Papierový organizér na káble",
     lead: "Malý projekt z pevného kartónu, ktorý rozdelí nabíjačky a krátke káble bez ďalšej plastovej krabičky.",
@@ -118,6 +127,7 @@ const projects = {
   },
   drawer: {
     number: "05",
+    color: "#9dbbff",
     category: "Domácnosť",
     title: "Nastaviteľné priečky do zásuvky",
     lead: "Deliaci systém bez lepidla a bez vŕtania. Rozloženie si vieš neskôr zmeniť podľa toho, čo pribudne.",
@@ -141,6 +151,7 @@ const projects = {
   },
   drills: {
     number: "06",
+    color: "#f2d15e",
     category: "Dielňa",
     title: "Prehľadný stojan na vrtáky",
     lead: "Blok s presne označenými otvormi, vďaka ktorému je správny priemer viditeľný a po ruke.",
@@ -176,38 +187,50 @@ function updateProjects() {
   const query = normalize(searchInput.value.trim());
   let visible = 0;
 
-  cards.forEach((card) => {
+  rows.forEach((row) => {
     const categoryMatches =
-      activeCategory === "all" || card.dataset.category === activeCategory;
+      activeCategory === "all" || row.dataset.category === activeCategory;
 
     const searchable = normalize(
-      `${card.dataset.search} ${card.textContent}`
+      `${row.dataset.search} ${row.textContent}`
     );
 
     const searchMatches = !query || searchable.includes(query);
     const show = categoryMatches && searchMatches;
 
-    card.hidden = !show;
+    row.hidden = !show;
     if (show) visible += 1;
   });
 
   emptyState.hidden = visible !== 0;
-  resultCount.textContent =
-    visible === 1 ? "1 projekt" : `${visible} projektov`;
+  resultCount.textContent = visible === 1 ? "1 projekt" : `${visible} projektov`;
+}
+
+function setSearchOpen(open) {
+  searchPanel.classList.toggle("open", open);
+  searchPanel.setAttribute("aria-hidden", String(!open));
+  searchToggle.setAttribute("aria-expanded", String(open));
+  document.body.classList.toggle("search-open", open);
+
+  if (open) {
+    window.setTimeout(() => searchInput.focus(), 50);
+  }
 }
 
 function openProject(projectId) {
   const project = projects[projectId];
   if (!project) return;
 
-  dialogNumber.textContent = `Vychytávka ${project.number}`;
-  dialogCategory.textContent = project.category;
+  dialogIntro.style.background = project.color;
+  dialogNumber.textContent = `VYCHYTÁVKA ${project.number}`;
+  dialogCategory.textContent = project.category.toUpperCase();
   dialogTitle.textContent = project.title;
   dialogLead.textContent = project.lead;
+
   dialogStats.innerHTML = [
-    `<span>⏱ ${project.time}</span>`,
-    `<span>● ${project.difficulty}</span>`,
-    `<span>Rozpočet ${project.price}</span>`
+    `<span>ČAS · ${project.time}</span>`,
+    `<span>NÁROČNOSŤ · ${project.difficulty}</span>`,
+    `<span>ROZPOČET · ${project.price}</span>`
   ].join("");
 
   dialogMaterials.innerHTML = project.materials
@@ -220,6 +243,8 @@ function openProject(projectId) {
 
   dialogTip.textContent = project.tip;
 
+  setSearchOpen(false);
+
   if (typeof projectDialog.showModal === "function") {
     projectDialog.showModal();
     document.body.classList.add("dialog-open");
@@ -227,35 +252,33 @@ function openProject(projectId) {
 }
 
 function closeProject() {
-  projectDialog.close();
+  if (projectDialog.open) projectDialog.close();
   document.body.classList.remove("dialog-open");
 }
 
-chips.forEach((chip) => {
-  chip.addEventListener("click", () => {
-    activeCategory = chip.dataset.filter;
-    chips.forEach((item) => item.classList.remove("active"));
-    chip.classList.add("active");
+filters.forEach((filter) => {
+  filter.addEventListener("click", () => {
+    activeCategory = filter.dataset.filter;
+    filters.forEach((item) => item.classList.remove("active"));
+    filter.classList.add("active");
     updateProjects();
   });
 });
 
+searchToggle.addEventListener("click", () => setSearchOpen(true));
+searchClose.addEventListener("click", () => setSearchOpen(false));
+searchPanel.addEventListener("click", (event) => {
+  if (event.target === searchPanel) setSearchOpen(false);
+});
 searchInput.addEventListener("input", updateProjects);
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "/" && document.activeElement !== searchInput) {
-    event.preventDefault();
-    searchInput.focus();
-  }
-});
+rows.forEach((row) => {
+  row.addEventListener("click", () => openProject(row.dataset.project));
 
-cards.forEach((card) => {
-  card.addEventListener("click", () => openProject(card.dataset.project));
-
-  card.addEventListener("keydown", (event) => {
+  row.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      openProject(card.dataset.project);
+      openProject(row.dataset.project);
     }
   });
 });
@@ -265,67 +288,73 @@ document.querySelectorAll("[data-open-project]").forEach((button) => {
 });
 
 randomProjectButton.addEventListener("click", () => {
-  const visibleCards = cards.filter((card) => !card.hidden);
-  const pool = visibleCards.length ? visibleCards : cards;
+  const visibleRows = rows.filter((row) => !row.hidden);
+  const pool = visibleRows.length ? visibleRows : rows;
   const pick = pool[Math.floor(Math.random() * pool.length)];
   openProject(pick.dataset.project);
 });
 
 dialogClose.addEventListener("click", closeProject);
-
 projectDialog.addEventListener("click", (event) => {
   if (event.target === projectDialog) closeProject();
 });
-
 projectDialog.addEventListener("close", () => {
   document.body.classList.remove("dialog-open");
 });
 
+document.addEventListener("keydown", (event) => {
+  const typing =
+    document.activeElement instanceof HTMLInputElement ||
+    document.activeElement instanceof HTMLTextAreaElement;
+
+  if (event.key === "/" && !typing && !projectDialog.open) {
+    event.preventDefault();
+    setSearchOpen(true);
+  }
+
+  if (event.key === "Escape" && searchPanel.classList.contains("open")) {
+    setSearchOpen(false);
+  }
+});
+
 window.addEventListener(
   "scroll",
-  () => siteHeader.classList.toggle("scrolled", window.scrollY > 20),
+  () => {
+    siteHeader.classList.toggle("scrolled", window.scrollY > 28);
+  },
   { passive: true }
 );
 
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(pointer: fine)").matches;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (!reduceMotion && "IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
-  );
-
-  document.querySelectorAll("[data-reveal]").forEach((element, index) => {
-    element.style.transitionDelay = `${Math.min(index * 35, 180)}ms`;
-    observer.observe(element);
+if (finePointer && hoverOrb) {
+  window.addEventListener("pointermove", (event) => {
+    hoverOrb.style.left = `${event.clientX}px`;
+    hoverOrb.style.top = `${event.clientY}px`;
   });
-} else {
-  document.querySelectorAll("[data-reveal]").forEach((element) => {
-    element.classList.add("is-visible");
+
+  rows.forEach((row) => {
+    row.addEventListener("pointerenter", () => hoverOrb.classList.add("visible"));
+    row.addEventListener("pointerleave", () => hoverOrb.classList.remove("visible"));
   });
 }
 
-if (!reduceMotion && finePointer && featuredCard) {
-  featuredCard.addEventListener("pointermove", (event) => {
-    const rect = featuredCard.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
+if (!reduceMotion && heroWord) {
+  const words = ["VYLEPŠÍŠ.", "VYROBÍŠ.", "OPRAVÍŠ.", "UPRACEŠ."];
+  let wordIndex = 0;
 
-    featuredCard.style.transform =
-      `rotate(2.5deg) perspective(900px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg) translateY(-3px)`;
-  });
+  window.setInterval(() => {
+    heroWord.classList.remove("swap-in");
+    heroWord.classList.add("swap-out");
 
-  featuredCard.addEventListener("pointerleave", () => {
-    featuredCard.style.transform = "rotate(2.5deg)";
-  });
+    window.setTimeout(() => {
+      wordIndex = (wordIndex + 1) % words.length;
+      heroWord.textContent = words[wordIndex];
+      heroWord.classList.remove("swap-out");
+      heroWord.classList.add("swap-in");
+    }, 250);
+  }, 2400);
 }
 
 updateProjects();
