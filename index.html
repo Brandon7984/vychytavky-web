@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Praktické DIY nápady, malé projekty a vychytávky pre domácnosť, dielňu, záhradu a každodenný život." />
+  <title>Vychytávky — nápady, ktoré fungujú</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Vychytávky domovská stránka">
+      <span class="brand-mark">V</span>
+      <span>Vychytávky</span>
+    </a>
+    <nav class="top-nav" aria-label="Hlavná navigácia">
+      <a href="#projekty">Projekty</a>
+      <a href="#kategorie">Kategórie</a>
+      <a href="#ako-na-to">Ako na to</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Jednoduché nápady. Reálny výsledok.</p>
+        <h1>Nápady, ktoré sa zmestia do popoludnia.</h1>
+        <p class="hero-text">
+          Praktické zlepšováky do domácnosti, dielne, záhrady aj na tvorenie.
+          Bez zbytočnej vedy, s jasným postupom a materiálmi, ktoré vieš reálne zohnať.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projekty">Pozrieť nápady</a>
+          <a class="button secondary" href="#ako-na-to">Ako web funguje</a>
+        </div>
+        <div class="hero-stats" aria-label="Prehľad obsahu">
+          <div><strong>15–90 min</strong><span>typická dĺžka projektu</span></div>
+          <div><strong>€ / €€ / €€€</strong><span>jasný odhad nákladov</span></div>
+          <div><strong>1–3</strong><span>úroveň náročnosti</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="idea-card idea-card-a">
+          <span class="idea-icon">🪵</span>
+          <div><strong>Drevený stojan</strong><small>45 min · ľahké</small></div>
+        </div>
+        <div class="idea-card idea-card-b">
+          <span class="idea-icon">🌿</span>
+          <div><strong>Bylinkový kút</strong><small>30 min · ľahké</small></div>
+        </div>
+        <div class="idea-card idea-card-c">
+          <span class="idea-icon">✂️</span>
+          <div><strong>Papierový organizér</strong><small>25 min · ľahké</small></div>
+        </div>
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+      </div>
+    </section>
+
+    <section class="section" id="kategorie">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Nájdi si smer</p>
+          <h2>Čo chceš dnes vylepšiť?</h2>
+        </div>
+        <p>Vyber kategóriu alebo jednoducho začni hľadať.</p>
+      </div>
+
+      <div class="filter-bar">
+        <label class="search">
+          <span class="sr-only">Hľadať projekt</span>
+          <input id="searchInput" type="search" placeholder="Hľadať napr. polica, záhrada, papier…" autocomplete="off" />
+        </label>
+        <div class="chips" id="categoryFilters" aria-label="Filtrovanie podľa kategórie">
+          <button class="chip active" data-filter="all">Všetko</button>
+          <button class="chip" data-filter="Domácnosť">Domácnosť</button>
+          <button class="chip" data-filter="Dielňa">Dielňa</button>
+          <button class="chip" data-filter="Záhrada">Záhrada</button>
+          <button class="chip" data-filter="Tvorenie">Tvorenie</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projekty">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">Prvé inšpirácie</p>
+          <h2>Vyber si projekt</h2>
+        </div>
+        <p id="resultCount" aria-live="polite"></p>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <article class="project-card" data-category="Domácnosť" data-search="vstup predsieň organizér kľúče polička domácnosť">
+          <div class="project-image image-entryway"><span>🔑</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Domácnosť</span><span>35 min</span></div>
+            <h3>Mini odkladacia stanica pri dverách</h3>
+            <p>Kľúče, okuliare a pošta konečne na jednom mieste bez veľkého nábytku.</p>
+            <div class="project-footer"><span>●○○ Ľahké</span><span>€</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="Dielňa" data-search="dielňa drevo brúsny papier organizér náradie stojan">
+          <div class="project-image image-workshop"><span>🧰</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Dielňa</span><span>60 min</span></div>
+            <h3>Stojan na brúsny papier zo zvyškov dreva</h3>
+            <p>Jednoduchý prípravok, vďaka ktorému nájdeš správnu zrnitosť bez prehrabávania.</p>
+            <div class="project-footer"><span>●●○ Stredné</span><span>€</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="Záhrada" data-search="záhrada bylinky kvetináč stojan kuchyňa drevo">
+          <div class="project-image image-garden"><span>🌱</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Záhrada</span><span>45 min</span></div>
+            <h3>Kompaktný stojan na bylinky</h3>
+            <p>Malý vertikálny stojan na balkón, terasu alebo kuchynské okno.</p>
+            <div class="project-footer"><span>●○○ Ľahké</span><span>€€</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="Tvorenie" data-search="papier tvorenie káble organizér nabíjačky recyklácia krabička">
+          <div class="project-image image-paper"><span>📦</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Tvorenie</span><span>25 min</span></div>
+            <h3>Papierový organizér na káble</h3>
+            <p>Rýchly projekt z kartónu, ktorý uprace nabíjačky bez kupovania ďalšieho plastu.</p>
+            <div class="project-footer"><span>●○○ Ľahké</span><span>€</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="Domácnosť" data-search="kuchyňa zásuvka deliace priečky organizácia poriadok">
+          <div class="project-image image-kitchen"><span>🍴</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Domácnosť</span><span>30 min</span></div>
+            <h3>Nastaviteľné priečky do zásuvky</h3>
+            <p>Bez vŕtania a bez lepidla. Rozdelenie zásuvky presne podľa toho, čo v nej máš.</p>
+            <div class="project-footer"><span>●○○ Ľahké</span><span>€</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="Dielňa" data-search="dielňa vrtáky stojan drevo poriadok náradie">
+          <div class="project-image image-drill"><span>🪛</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Dielňa</span><span>75 min</span></div>
+            <h3>Prehľadný stojan na vrtáky</h3>
+            <p>Každý vrták má svoje miesto a správny priemer nájdeš na prvý pohľad.</p>
+            <div class="project-footer"><span>●●○ Stredné</span><span>€€</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <strong>Nič sme nenašli.</strong>
+        <span>Skús iné slovo alebo inú kategóriu.</span>
+      </div>
+    </section>
+
+    <section class="section how-section" id="ako-na-to">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Bez zdržovania</p>
+          <h2>Každý projekt v rovnakom jasnom formáte</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <article><span>01</span><h3>Čo vyrábame</h3><p>Krátko a zrozumiteľne, bez omáčky.</p></article>
+        <article><span>02</span><h3>Čo potrebuješ</h3><p>Materiál, náradie, čas a približná cena.</p></article>
+        <article><span>03</span><h3>Postup</h3><p>Jasné kroky v správnom poradí.</p></article>
+        <article><span>04</span><h3>Hotovo</h3><p>Výsledok, tipy a čo sa dá nabudúce zlepšiť.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Vychytávky</strong>
+      <p>Malé nápady, ktoré robia bežný deň o kus príjemnejší.</p>
+    </div>
+    <span>Prvý prototyp · 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
