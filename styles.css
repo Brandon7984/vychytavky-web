@@ -2362,3 +2362,192 @@ button.callout:focus-visible{
     margin-top:-7px;
   }
 }
+
+
+/* =========================================================
+   STEP 02 — MARKING / MEASUREMENT
+   ========================================================= */
+.pilot-roadmap > .step-two-feature{
+  margin-top:54px;
+  padding:52px 0 56px;
+  display:grid;
+  grid-template-columns:minmax(300px,.88fr) minmax(0,1.12fr);
+  gap:34px;
+  align-items:start;
+  border-top:1px solid #5e4a3c;
+  border-bottom:1px solid #5e4a3c;
+  background:
+    linear-gradient(180deg,rgba(239,138,67,.035),transparent 35%),
+    #17130f;
+}
+.step-two-copy{padding:6px 0 0}
+.step-two-copy h3{
+  margin:0 0 16px;
+  font-size:clamp(2rem,3.1vw,3.35rem);
+  line-height:.95;
+  letter-spacing:-.05em;
+}
+.step-two-copy>p:not(.eyebrow){
+  margin:0 0 22px;
+  color:#ab9b8e;
+  font-size:.9rem;
+}
+.step-two-copy strong{color:#f2e5d6}
+
+.step-two-sequence{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  border-top:1px solid #5e4a3c;
+  border-left:1px solid #5e4a3c;
+  margin:8px 0 22px;
+}
+.step-two-sequence span{
+  min-height:50px;
+  padding:9px 11px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  border-right:1px solid #5e4a3c;
+  border-bottom:1px solid #5e4a3c;
+  background:rgba(255,255,255,.012);
+}
+.step-two-sequence b{
+  color:#ef8a43;
+  font-size:.7rem;
+}
+.step-two-sequence small{
+  color:#9b8c7f;
+  font-size:.63rem;
+  font-weight:800;
+}
+.step-two-tip{margin-top:0}
+.step-two-note{margin-top:15px}
+
+.step-two-media{
+  position:sticky;
+  top:118px;
+  align-self:start;
+  min-width:0;
+}
+.step-two-frame{
+  --step2-scale:.94;
+  --step2-shift:30px;
+  --step2-crop:5%;
+  --step2-photo-y:12px;
+  position:relative;
+  width:100%;
+  aspect-ratio:1.02/1;
+  overflow:hidden;
+  border:1px solid #715642;
+  border-radius:24px;
+  background:#2b2119;
+  box-shadow:0 32px 80px rgba(0,0,0,.28);
+  clip-path:inset(var(--step2-crop) round 24px);
+  transform:translateY(var(--step2-shift)) scale(var(--step2-scale));
+  transform-origin:center;
+  will-change:transform,clip-path;
+}
+.step-two-photo{
+  position:absolute;
+  inset:-4% 0;
+  width:100%;
+  height:108%;
+  object-fit:cover;
+  object-position:center center;
+  transform:translateY(var(--step2-photo-y)) scale(1.04);
+  filter:saturate(.96) contrast(1.03) brightness(.93);
+  will-change:transform;
+}
+.step-two-vignette{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(10,7,5,.03),transparent 52%,rgba(10,7,5,.36)),
+    radial-gradient(circle at 48% 44%,transparent 45%,rgba(12,8,5,.14) 100%);
+}
+
+.step-two-hotspot{
+  position:absolute;
+  z-index:7;
+  width:38px;
+  height:38px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  cursor:pointer;
+}
+.step2-hotspot-a{left:12%;top:31%}
+.step2-hotspot-b{right:16%;top:18%}
+.step2-hotspot-c{right:22%;bottom:17%}
+
+.step-two-hotspot .step-one-note{
+  width:245px;
+}
+.step2-hotspot-a .step-one-note{left:48px;top:-7px}
+.step2-hotspot-a .step-one-note::before{left:-35px}
+.step2-hotspot-b .step-one-note{right:48px;top:-7px}
+.step2-hotspot-b .step-one-note::before{right:-35px}
+.step2-hotspot-c .step-one-note{right:48px;bottom:-4px}
+.step2-hotspot-c .step-one-note::before{right:-35px}
+
+.step-two-hotspot:hover .step-one-note,
+.step-two-hotspot.active .step-one-note{
+  visibility:visible;
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+@media(max-width:1180px){
+  .pilot-roadmap > .step-two-feature{
+    grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);
+  }
+}
+@media(max-width:820px){
+  .pilot-roadmap > .step-two-feature{
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:38px 0 44px;
+  }
+  .step-two-media{
+    position:relative;
+    top:auto;
+    order:-1;
+  }
+  .step-two-frame{
+    --step2-scale:1!important;
+    --step2-shift:0px!important;
+    --step2-crop:0%!important;
+    aspect-ratio:1/1;
+    border-radius:17px;
+    clip-path:none;
+    transform:none!important;
+  }
+  .step-two-photo{
+    inset:0;
+    width:100%;
+    height:100%;
+    transform:none!important;
+  }
+  .step-two-hotspot .step-one-note{
+    position:fixed;
+    left:16px!important;
+    right:16px!important;
+    top:auto!important;
+    bottom:18px!important;
+    width:auto;
+    z-index:80;
+  }
+  .step-two-hotspot .step-one-note::before{display:none}
+}
+@media(max-width:520px){
+  .step-two-sequence{
+    grid-template-columns:1fr;
+  }
+  .step-two-frame{aspect-ratio:1/1.08}
+  .step2-hotspot-a{left:10%;top:32%}
+  .step2-hotspot-b{right:12%;top:18%}
+  .step2-hotspot-c{right:16%;bottom:18%}
+}
