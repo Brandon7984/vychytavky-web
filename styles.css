@@ -448,3 +448,96 @@ h1,h2,h3,h4,p{margin-top:0}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* ORBITAL DISC REFERENCE PROJECT */
+.disc-sprite-image{
+  opacity:0;
+  transition:opacity .45s ease;
+}
+body.sprite-ready .disc-sprite-image{opacity:1}
+
+.diameter-pills{
+  margin:-5px 0 28px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.diameter-pills span{
+  padding:8px 11px;
+  border:1px solid #745843;
+  border-radius:999px;
+  background:#241b15;
+  color:#f3dfcd;
+  font-size:.67rem;
+  font-weight:900;
+  letter-spacing:.04em;
+}
+.diameter-pills small{
+  color:#8f7e70;
+  font-size:.67rem;
+  font-weight:700;
+}
+
+button.callout{
+  border:0;
+  text-align:left;
+  cursor:pointer;
+  font-family:inherit;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+button.callout:hover,
+button.callout.active{
+  transform:translateY(-2px);
+  background:#fffdf8;
+  box-shadow:0 18px 38px rgba(22,14,9,.3);
+}
+button.callout:focus-visible{
+  outline:3px solid var(--orange);
+  outline-offset:3px;
+}
+.step-card.is-current .step-number{
+  background:var(--orange);
+  color:#1b120d;
+  box-shadow:0 0 0 8px rgba(229,133,62,.12);
+}
+.step-card.is-current .step-photo{
+  box-shadow:0 26px 65px rgba(70,46,29,.18);
+}
+
+.finale-lead{
+  max-width:620px;
+  margin:-5px 0 26px;
+  color:#a99889;
+}
+
+@media(max-width:560px){
+  .hero-hotspot{display:block}
+  .hotspot-dot{
+    width:30px;
+    height:30px;
+    font-size:1rem;
+    box-shadow:0 0 0 6px rgba(229,133,62,.14);
+  }
+  .hotspot-one{left:10%;top:17%}
+  .hotspot-two{right:10%;bottom:18%}
+  .hotspot-note{
+    width:min(220px,72vw);
+    font-size:.67rem;
+  }
+  .hotspot-one .hotspot-note{left:0;top:40px}
+  .hotspot-two .hotspot-note{right:0;bottom:40px}
+  .diameter-pills{margin-top:0}
+  .diameter-pills small{width:100%;line-height:1.35}
+  .interactive-callout{
+    max-width:145px;
+    padding:8px 9px;
+  }
+  .interactive-callout small{display:none}
+  .interactive-callout.active small{display:block;margin-top:3px}
+  .callout-line{width:42px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .disc-sprite-image{transition:none}
+}
