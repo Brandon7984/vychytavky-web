@@ -282,3 +282,34 @@ if (expandableStep && expandableFrame) {
   window.addEventListener("resize", updateStepOneMotion);
   updateStepOneMotion();
 }
+
+
+/* Step 02 scroll-open animation */
+const expandableStepTwo = document.querySelector("[data-step2-expand]");
+const expandableFrameTwo = expandableStepTwo?.querySelector(".step-two-frame");
+
+function updateStepTwoMotion() {
+  if (!expandableStepTwo || !expandableFrameTwo || reduceMotion || window.innerWidth <= 820) return;
+
+  const rect = expandableStepTwo.getBoundingClientRect();
+  const start = window.innerHeight * 0.92;
+  const end = window.innerHeight * 0.18;
+  const raw = (start - rect.top) / Math.max(1, start - end);
+  const p = Math.min(1, Math.max(0, raw));
+
+  const scale = 0.94 + p * 0.06;
+  const shift = 30 - p * 30;
+  const crop = 5 - p * 5;
+  const photoY = 16 - p * 30;
+
+  expandableFrameTwo.style.setProperty("--step2-scale", scale.toFixed(3));
+  expandableFrameTwo.style.setProperty("--step2-shift", shift.toFixed(1) + "px");
+  expandableFrameTwo.style.setProperty("--step2-crop", crop.toFixed(2) + "%");
+  expandableFrameTwo.style.setProperty("--step2-photo-y", photoY.toFixed(1) + "px");
+}
+
+if (expandableStepTwo && expandableFrameTwo) {
+  window.addEventListener("scroll", updateStepTwoMotion, { passive: true });
+  window.addEventListener("resize", updateStepTwoMotion);
+  updateStepTwoMotion();
+}
