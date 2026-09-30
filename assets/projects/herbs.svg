@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c9b59c"/><stop offset="1" stop-color="#7b6b59"/></linearGradient>
+ <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ae7549"/><stop offset="1" stop-color="#69412a"/></linearGradient>
+ <filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".28"/></filter>
+</defs>
+<rect width="1200" height="800" fill="url(#bg)"/><rect y="600" width="1200" height="200" fill="#4d4439"/>
+<circle cx="1030" cy="120" r="120" fill="#eadbc9" opacity=".5"/>
+<g filter="url(#s)" stroke-linejoin="round">
+ <path d="M360 135h72l-48 470h-76zM768 135h72l52 470h-76z" fill="url(#wood)"/>
+ <g fill="url(#wood)"><rect x="330" y="230" width="520" height="42" rx="10"/><rect x="350" y="390" width="500" height="42" rx="10"/><rect x="370" y="550" width="480" height="42" rx="10"/></g>
+ <g fill="#b56b46" stroke="#75442e" stroke-width="6">
+   <path d="M410 175h150l-18 70H428z"/><path d="M555 335h150l-18 70H573z"/><path d="M445 495h150l-18 70H463z"/>
+ </g>
+ <g stroke="#3f6b48" stroke-width="10" stroke-linecap="round" fill="#5e8f62">
+  <path d="M482 175c-20-65 30-105 62-130M627 335c20-65-30-105-62-130M517 495c-20-65 30-105 62-130"/>
+  <ellipse cx="540" cy="62" rx="40" ry="17" transform="rotate(-28 540 62)"/><ellipse cx="486" cy="93" rx="38" ry="16" transform="rotate(25 486 93)"/>
+  <ellipse cx="566" cy="225" rx="40" ry="17" transform="rotate(-25 566 225)"/><ellipse cx="622" cy="250" rx="38" ry="16" transform="rotate(25 622 250)"/>
+  <ellipse cx="575" cy="382" rx="40" ry="17" transform="rotate(-25 575 382)"/><ellipse cx="520" cy="414" rx="38" ry="16" transform="rotate(25 520 414)"/>
+ </g>
+</g>
+<text x="88" y="700" font-family="system-ui,sans-serif" font-size="48" font-weight="800" fill="#f5ede3">STOJAN NA BYLINKY</text>
+<text x="90" y="744" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="#d0c0ad">drevo • terakota • 45 min</text>
+</svg>
