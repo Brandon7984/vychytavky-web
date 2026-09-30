@@ -2012,3 +2012,353 @@ button.callout:focus-visible{
   .pilot-product-stage{aspect-ratio:4 / 5.4}
   .pilot-story-points span{grid-template-columns:32px 1fr}
 }
+
+
+/* =========================================================
+   STEP 01 — PHOTOREAL CUTTING / INTERACTIVE SCROLL
+   ========================================================= */
+.pilot-process{
+  grid-template-columns:minmax(250px,.44fr) minmax(640px,1.56fr);
+}
+.pilot-roadmap > .pilot-step-feature{
+  position:relative;
+  z-index:3;
+  min-height:0;
+  padding:0 0 52px;
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(290px,.92fr);
+  gap:30px;
+  border-bottom:1px solid #5e4a3c;
+  background:#17130f;
+}
+.pilot-roadmap > .pilot-step-feature + article{padding-top:38px}
+.step-one-media{
+  position:sticky;
+  top:118px;
+  align-self:start;
+  min-width:0;
+}
+.step-one-frame{
+  --step-scale:.94;
+  --step-shift:28px;
+  --step-crop:5%;
+  --photo-y:0px;
+  position:relative;
+  width:100%;
+  aspect-ratio:16/10;
+  overflow:hidden;
+  border:1px solid #715642;
+  border-radius:24px;
+  background:#2b2119;
+  box-shadow:0 32px 80px rgba(0,0,0,.28);
+  clip-path:inset(var(--step-crop) round 24px);
+  transform:translateY(var(--step-shift)) scale(var(--step-scale));
+  transform-origin:center center;
+  transition:clip-path .18s linear,box-shadow .28s ease;
+  will-change:transform,clip-path;
+}
+.step-one-frame:hover{box-shadow:0 38px 95px rgba(0,0,0,.36)}
+.step-one-photo{
+  position:absolute;
+  inset:-4% 0;
+  width:100%;
+  height:108%;
+  object-fit:cover;
+  object-position:center center;
+  transform:translateY(var(--photo-y)) scale(1.055);
+  filter:saturate(.96) contrast(1.03) brightness(.92);
+  will-change:transform;
+}
+.step-one-vignette{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(10,7,5,.04) 45%,rgba(10,7,5,.42)),
+    radial-gradient(circle at 48% 44%,transparent 44%,rgba(12,8,5,.17) 100%);
+}
+.step-one-photo-label{
+  position:absolute;
+  left:14px;
+  bottom:14px;
+  z-index:5;
+  padding:7px 9px;
+  border:1px solid rgba(255,239,223,.34);
+  border-radius:999px;
+  color:#f6eadd;
+  background:rgba(22,16,12,.74);
+  backdrop-filter:blur(10px);
+  font-size:.55rem;
+  font-weight:950;
+  letter-spacing:.11em;
+}
+
+.step-one-hotspot{
+  position:absolute;
+  z-index:7;
+  width:38px;
+  height:38px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  cursor:pointer;
+}
+.step-one-hotspot.hotspot-a{left:14%;top:19%}
+.step-one-hotspot.hotspot-b{right:13%;bottom:18%}
+.step-one-hotspot.hotspot-c{left:48%;top:46%}
+.step-one-dot{
+  width:36px;
+  height:36px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.88);
+  border-radius:50%;
+  color:#21150e;
+  background:#ef8a43;
+  box-shadow:0 0 0 7px rgba(239,138,67,.15),0 8px 20px rgba(0,0,0,.25);
+  font-size:1rem;
+  font-weight:950;
+  animation:stepOnePulse 2.5s ease-in-out infinite;
+}
+@keyframes stepOnePulse{
+  0%,100%{box-shadow:0 0 0 5px rgba(239,138,67,.14),0 8px 20px rgba(0,0,0,.25)}
+  50%{box-shadow:0 0 0 12px rgba(239,138,67,.02),0 8px 20px rgba(0,0,0,.25)}
+}
+.step-one-note{
+  position:absolute;
+  width:240px;
+  padding:13px 14px;
+  visibility:hidden;
+  opacity:0;
+  border:1px solid rgba(255,239,223,.24);
+  border-radius:13px;
+  color:#c8b7a8;
+  background:rgba(22,16,12,.94);
+  backdrop-filter:blur(14px);
+  box-shadow:0 20px 52px rgba(0,0,0,.32);
+  text-align:left;
+  transform:translateY(8px) scale(.98);
+  transition:opacity .18s ease,transform .18s ease,visibility .18s ease;
+  pointer-events:none;
+}
+.step-one-note::before{
+  content:"";
+  position:absolute;
+  width:34px;
+  height:1px;
+  background:#ef8a43;
+  top:18px;
+}
+.hotspot-a .step-one-note{left:48px;top:-7px}
+.hotspot-a .step-one-note::before{left:-35px}
+.hotspot-b .step-one-note{right:48px;bottom:-4px}
+.hotspot-b .step-one-note::before{right:-35px}
+.hotspot-c .step-one-note{left:48px;top:-7px}
+.hotspot-c .step-one-note::before{left:-35px}
+.step-one-note strong{
+  display:block;
+  margin-bottom:5px;
+  color:#fff0e2;
+  font-size:.73rem;
+}
+.step-one-note small{
+  display:block;
+  color:#b7a89b;
+  font-size:.64rem;
+  line-height:1.45;
+}
+.step-one-hotspot:hover .step-one-note,
+.step-one-hotspot.active .step-one-note{
+  visibility:visible;
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+.step-one-copy{
+  padding:6px 0 0;
+  align-self:start;
+}
+.step-one-progress{
+  margin-bottom:28px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:10px;
+  align-items:center;
+}
+.step-one-progress span{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:#1d140f;
+  background:#ef8a43;
+  font-size:.72rem;
+  font-weight:950;
+}
+.step-one-progress i{height:1px;background:linear-gradient(90deg,#ef8a43,#5e4a3c)}
+.step-one-progress small{color:#7e6e61;font-size:.62rem;font-weight:900}
+.step-one-copy h3{
+  margin:0 0 16px;
+  font-size:clamp(2rem,3.2vw,3.5rem);
+  line-height:.94;
+  letter-spacing:-.052em;
+}
+.step-one-copy>p:not(.eyebrow){
+  margin:0 0 22px;
+  color:#ab9b8e;
+  font-size:.9rem;
+}
+.step-one-copy strong{color:#f2e5d6}
+.step-one-cutlist{
+  display:grid;
+  grid-template-columns:1fr;
+  border-top:1px solid #5e4a3c;
+}
+.step-one-cutlist>div{
+  min-height:61px;
+  display:grid;
+  grid-template-columns:54px 1fr auto;
+  gap:10px;
+  align-items:center;
+  border-bottom:1px solid #5e4a3c;
+}
+.step-one-cutlist span{
+  color:#ef8a43;
+  font-size:.72rem;
+  font-weight:950;
+}
+.step-one-cutlist strong{font-size:.78rem}
+.step-one-cutlist small{color:#8f8074;font-size:.66rem}
+.step-one-tip{
+  margin-top:22px;
+  padding:18px;
+  border-left:4px solid #ef8a43;
+  background:#231b16;
+}
+.step-one-tip>span{
+  display:block;
+  margin-bottom:7px;
+  color:#ef8a43;
+  font-size:.57rem;
+  font-weight:950;
+  letter-spacing:.11em;
+}
+.step-one-tip p{
+  margin:0;
+  color:#b4a396;
+  font-size:.72rem;
+  line-height:1.55;
+}
+.nailer-note{
+  margin-top:16px;
+  padding:14px 15px;
+  display:grid;
+  grid-template-columns:36px 1fr;
+  gap:12px;
+  align-items:center;
+  border:1px solid #5e4a3c;
+  border-radius:12px;
+  background:#1e1814;
+}
+.nailer-icon{
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:#24170f;
+  background:#d6a06e;
+  font-size:1.05rem;
+}
+.nailer-note strong{
+  display:block;
+  margin-bottom:3px;
+  color:#eadbcd;
+  font-size:.7rem;
+}
+.nailer-note small{
+  display:block;
+  color:#8f8074;
+  font-size:.62rem;
+  line-height:1.4;
+}
+
+/* subsequent roadmap steps remain intentionally lighter until their photos are approved */
+.pilot-roadmap > article:not(.pilot-step-feature){
+  transition:background .2s ease,padding-left .2s ease;
+}
+.pilot-roadmap > article:not(.pilot-step-feature):hover{
+  background:rgba(255,255,255,.018);
+  padding-left:100px;
+}
+
+@media(max-width:1180px){
+  .pilot-process{
+    grid-template-columns:1fr;
+  }
+  .pilot-process-intro{position:static;max-width:820px}
+  .pilot-step-feature{
+    grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr)!important;
+  }
+}
+
+@media(max-width:820px){
+  .pilot-roadmap > .pilot-step-feature{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .step-one-media{
+    position:relative;
+    top:auto;
+  }
+  .step-one-frame{
+    --step-scale:1!important;
+    --step-shift:0px!important;
+    --step-crop:0%!important;
+    aspect-ratio:4/3;
+    border-radius:17px;
+    clip-path:none;
+  }
+  .step-one-photo{inset:0;height:100%;transform:none!important}
+  .step-one-copy{padding-top:0}
+  .step-one-hotspot{
+    width:42px;
+    height:42px;
+  }
+  .step-one-dot{
+    width:40px;
+    height:40px;
+  }
+  .step-one-note{
+    position:fixed;
+    left:16px!important;
+    right:16px!important;
+    bottom:18px!important;
+    top:auto!important;
+    width:auto;
+    z-index:80;
+    transform:translateY(16px);
+  }
+  .step-one-note::before{display:none}
+  .step-one-hotspot.active .step-one-note{
+    transform:translateY(0);
+  }
+}
+
+@media(max-width:520px){
+  .pilot-process{padding:72px 16px 85px}
+  .pilot-roadmap > .pilot-step-feature{padding-bottom:38px}
+  .step-one-frame{aspect-ratio:1/1}
+  .step-one-photo{object-position:center}
+  .step-one-photo-label{font-size:.48rem}
+  .step-one-cutlist>div{
+    grid-template-columns:44px 1fr;
+    padding:10px 0;
+  }
+  .step-one-cutlist small{
+    grid-column:2;
+    margin-top:-7px;
+  }
+}
