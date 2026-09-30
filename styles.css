@@ -1537,7 +1537,11 @@ button.callout:focus-visible{
   color:#fff1e1;
   font-size:.78rem;
 }
-.pilot-hotspot.active .hotspot-note,
+.pilot-hotspot.active .hotspot-note{
+  visibility:visible;
+  opacity:1;
+  transform:none;
+}
 @media (hover:hover){
   .pilot-hotspot:hover .hotspot-note{
     visibility:visible;
