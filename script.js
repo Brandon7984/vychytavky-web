@@ -6,6 +6,36 @@ const saveProject = document.getElementById("saveProject");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 
+async function loadDiscSprite() {
+  const targets = [...document.querySelectorAll(".disc-sprite-image")];
+  if (!targets.length) return;
+
+  try {
+    const parts = await Promise.all(
+      Array.from({ length: 7 }, (_, index) =>
+        fetch(`assets/projects/sandpaper-sprite-${index + 1}.txt`, { cache: "force-cache" })
+          .then((response) => {
+            if (!response.ok) throw new Error("Sprite chunk failed: " + response.status);
+            return response.text();
+          })
+      )
+    );
+
+    const dataUri = "data:image/webp;base64," + parts.join("");
+    targets.forEach((image) => {
+      image.setAttribute("href", dataUri);
+      image.setAttributeNS("http://www.w3.org/1999/xlink", "href", dataUri);
+    });
+
+    document.body.classList.add("sprite-ready");
+  } catch (error) {
+    console.error("Photo sprite could not be loaded.", error);
+    document.body.classList.add("sprite-failed");
+  }
+}
+
+loadDiscSprite();
+
 function updateScrollUI() {
   const y = window.scrollY;
   const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
@@ -57,12 +87,42 @@ document.querySelectorAll(".hero-hotspot").forEach((hotspot) => {
   });
 });
 
+document.querySelectorAll(".interactive-callout").forEach((callout) => {
+  callout.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const willOpen = !callout.classList.contains("active");
+
+    document.querySelectorAll(".interactive-callout.active").forEach((item) => {
+      if (item !== callout) item.classList.remove("active");
+    });
+
+    callout.classList.toggle("active", willOpen);
+  });
+});
+
 if (saveProject) {
-  saveProject.addEventListener("click", () => {
-    const saved = saveProject.classList.toggle("saved");
+  const storageKey = "vychytavky:sanding-discs:saved";
+  const applySavedState = (saved) => {
+    saveProject.classList.toggle("saved", saved);
     saveProject.innerHTML = saved
       ? "<span>♥</span> Projekt uložený"
       : "<span>♡</span> Uložiť projekt";
+  };
+
+  let saved = false;
+  try {
+    saved = localStorage.getItem(storageKey) === "1";
+  } catch (_) {}
+
+  applySavedState(saved);
+
+  saveProject.addEventListener("click", () => {
+    const next = !saveProject.classList.contains("saved");
+    applySavedState(next);
+
+    try {
+      localStorage.setItem(storageKey, next ? "1" : "0");
+    } catch (_) {}
   });
 }
 
@@ -87,6 +147,20 @@ if (projectSubnav) {
 
   window.addEventListener("scroll", setActiveLink, { passive: true });
   setActiveLink();
+}
+
+const stepCards = [...document.querySelectorAll(".step-card")];
+if (stepCards.length && "IntersectionObserver" in window) {
+  const stepObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-current", entry.isIntersecting);
+      });
+    },
+    { threshold: 0.52 }
+  );
+
+  stepCards.forEach((step) => stepObserver.observe(step));
 }
 
 if (!reduceMotion && finePointer) {
@@ -117,6 +191,12 @@ if (!reduceMotion && finePointer) {
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".hero-hotspot")) {
     document.querySelectorAll(".hero-hotspot.active").forEach((item) => {
+      item.classList.remove("active");
+    });
+  }
+
+  if (!event.target.closest(".interactive-callout")) {
+    document.querySelectorAll(".interactive-callout.active").forEach((item) => {
       item.classList.remove("active");
     });
   }
