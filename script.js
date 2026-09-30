@@ -251,3 +251,34 @@ document.querySelectorAll(".tower-slot").forEach((slot) => {
     slot.classList.toggle("is-selected");
   });
 });
+
+
+/* Step 01 scroll-open animation */
+const expandableStep = document.querySelector("[data-step-expand]");
+const expandableFrame = expandableStep?.querySelector(".step-one-frame");
+
+function updateStepOneMotion() {
+  if (!expandableStep || !expandableFrame || reduceMotion || window.innerWidth <= 820) return;
+
+  const rect = expandableStep.getBoundingClientRect();
+  const start = window.innerHeight * 0.92;
+  const end = window.innerHeight * 0.18;
+  const raw = (start - rect.top) / Math.max(1, start - end);
+  const p = Math.min(1, Math.max(0, raw));
+
+  const scale = 0.94 + p * 0.06;
+  const shift = 28 - p * 28;
+  const crop = 5 - p * 5;
+  const photoY = 14 - p * 26;
+
+  expandableFrame.style.setProperty("--step-scale", scale.toFixed(3));
+  expandableFrame.style.setProperty("--step-shift", shift.toFixed(1) + "px");
+  expandableFrame.style.setProperty("--step-crop", crop.toFixed(2) + "%");
+  expandableFrame.style.setProperty("--photo-y", photoY.toFixed(1) + "px");
+}
+
+if (expandableStep && expandableFrame) {
+  window.addEventListener("scroll", updateStepOneMotion, { passive: true });
+  window.addEventListener("resize", updateStepOneMotion);
+  updateStepOneMotion();
+}
