@@ -56,6 +56,26 @@ loadChunkedWebp(
 );
 
 
+
+loadChunkedWebp(
+  [
+    "assets/photos/step3-tutorial-01.txt",
+    "assets/photos/step3-tutorial-02.txt",
+    "assets/photos/step3-tutorial-03.txt",
+    "assets/photos/step3-tutorial-04.txt",
+    "assets/photos/step3-tutorial-05.txt",
+    "assets/photos/step3-tutorial-06.txt",
+    "assets/photos/step3-tutorial-07.txt",
+    "assets/photos/step3-tutorial-08.txt",
+    "assets/photos/step3-tutorial-09.txt",
+    "assets/photos/step3-tutorial-10.txt",
+    "assets/photos/step3-tutorial-11.txt",
+    "assets/photos/step3-tutorial-12.txt"
+  ],
+  ".step3-tutorial-image",
+  "step3-tutorial-ready"
+);
+
 // Direct HQ tutorial images: keep the repository file as the source and mark it ready after decode/load.
 document.querySelectorAll(".approved-tutorial-image[src]").forEach((image) => {
   const markReady = () => image.classList.add("is-loaded");
