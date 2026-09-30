@@ -55,29 +55,72 @@ loadChunkedWebp(
   "rack-product-ready"
 );
 
-loadChunkedWebp(
-  [
-    "assets/photos/step1-tutorial-01.txt",
-    "assets/photos/step1-tutorial-02.txt",
-    "assets/photos/step1-tutorial-03.txt",
-    "assets/photos/step1-tutorial-04.txt",
-    "assets/photos/step1-tutorial-05.txt"
-  ],
-  ".step1-tutorial-image",
-  "step1-tutorial-ready"
-);
 
-loadChunkedWebp(
-  [
-    "assets/photos/step2-tutorial-01.txt",
-    "assets/photos/step2-tutorial-02.txt",
-    "assets/photos/step2-tutorial-03.txt",
-    "assets/photos/step2-tutorial-04.txt",
-    "assets/photos/step2-tutorial-05.txt"
-  ],
-  ".step2-tutorial-image",
-  "step2-tutorial-ready"
-);
+// Direct HQ tutorial images: keep the repository file as the source and mark it ready after decode/load.
+document.querySelectorAll(".approved-tutorial-image[src]").forEach((image) => {
+  const markReady = () => image.classList.add("is-loaded");
+
+  if (image.complete && image.naturalWidth > 0) {
+    markReady();
+  } else {
+    image.addEventListener("load", markReady, { once: true });
+    image.addEventListener("error", () => {
+      image.classList.add("is-loaded");
+      image.closest(".approved-tutorial-frame")?.classList.add("image-error");
+    }, { once: true });
+  }
+});
+
+// Subtle cinematic motion for the approved tutorial posters.
+const tutorialMotionFrames = [...document.querySelectorAll("[data-tutorial-motion]")];
+
+function updateTutorialMotion() {
+  if (!tutorialMotionFrames.length) return;
+
+  tutorialMotionFrames.forEach((frame) => {
+    if (reduceMotion || window.innerWidth <= 820) {
+      frame.style.setProperty("--tutorial-scale", "1");
+      frame.style.setProperty("--tutorial-y", "0px");
+      frame.style.setProperty("--tutorial-image-scale", "1");
+      frame.style.setProperty("--tutorial-image-y", "0px");
+      frame.style.setProperty("--tutorial-shine-x", "-120%");
+      return;
+    }
+
+    const rect = frame.getBoundingClientRect();
+    const viewport = window.innerHeight;
+    const center = rect.top + rect.height / 2;
+    const normalized = Math.max(-1, Math.min(1, (center - viewport / 2) / viewport));
+    const visible = Math.max(0, Math.min(1, (viewport - rect.top) / (viewport * 0.82)));
+
+    const frameScale = 0.972 + visible * 0.028;
+    const frameY = (1 - visible) * 22;
+    const imageScale = 1.008 + (1 - Math.abs(normalized)) * 0.012;
+    const imageY = normalized * -12;
+    const shineX = -130 + visible * 260;
+
+    frame.style.setProperty("--tutorial-scale", frameScale.toFixed(4));
+    frame.style.setProperty("--tutorial-y", frameY.toFixed(1) + "px");
+    frame.style.setProperty("--tutorial-image-scale", imageScale.toFixed(4));
+    frame.style.setProperty("--tutorial-image-y", imageY.toFixed(1) + "px");
+    frame.style.setProperty("--tutorial-shine-x", shineX.toFixed(1) + "%");
+  });
+}
+
+if (tutorialMotionFrames.length) {
+  let tutorialRaf = 0;
+  const queueTutorialMotion = () => {
+    if (tutorialRaf) return;
+    tutorialRaf = requestAnimationFrame(() => {
+      tutorialRaf = 0;
+      updateTutorialMotion();
+    });
+  };
+
+  window.addEventListener("scroll", queueTutorialMotion, { passive: true });
+  window.addEventListener("resize", queueTutorialMotion);
+  updateTutorialMotion();
+}
 
 function updateScrollUI() {
   const y = window.scrollY;
