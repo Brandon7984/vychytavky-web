@@ -55,6 +55,30 @@ loadChunkedWebp(
   "rack-product-ready"
 );
 
+loadChunkedWebp(
+  [
+    "assets/photos/step1-tutorial-01.txt",
+    "assets/photos/step1-tutorial-02.txt",
+    "assets/photos/step1-tutorial-03.txt",
+    "assets/photos/step1-tutorial-04.txt",
+    "assets/photos/step1-tutorial-05.txt"
+  ],
+  ".step1-tutorial-image",
+  "step1-tutorial-ready"
+);
+
+loadChunkedWebp(
+  [
+    "assets/photos/step2-tutorial-01.txt",
+    "assets/photos/step2-tutorial-02.txt",
+    "assets/photos/step2-tutorial-03.txt",
+    "assets/photos/step2-tutorial-04.txt",
+    "assets/photos/step2-tutorial-05.txt"
+  ],
+  ".step2-tutorial-image",
+  "step2-tutorial-ready"
+);
+
 function updateScrollUI() {
   const y = window.scrollY;
   const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
