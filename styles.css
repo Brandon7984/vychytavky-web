@@ -2863,3 +2863,125 @@ button.callout:focus-visible{
   }
   .tutorial-scroll-cue b{animation:none}
 }
+
+
+/* =========================================================
+   STEP 03 — FIRST SHELF / PNEUMATIC NAILER
+   ========================================================= */
+.pilot-roadmap > .step-three-feature{
+  margin-top:54px;
+  padding:52px 0 56px;
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);
+  gap:34px;
+  align-items:start;
+  border-top:1px solid #5e4a3c;
+  border-bottom:1px solid #5e4a3c;
+  background:
+    linear-gradient(180deg,rgba(239,138,67,.04),transparent 36%),
+    #17130f;
+}
+.step-three-media{
+  position:sticky;
+  top:118px;
+  align-self:start;
+  min-width:0;
+}
+.step-three-frame{
+  aspect-ratio:2 / 3 !important;
+  min-height:0 !important;
+}
+.step-three-copy{
+  padding:6px 0 0;
+}
+.step-three-copy h3{
+  margin:0 0 16px;
+  font-size:clamp(2rem,3.1vw,3.35rem);
+  line-height:.95;
+  letter-spacing:-.05em;
+}
+.step-three-copy>p:not(.eyebrow){
+  margin:0 0 22px;
+  color:#ab9b8e;
+  font-size:.9rem;
+}
+.step-three-copy strong{color:#f2e5d6}
+
+.step-three-points{
+  margin:8px 0 22px;
+  display:grid;
+  gap:10px;
+}
+.step-three-points>div{
+  position:relative;
+  min-height:72px;
+  padding:14px 14px 14px 58px;
+  border:1px solid #5e4a3c;
+  background:rgba(255,255,255,.012);
+  transition:transform .2s ease,border-color .2s ease,background .2s ease;
+}
+.step-three-points span{
+  position:absolute;
+  left:14px;
+  top:14px;
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:#21150e;
+  background:#ef8a43;
+  font-size:.58rem;
+  font-weight:950;
+}
+.step-three-points strong{
+  display:block;
+  margin-bottom:4px;
+  font-size:.78rem;
+}
+.step-three-points small{
+  display:block;
+  color:#938477;
+  font-size:.65rem;
+  line-height:1.45;
+}
+.step-three-tip{margin-top:0}
+.step-three-note{margin-top:15px}
+
+@media (hover:hover) and (pointer:fine){
+  .step-three-points>div:hover{
+    transform:translateX(5px);
+    border-color:#8a654d;
+    background:rgba(239,138,67,.035);
+  }
+}
+
+@media(max-width:1180px){
+  .pilot-roadmap > .step-three-feature{
+    grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);
+  }
+}
+
+@media(max-width:820px){
+  .pilot-roadmap > .step-three-feature{
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:38px 0 44px;
+  }
+  .step-three-media{
+    position:relative;
+    top:auto;
+  }
+  .step-three-frame{
+    width:100%;
+    aspect-ratio:2 / 3 !important;
+    border-radius:16px;
+  }
+  .step-three-copy{padding-top:0}
+}
+
+@media(max-width:520px){
+  .step-three-points>div{
+    padding:13px 12px 13px 54px;
+  }
+}
