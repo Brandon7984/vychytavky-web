@@ -201,3 +201,34 @@ document.addEventListener("click", (event) => {
     });
   }
 });
+
+/* 20-compartment tower selector */
+const diameterButtons = [...document.querySelectorAll(".diameter-button")];
+const discTower = document.getElementById("discTower");
+
+if (diameterButtons.length && discTower) {
+  const applyDiameter = (mode) => {
+    discTower.classList.remove("mode-125", "mode-150");
+    if (mode === "125") discTower.classList.add("mode-125");
+    if (mode === "150") discTower.classList.add("mode-150");
+
+    diameterButtons.forEach((button) => {
+      button.classList.toggle("active", button.dataset.diameter === mode);
+    });
+  };
+
+  diameterButtons.forEach((button) => {
+    button.addEventListener("click", () => applyDiameter(button.dataset.diameter));
+  });
+
+  applyDiameter("125");
+}
+
+document.querySelectorAll(".tower-slot").forEach((slot) => {
+  slot.addEventListener("click", () => {
+    document.querySelectorAll(".tower-slot.is-selected").forEach((item) => {
+      if (item !== slot) item.classList.remove("is-selected");
+    });
+    slot.classList.toggle("is-selected");
+  });
+});
