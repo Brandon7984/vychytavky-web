@@ -6,35 +6,54 @@ const saveProject = document.getElementById("saveProject");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 
-async function loadDiscSprite() {
-  const targets = [...document.querySelectorAll(".disc-sprite-image")];
+async function loadChunkedWebp(paths, selector, readyClass) {
+  const targets = [...document.querySelectorAll(selector)];
   if (!targets.length) return;
 
   try {
     const parts = await Promise.all(
-      Array.from({ length: 7 }, (_, index) =>
-        fetch(`assets/projects/sandpaper-sprite-${index + 1}.txt`, { cache: "force-cache" })
-          .then((response) => {
-            if (!response.ok) throw new Error("Sprite chunk failed: " + response.status);
-            return response.text();
-          })
+      paths.map((path) =>
+        fetch(path, { cache: "force-cache" }).then((response) => {
+          if (!response.ok) throw new Error("Image chunk failed: " + response.status + " " + path);
+          return response.text();
+        })
       )
     );
 
     const dataUri = "data:image/webp;base64," + parts.join("");
     targets.forEach((image) => {
-      image.setAttribute("href", dataUri);
-      image.setAttributeNS("http://www.w3.org/1999/xlink", "href", dataUri);
+      image.src = dataUri;
+      image.classList.add("is-loaded");
     });
-
-    document.body.classList.add("sprite-ready");
+    document.body.classList.add(readyClass);
   } catch (error) {
-    console.error("Photo sprite could not be loaded.", error);
-    document.body.classList.add("sprite-failed");
+    console.error("Project photography could not be loaded.", error);
   }
 }
 
-loadDiscSprite();
+loadChunkedWebp(
+  [
+    "assets/photos/rack-mood-v5-01.txt",
+    "assets/photos/rack-mood-v5-01b.txt",
+    "assets/photos/rack-mood-v5-02.txt",
+    "assets/photos/rack-mood-v5-03.txt",
+    "assets/photos/rack-mood-v5-04.txt"
+  ],
+  ".rack-mood-image",
+  "rack-mood-ready"
+);
+
+loadChunkedWebp(
+  [
+    "assets/photos/rack-product-v5-01.txt",
+    "assets/photos/rack-product-v5-02.txt",
+    "assets/photos/rack-product-v5-03.txt",
+    "assets/photos/rack-product-v5-04.txt",
+    "assets/photos/rack-product-v5-05.txt"
+  ],
+  ".rack-product-image",
+  "rack-product-ready"
+);
 
 function updateScrollUI() {
   const y = window.scrollY;
