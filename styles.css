@@ -2671,3 +2671,36 @@ button.callout:focus-visible{
     border-radius:16px;
   }
 }
+
+/* Reliable loading state for approved tutorial photography */
+.approved-tutorial-image{
+  opacity:.08;
+  transition:opacity .38s ease;
+}
+.approved-tutorial-image.is-loaded{
+  opacity:1;
+}
+.approved-tutorial-frame:has(.approved-tutorial-image:not(.is-loaded))::before{
+  content:"Načítavam obrazový postup…";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:grid;
+  place-items:center;
+  color:#9f8e80;
+  background:
+    linear-gradient(110deg,#17130f 20%,#241b15 40%,#17130f 60%);
+  background-size:220% 100%;
+  animation:tutorialLoading 1.25s linear infinite;
+  font-size:.67rem;
+  font-weight:850;
+  letter-spacing:.06em;
+}
+@keyframes tutorialLoading{
+  to{background-position:-220% 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .approved-tutorial-frame:has(.approved-tutorial-image:not(.is-loaded))::before{
+    animation:none;
+  }
+}
