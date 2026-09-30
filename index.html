@@ -3,200 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Praktické DIY vychytávky pre domácnosť, dielňu, záhradu a tvorenie. Materiál, náradie, obrázkový postup a hotový výsledok." />
-  <meta name="theme-color" content="#2a211b" />
-  <title>Vychytávky — dom, dielňa, záhrada</title>
+  <meta name="description" content="Vychytávky – moderné DIY projekty do domu, dielne a záhrady s obrazovým postupom." />
+  <meta name="theme-color" content="#17130f" />
+  <title>Vychytávky – praktické DIY, ktoré chceš naozaj spraviť</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="home-page">
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#top" aria-label="Vychytávky domov">
-      <span class="brand-mark">V</span>
-      <span><strong>VYCHYTÁVKY</strong><small>dom · dielňa · záhrada</small></span>
+      <span class="brand-icon" aria-hidden="true">✕</span>
+      <span class="brand-copy"><strong>VYCHYTÁVKY</strong><small>urob · oprav · vylepši</small></span>
     </a>
-
-    <nav class="top-nav" aria-label="Hlavná navigácia">
+    <nav class="desktop-nav" aria-label="Hlavná navigácia">
       <a href="#projekty">Projekty</a>
-      <a href="#ako">Ako to funguje</a>
+      <a href="#princip">Ako na to</a>
+      <a href="sandpaper.html">Ukážkový návod</a>
     </nav>
-
-    <div class="header-tools">
-      <button class="text-button" id="searchToggle" type="button" aria-controls="searchPanel" aria-expanded="false">Hľadať <kbd>/</kbd></button>
-      <button class="shuffle-button" id="randomProjectButton" type="button"><span>↻</span> Náhodný nápad</button>
-    </div>
+    <a class="header-cta" href="sandpaper.html">Projekt týždňa <span>↗</span></a>
   </header>
 
-  <aside class="search-panel" id="searchPanel" aria-hidden="true">
-    <div class="search-panel-inner">
-      <label for="searchInput">Čo chceš vyriešiť?</label>
-      <div class="search-line">
-        <input id="searchInput" type="search" placeholder="napr. drevo, káble, vrtáky…" autocomplete="off" />
-        <button id="searchClose" type="button" aria-label="Zavrieť vyhľadávanie">×</button>
-      </div>
-      <p>Hľadaj problém, materiál alebo miesto. Výsledky sa filtrujú okamžite.</p>
-    </div>
-  </aside>
-
   <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">PRAKTICKÉ NÁPADY PRE BEŽNÝ DOMOV</p>
-        <h1>Trochu dreva.<br>Trochu kovu.<br><em>A poriadna vychytávka.</em></h1>
+    <section class="home-hero">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">DOM · DIELŇA · ZÁHRADA</p>
+        <h1>Nápad je dobrý.<br><em>Hotová vec je lepšia.</em></h1>
         <p class="hero-lead">
-          Projekty, ktoré majú zmysel aj mimo internetu. Reálny materiál, normálne náradie,
-          jasný obrázkový postup a výsledok, ktorý doma alebo v dielni naozaj využiješ.
+          Praktické projekty bez nekonečného čítania. Najprv vidíš výsledok,
+          potom materiál, náradie a jasný obrazový postup.
         </p>
         <div class="hero-actions">
-          <a href="#projekty" class="primary-action">Pozrieť projekty <span>↓</span></a>
-          <button class="plain-action" data-open-project="sandpaper" type="button">Projekt týždňa ↗</button>
+          <a class="button button-primary" href="sandpaper.html">Pozrieť referenčný projekt <span>↗</span></a>
+          <a class="text-link" href="#projekty">Prelistovať nápady ↓</a>
         </div>
-        <div class="material-line" aria-label="Charakter webu">
-          <span><i class="swatch wood"></i>Drevo</span>
-          <span><i class="swatch steel"></i>Kov</span>
-          <span><i class="swatch home"></i>Domov</span>
+        <div class="hero-proof">
+          <div><strong>01</strong><span>fotorealistický výsledok</span></div>
+          <div><strong>06</strong><span>obrazových krokov</span></div>
+          <div><strong>100%</strong><span>mobilne použiteľné</span></div>
         </div>
       </div>
 
-      <button class="hero-photo" data-open-project="sandpaper" type="button" aria-label="Otvoriť projekt Stojan na brúsny papier">
-        <img src="assets/projects/sandpaper.svg" alt="Hotový stojan na brúsny papier v teple ladenej dielni" />
-        <span class="photo-badge">PROJEKT TÝŽDŇA</span>
-        <span class="photo-caption">
-          <span><strong>Stojan na brúsny papier</strong><small>60 min · zvyškové drevo · €</small></span>
-          <b>↗</b>
-        </span>
-      </button>
+      <a class="featured-visual" href="sandpaper.html" aria-label="Otvoriť projekt stojan na brúsny papier" data-reveal>
+        <svg class="sprite-crop" viewBox="277 29 321 214" role="img" aria-label="Fotorealistický stojan na brúsny papier v dielni">
+          <image href="assets/projects/sandpaper-photo-sprite.svg" width="700" height="640" />
+        </svg>
+        <span class="featured-kicker">PROJEKT TÝŽDŇA · DIELŇA</span>
+        <span class="featured-title">Stojan na brúsny papier</span>
+        <span class="featured-meta">1–2 h · jednoduché · cca 10 €</span>
+        <span class="featured-arrow">↗</span>
+      </a>
     </section>
 
-    <section class="project-browser" id="projekty">
-      <div class="browser-head">
+    <section class="marquee" aria-label="Kategórie">
+      <div class="marquee-track">
+        <span>DREVO</span><i>✦</i><span>KOV</span><i>✦</i><span>DOMÁCNOSŤ</span><i>✦</i><span>DIELŇA</span><i>✦</i><span>ZÁHRADA</span><i>✦</i><span>TVORENIE</span><i>✦</i>
+        <span>DREVO</span><i>✦</i><span>KOV</span><i>✦</i><span>DOMÁCNOSŤ</span><i>✦</i><span>DIELŇA</span><i>✦</i><span>ZÁHRADA</span><i>✦</i><span>TVORENIE</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projekty">
+      <div class="section-head" data-reveal>
         <div>
-          <p class="eyebrow">6 PRVÝCH PROJEKTOV</p>
-          <h2>Vyber si, čo dnes<br><em>vylepšíš.</em></h2>
+          <p class="eyebrow dark">VYBRANÉ VYCHYTÁVKY</p>
+          <h2>Nie katalóg.<br><em>Zbierka vecí, čo fungujú.</em></h2>
         </div>
-        <div class="browser-controls">
-          <div class="filter-row" id="categoryFilters">
-            <button class="filter active" data-filter="all">Všetko</button>
-            <button class="filter" data-filter="Domácnosť">Domácnosť</button>
-            <button class="filter" data-filter="Dielňa">Dielňa</button>
-            <button class="filter" data-filter="Záhrada">Záhrada</button>
-            <button class="filter" data-filter="Tvorenie">Tvorenie</button>
-          </div>
-          <span id="resultCount" class="result-count" aria-live="polite"></span>
+        <p class="section-intro">Prvý projekt je spracovaný kompletne ako referencia. Ostatné zatiaľ ukazujú smer, ktorým môže web ďalej rásť.</p>
+      </div>
+
+      <div class="project-feature" data-reveal>
+        <a class="project-feature-image" href="sandpaper.html">
+          <svg class="sprite-crop" viewBox="277 29 321 214" role="img" aria-label="Stojan na brúsny papier">
+            <image href="assets/projects/sandpaper-photo-sprite.svg" width="700" height="640" />
+          </svg>
+          <span class="image-pill">KOMPLETNÝ NÁVOD</span>
+        </a>
+        <div class="project-feature-copy">
+          <span class="project-number">01 / REFERENČNÝ PROJEKT</span>
+          <h3>Stojan na<br>brúsny papier</h3>
+          <p>Fotorealistický výsledok, materiál, náradie, rozmery, šesť obrazových krokov, interaktívne callouty a tipy z dielne.</p>
+          <div class="project-tags"><span>Drevo</span><span>Dielňa</span><span>Organizácia</span></div>
+          <a class="button button-dark" href="sandpaper.html">Otvoriť celý návod <span>↗</span></a>
         </div>
       </div>
 
-      <div class="project-list" id="projectList">
-        <article class="project-row" tabindex="0" role="button" data-project="entryway" data-category="Domácnosť" data-search="vstup predsieň organizér kľúče polička domácnosť drevo kov">
-          <div class="project-thumb"><img src="assets/projects/entryway.svg" alt="" /></div>
-          <div class="project-copy"><span class="project-index">01 · DOMÁCNOSŤ</span><h3>Mini odkladacia stanica pri dverách</h3><p>Drevo, oceľové háčiky a konečne jedno miesto na veci, ktoré stále hľadáš.</p></div>
-          <div class="project-data"><span>35 min</span><span>Ľahké</span><span>€</span></div>
-          <span class="row-arrow">↗</span>
+      <div class="coming-grid">
+        <article class="coming-card" data-reveal>
+          <img src="assets/projects/entryway.svg" alt="Odkladacia stanica pri dverách" />
+          <div><span>DOMÁCNOSŤ · PRIPRAVUJEME</span><h3>Odkladacia stanica pri dverách</h3></div>
         </article>
-
-        <article class="project-row" tabindex="0" role="button" data-project="sandpaper" data-category="Dielňa" data-search="dielňa drevo brúsny papier organizér náradie stojan zrnitosť">
-          <div class="project-thumb"><img src="assets/projects/sandpaper.svg" alt="" /></div>
-          <div class="project-copy"><span class="project-index">02 · DIELŇA</span><h3>Stojan na brúsny papier zo zvyškov dreva</h3><p>Každá zrnitosť na svojom mieste. Malý projekt s veľkým efektom na poriadok.</p></div>
-          <div class="project-data"><span>60 min</span><span>Stredné</span><span>€</span></div>
-          <span class="row-arrow">↗</span>
+        <article class="coming-card" data-reveal>
+          <img src="assets/projects/herbs.svg" alt="Stojan na bylinky" />
+          <div><span>ZÁHRADA · PRIPRAVUJEME</span><h3>Kompaktný stojan na bylinky</h3></div>
         </article>
-
-        <article class="project-row" tabindex="0" role="button" data-project="herbs" data-category="Záhrada" data-search="záhrada bylinky kvetináč stojan kuchyňa drevo pestovanie">
-          <div class="project-thumb"><img src="assets/projects/herbs.svg" alt="" /></div>
-          <div class="project-copy"><span class="project-index">03 · ZÁHRADA</span><h3>Kompaktný stojan na bylinky</h3><p>Teplé drevo, terakota a tri úrovne zelene aj tam, kde nie je veľa miesta.</p></div>
-          <div class="project-data"><span>45 min</span><span>Ľahké</span><span>€€</span></div>
-          <span class="row-arrow">↗</span>
+        <article class="coming-card" data-reveal>
+          <img src="assets/projects/drills.svg" alt="Stojan na vrtáky" />
+          <div><span>DIELŇA · PRIPRAVUJEME</span><h3>Prehľadný stojan na vrtáky</h3></div>
         </article>
-
-        <article class="project-row" tabindex="0" role="button" data-project="cables" data-category="Tvorenie" data-search="papier tvorenie káble organizér nabíjačky recyklácia krabička kartón">
-          <div class="project-thumb"><img src="assets/projects/cables.svg" alt="" /></div>
-          <div class="project-copy"><span class="project-index">04 · TVORENIE</span><h3>Papierový organizér na káble</h3><p>Pevný kartón namiesto ďalšieho plastu. Jednoduché priehradky a pokoj v zásuvke.</p></div>
-          <div class="project-data"><span>25 min</span><span>Ľahké</span><span>€</span></div>
-          <span class="row-arrow">↗</span>
-        </article>
-
-        <article class="project-row" tabindex="0" role="button" data-project="drawer" data-category="Domácnosť" data-search="kuchyňa zásuvka deliace priečky organizácia poriadok preglejka">
-          <div class="project-thumb"><img src="assets/projects/drawer.svg" alt="" /></div>
-          <div class="project-copy"><span class="project-index">05 · DOMÁCNOSŤ</span><h3>Nastaviteľné priečky do zásuvky</h3><p>Bez lepidla, bez vŕtania. Rozloženie, ktoré si neskôr pokojne celé zmeníš.</p></div>
-          <div class="project-data"><span>30 min</span><span>Ľahké</span><span>€</span></div>
-          <span class="row-arrow">↗</span>
-        </article>
-
-        <article class="project-row" tabindex="0" role="button" data-project="drills" data-category="Dielňa" data-search="dielňa vrtáky stojan drevo poriadok náradie oceľ">
-          <div class="project-thumb"><img src="assets/projects/drills.svg" alt="" /></div>
-          <div class="project-copy"><span class="project-index">06 · DIELŇA</span><h3>Prehľadný stojan na vrtáky</h3><p>Drevený blok, oceľové vrtáky a každý priemer presne tam, kde ho čakáš.</p></div>
-          <div class="project-data"><span>75 min</span><span>Stredné</span><span>€€</span></div>
-          <span class="row-arrow">↗</span>
-        </article>
-      </div>
-
-      <div class="empty-state" id="emptyState" hidden>
-        <strong>Nič sme nenašli.</strong>
-        <p>Skús iné slovo alebo inú kategóriu.</p>
       </div>
     </section>
 
-    <section class="manifesto" id="ako">
-      <div>
-        <p class="eyebrow light">JEDEN FORMÁT PRE KAŽDÝ PROJEKT</p>
-        <h2>Najprv vidíš.<br>Potom vyrábaš.</h2>
+    <section class="principle-section" id="princip">
+      <div class="principle-copy" data-reveal>
+        <p class="eyebrow">NÁVOD BEZ VATY</p>
+        <h2>Vidíš.<br>Rozumieš.<br><em>Spravíš.</em></h2>
       </div>
-      <div class="manifesto-steps">
-        <article><span>01</span><strong>Hotový výsledok</strong><p>Veľký vizuál hneď ukáže, či je to projekt pre teba.</p></article>
-        <article><span>02</span><strong>Materiál a náradie</strong><p>Žiadne prekvapenie v polovici výroby. Všetko je vypísané vopred.</p></article>
-        <article><span>03</span><strong>Obrázkový postup</strong><p>Každý krok má vlastnú grafiku a krátky popis.</p></article>
-        <article><span>04</span><strong>Finta na záver</strong><p>Praktický detail, ktorý ušetrí čas, materiál alebo nervy.</p></article>
+      <div class="principle-list">
+        <article data-reveal><span>01</span><div><h3>Výsledok ako prvý</h3><p>Veľká fotografia ti okamžite povie, či je projekt pre teba.</p></div></article>
+        <article data-reveal><span>02</span><div><h3>Realistická príprava</h3><p>Materiál, náradie, čas, cena a rozmery ešte pred prvým rezom.</p></div></article>
+        <article data-reveal><span>03</span><div><h3>Obrazový postup</h3><p>Každý krok má fotografiu, krátky popis a vizuálnu poznámku presne tam, kde ju potrebuješ.</p></div></article>
+        <article data-reveal><span>04</span><div><h3>Mobil v dielni</h3><p>Veľké dotykové prvky, čitateľný text a postup, ktorý sa dobre používa jednou rukou.</p></div></article>
       </div>
+    </section>
+
+    <section class="closing-cta" data-reveal>
+      <p class="eyebrow dark">POZRIME SA DOVNÚTRA</p>
+      <h2>Jeden projekt.<br><em>Spracovaný poriadne.</em></h2>
+      <a class="button button-primary" href="sandpaper.html">Stojan na brúsny papier <span>↗</span></a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <strong>VYCHYTÁVKY</strong>
-    <p>Moderné domáce DIY bez sterilného katalógového pocitu.</p>
+    <a class="brand footer-brand" href="#top"><span class="brand-icon">✕</span><strong>VYCHYTÁVKY</strong></a>
+    <p>Praktické DIY pre ľudí, ktorí chcú veci naozaj dokončiť.</p>
     <a href="#top">Hore ↑</a>
   </footer>
-
-  <dialog class="project-dialog" id="projectDialog">
-    <button class="dialog-close" id="dialogClose" type="button" aria-label="Zavrieť detail projektu">×</button>
-
-    <div class="dialog-hero">
-      <div class="dialog-photo-wrap">
-        <img id="dialogImage" class="dialog-photo" src="" alt="" />
-        <span class="dialog-photo-tag">HOTOVÝ VÝSLEDOK</span>
-      </div>
-      <div class="dialog-title">
-        <div class="dialog-code"><span id="dialogNumber"></span><span id="dialogCategory"></span></div>
-        <h2 id="dialogTitle"></h2>
-        <p id="dialogLead"></p>
-        <div class="dialog-stats" id="dialogStats"></div>
-      </div>
-    </div>
-
-    <div class="dialog-content">
-      <section class="prep-grid">
-        <article>
-          <p class="dialog-label">MATERIÁL</p>
-          <ul id="dialogMaterials" class="check-list"></ul>
-        </article>
-        <article>
-          <p class="dialog-label">NÁRADIE</p>
-          <ul id="dialogTools" class="check-list tool-list"></ul>
-        </article>
-      </section>
-
-      <section class="visual-guide">
-        <div class="guide-head">
-          <div><p class="dialog-label">OBRÁZKOVÝ POSTUP</p><h3>Od materiálu k hotovej veci</h3></div>
-          <span id="dialogStepCount"></span>
-        </div>
-        <div id="dialogVisualSteps" class="visual-steps"></div>
-      </section>
-
-      <aside class="pro-tip">
-        <span>FINTA</span>
-        <p id="dialogTip"></p>
-      </aside>
-    </div>
-  </dialog>
 
   <script src="script.js"></script>
 </body>
