@@ -55,6 +55,17 @@ loadChunkedWebp(
   "rack-product-ready"
 );
 
+loadChunkedWebp(
+  [
+    "assets/photos/key-shelf-master-01.txt",
+    "assets/photos/key-shelf-master-02.txt",
+    "assets/photos/key-shelf-master-03.txt",
+    "assets/photos/key-shelf-master-04.txt"
+  ],
+  ".key-shelf-master-image",
+  "key-shelf-master-ready"
+);
+
 
 
 loadChunkedWebp(
