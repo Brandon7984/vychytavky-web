@@ -2634,3 +2634,40 @@ button.callout:focus-visible{
     font-size:.46rem;
   }
 }
+
+
+/* Approved full tutorial posters for steps 1–2 */
+.approved-tutorial-frame{
+  aspect-ratio:2 / 3 !important;
+  min-height:0 !important;
+  clip-path:none !important;
+  transform:none !important;
+  overflow:hidden;
+  background:#0f1212;
+  border-color:#5e4a3c;
+}
+.approved-tutorial-frame .approved-tutorial-image{
+  position:relative !important;
+  inset:auto !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center top !important;
+  transform:none !important;
+  filter:none !important;
+  background:#0f1212;
+}
+.approved-tutorial-frame .step-one-vignette,
+.approved-tutorial-frame .step-two-vignette{
+  display:none;
+}
+.approved-tutorial-frame .step-one-photo-label{
+  display:none;
+}
+@media(max-width:820px){
+  .approved-tutorial-frame{
+    aspect-ratio:2 / 3 !important;
+    width:100%;
+    border-radius:16px;
+  }
+}
