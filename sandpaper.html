@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Vysoký dielenský organizér na brúsne kotúče Ø125 a Ø150 mm z 6 mm preglejky. 20 priečinkov, presný rozpis zrnitostí a obrázkový postup." />
+  <meta name="description" content="Vertikálny zakladač na brúsne kotúče pre excentrické brúsky Ø125 a Ø150 mm. 20 priečinkov, 6 mm preglejka a fotorealistický postup." />
   <meta name="theme-color" content="#17130f" />
-  <title>Organizér na brúsne kotúče | Vychytávky</title>
+  <title>Zakladač na brúsne kotúče | Vychytávky</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="project-page tower-project">
+<body class="project-page rack-project-page">
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <header class="site-header" id="siteHeader">
@@ -17,227 +17,323 @@
       <span class="brand-copy"><strong>VYCHYTÁVKY</strong><small>urob · oprav · vylepši</small></span>
     </a>
     <nav class="desktop-nav" aria-label="Projektová navigácia">
-      <a href="#navrh">Návrh</a>
+      <a href="#vysledok">Výsledok</a>
+      <a href="#rozmery">Rozmery</a>
       <a href="#material">Materiál</a>
-      <a href="#rozpis">20 priečinkov</a>
       <a href="#postup">Postup</a>
     </nav>
     <a class="header-cta" href="index.html">Všetky projekty <span>↗</span></a>
   </header>
 
   <main>
-    <section class="tower-hero" id="navrh">
-      <div class="tower-hero-copy" data-reveal>
+    <section class="rack-hero">
+      <div class="rack-hero-copy" data-reveal>
         <div class="breadcrumbs"><a href="index.html">Domov</a><span>›</span><span>Dielňa</span><span>›</span><strong>Brúsne kotúče</strong></div>
-        <p class="eyebrow">REFERENČNÝ PROJEKT · PODĽA REÁLNEHO KUSU Z DIELNE</p>
-        <h1>Úzky stojan.<br><em>20 zrnitostí po ruke.</em></h1>
+        <p class="eyebrow">PODĽA REÁLNEHO STOJANA Z DIELNE · REFERENČNÝ PROJEKT 01</p>
+        <h1>Zakladač na<br><em>brúsne kotúče.</em></h1>
         <p class="project-lead">
-          Vysoký dielenský organizér z 6 mm preglejky, inšpirovaný reálnym stojanom.
-          Horná polovica patrí kotúčom Ø125 mm, spodná Ø150 mm. Každý priemer má
-          desať samostatných priečinkov od P40 po P400.
+          Úzky vertikálny stojan z 6 mm preglejky, ktorý využije výšku namiesto pracovnej plochy.
+          Dvadsať priečinkov rozdelí kotúče Ø125 a Ø150 mm podľa zrnitosti od P40 po P400.
         </p>
 
-        <div class="tower-key-stats">
-          <div><strong>120</strong><span>cm výška</span></div>
-          <div><strong>17 × 15</strong><span>cm šírka × hĺbka</span></div>
-          <div><strong>6</strong><span>mm preglejka</span></div>
-          <div><strong>20</strong><span>priečinkov</span></div>
+        <div class="rack-key-stats">
+          <div><span>ROZMER</span><strong>17 × 15 × 120 cm</strong></div>
+          <div><span>MATERIÁL</span><strong>preglejka 6 mm</strong></div>
+          <div><span>KAPACITA</span><strong>20 priečinkov</strong></div>
+          <div><span>KOTÚČE</span><strong>Ø125 + Ø150 mm</strong></div>
         </div>
 
         <div class="hero-actions">
-          <a class="button button-primary" href="#rozpis">Pozrieť presný rozpis <span>↓</span></a>
+          <a class="button button-primary" href="#postup">Pozrieť výrobu <span>↓</span></a>
           <button class="save-button" id="saveProject" type="button"><span>♡</span> Uložiť projekt</button>
         </div>
-
-        <p class="project-note">
-          <strong>Poznámka:</strong> údaj „P302“ som v návrhu interpretoval ako štandardnú zrnitosť <strong>P320</strong>.
-        </p>
       </div>
 
-      <div class="tower-stage" data-reveal>
-        <div class="tower-dimension tower-height"><span>120 cm</span></div>
-        <div class="tower-dimension tower-width"><span>17 cm</span></div>
-
-        <div class="disc-tower" id="discTower" aria-label="Schéma organizéra s dvadsiatimi priečinkami">
-          <div class="tower-side left"></div>
-          <div class="tower-side right"></div>
-          <div class="tower-group-label label-125">Ø125 mm · 10 priečinkov</div>
-          <div class="tower-group-label label-150">Ø150 mm · 10 priečinkov</div>
-
-          <div class="tower-slots">
-            <div class="tower-slot d125" style="--slot:7"><b>P40</b><span>7,0 cm</span><i class="disc-stack coarse"></i></div>
-            <div class="tower-slot d125" style="--slot:6.8"><b>P60</b><span>6,8 cm</span><i class="disc-stack coarse"></i></div>
-            <div class="tower-slot d125" style="--slot:6.5"><b>P80</b><span>6,5 cm</span><i class="disc-stack coarse"></i></div>
-            <div class="tower-slot d125" style="--slot:6"><b>P100</b><span>6,0 cm</span><i class="disc-stack medium"></i></div>
-            <div class="tower-slot d125" style="--slot:5.5"><b>P120</b><span>5,5 cm</span><i class="disc-stack medium"></i></div>
-            <div class="tower-slot d125" style="--slot:5"><b>P150</b><span>5,0 cm</span><i class="disc-stack medium"></i></div>
-            <div class="tower-slot d125" style="--slot:4.7"><b>P180</b><span>4,7 cm</span><i class="disc-stack fine"></i></div>
-            <div class="tower-slot d125" style="--slot:4.4"><b>P240</b><span>4,4 cm</span><i class="disc-stack fine"></i></div>
-            <div class="tower-slot d125" style="--slot:4"><b>P320</b><span>4,0 cm</span><i class="disc-stack fine"></i></div>
-            <div class="tower-slot d125" style="--slot:3.8"><b>P400</b><span>3,8 cm</span><i class="disc-stack fine"></i></div>
-
-            <div class="tower-divider"><span>Ø150 mm</span></div>
-
-            <div class="tower-slot d150" style="--slot:7"><b>P40</b><span>7,0 cm</span><i class="disc-stack coarse large"></i></div>
-            <div class="tower-slot d150" style="--slot:6.8"><b>P60</b><span>6,8 cm</span><i class="disc-stack coarse large"></i></div>
-            <div class="tower-slot d150" style="--slot:6.5"><b>P80</b><span>6,5 cm</span><i class="disc-stack coarse large"></i></div>
-            <div class="tower-slot d150" style="--slot:6"><b>P100</b><span>6,0 cm</span><i class="disc-stack medium large"></i></div>
-            <div class="tower-slot d150" style="--slot:5.5"><b>P120</b><span>5,5 cm</span><i class="disc-stack medium large"></i></div>
-            <div class="tower-slot d150" style="--slot:5"><b>P150</b><span>5,0 cm</span><i class="disc-stack medium large"></i></div>
-            <div class="tower-slot d150" style="--slot:4.7"><b>P180</b><span>4,7 cm</span><i class="disc-stack fine large"></i></div>
-            <div class="tower-slot d150" style="--slot:4.4"><b>P240</b><span>4,4 cm</span><i class="disc-stack fine large"></i></div>
-            <div class="tower-slot d150" style="--slot:4"><b>P320</b><span>4,0 cm</span><i class="disc-stack fine large"></i></div>
-            <div class="tower-slot d150" style="--slot:3.8"><b>P400</b><span>3,8 cm</span><i class="disc-stack fine large"></i></div>
-          </div>
+      <div class="rack-hero-visual" data-reveal>
+        <img src="assets/projects/sandpaper-rack-20.svg" alt="Vertikálny zakladač s 20 priečinkami pre okrúhle brúsne kotúče 125 a 150 mm" />
+        <div class="hero-hotspot rack-hotspot rack-hotspot-a">
+          <button class="hotspot-dot" type="button" aria-label="Zobraziť informáciu o rozmere">+</button>
+          <span class="hotspot-note"><strong>120 cm na výšku</strong> Úzky stojan využije miesto medzi pracovnými zónami, nie plochu stola.</span>
         </div>
-
-        <div class="tower-depth-card"><span>HĹBKA</span><strong>15 cm</strong><small>bez vnútornej zadnej steny, aby Ø150 mm kotúč využil celú hĺbku</small></div>
+        <div class="hero-hotspot rack-hotspot rack-hotspot-b">
+          <button class="hotspot-dot" type="button" aria-label="Zobraziť informáciu o kotúčoch">+</button>
+          <span class="hotspot-note"><strong>2 × 10 priečinkov</strong> Horná desiatka Ø125 mm, spodná desiatka Ø150 mm.</span>
+        </div>
+        <span class="real-reference-pill">INŠPIROVANÉ REÁLNYM KUSOM Z DIELNE</span>
       </div>
     </section>
 
     <nav class="project-subnav" id="projectSubnav" aria-label="Obsah projektu">
-      <a href="#navrh">Návrh</a>
-      <a href="#material">Rezací plán</a>
-      <a href="#rozpis">Rozpis priečinkov</a>
-      <a href="#postup">Postup</a>
+      <a href="#vysledok">Prehľad</a>
+      <a href="#rozmery">Rozmery</a>
+      <a href="#material">Materiál</a>
+      <a href="#postup">Obrazový postup</a>
       <a href="#tip">Finta</a>
     </nav>
 
-    <section class="real-design-section">
-      <div class="real-design-copy" data-reveal>
-        <p class="eyebrow dark">PREČO TAKÝTO TVAR</p>
-        <h2>Využije výšku.<br><em>Nezožerie pracovný stôl.</em></h2>
+    <section class="rack-overview" id="vysledok">
+      <div class="rack-overview-copy" data-reveal>
+        <p class="eyebrow dark">PREČO TAKTO VYSOKÝ?</p>
+        <h2>20 zrnitostí na ploche<br><em>17 × 15 centimetrov.</em></h2>
         <p>
-          Pôdorys má iba 17 × 15 cm. Namiesto širokého stolového organizéra ide hore do výšky.
-          Jemnejšie zrnitosti potrebujú menej miesta, preto sa otvory postupne zmenšujú.
-          Väčšie a ťažšie Ø150 mm kotúče sú v spodnej polovici.
+          Konštrukcia kopíruje princíp reálneho stojana: dve bočnice a medzi nimi hustá séria políc.
+          Kotúče neležia v krabiciach na sebe. Každá zrnitosť dostane vlastnú výšku podľa toho,
+          koľko kusov sa pri nej typicky nazbiera.
         </p>
-        <div class="design-callouts">
-          <article><span>01</span><strong>15,8 cm vnútorná šírka</strong><p>17 cm mínus dve 6 mm bočnice. Ø150 mm kotúč má približne 8 mm celkovej bočnej vôle.</p></article>
-          <article><span>02</span><strong>21 vodorovných dielov</strong><p>Dno + 19 deliacich políc + vrchný diel. Spolu 12,6 cm materiálu vo výške.</p></article>
-          <article><span>03</span><strong>107,4 cm čistých otvorov</strong><p>Dve identické sady po 53,7 cm. S preglejkou to dá presne 120 cm.</p></article>
-        </div>
+        <ul class="feature-list">
+          <li><span>01</span>Horných 10 priečinkov pre Ø125 mm</li>
+          <li><span>02</span>Dolných 10 priečinkov pre Ø150 mm</li>
+          <li><span>03</span>P40 a P60 majú najviac priestoru</li>
+          <li><span>04</span>Jemné P320 a P400 sú kompaktnejšie</li>
+        </ul>
       </div>
 
-      <div class="height-math" data-reveal>
-        <div class="math-head"><span>VÝŠKOVÁ SKLADAČKA</span><strong>120,0 cm</strong></div>
-        <div class="math-bar"><span style="--pct:89.5%">20 otvorov · 107,4 cm</span><span style="--pct:10.5%">21 × 6 mm · 12,6 cm</span></div>
-        <p>107,4 + 12,6 = <strong>120,0 cm</strong></p>
+      <div class="rack-overview-media" data-reveal>
+        <img src="assets/projects/sandpaper-rack-20.svg" alt="Schéma vysokého zakladača na kotúče" />
+        <div class="dimension-floating-card">
+          <span>VONKAJŠIA ŠÍRKA</span><strong>17 cm</strong>
+          <span>VNÚTORNÁ ŠÍRKA</span><strong>15,8 cm</strong>
+          <small>150 mm kotúč má približne 8 mm celkovej bočnej vôle.</small>
+        </div>
       </div>
     </section>
 
-    <section class="prep-section" id="material">
+    <section class="rack-dimensions" id="rozmery">
+      <div class="rack-dimension-intro" data-reveal>
+        <p class="eyebrow">ROZMEROVÝ SYSTÉM</p>
+        <h2>Hrubé zrno potrebuje<br><em>viac vzduchu.</em></h2>
+        <p>
+          Pri hrubších zrnitostiach býva v dielni viac kotúčov, preto sú priečinky vyššie.
+          Jemnejšie papiere dostanú menej priestoru. Táto zostava presne vychádza na celkovú výšku 120 cm.
+        </p>
+        <div class="math-proof">
+          <span>20 otvorov</span><b>107,4 cm</b>
+          <span>21 vrstiev preglejky × 6 mm</span><b>12,6 cm</b>
+          <span>spolu</span><b>120,0 cm</b>
+        </div>
+      </div>
+
+      <div class="grit-schedule-wrap" data-reveal>
+        <div class="grit-schedule-head">
+          <div><span>Ø125 mm</span><small>horných 10 priečinkov</small></div>
+          <div><span>Ø150 mm</span><small>spodných 10 priečinkov</small></div>
+        </div>
+        <div class="grit-schedule-grid">
+          <div class="grit-table">
+            <div class="grit-row grit-title"><span>Zrnitosť</span><span>výška otvoru</span></div>
+            <div class="grit-row coarse"><b>P40</b><span>7,0 cm</span></div>
+            <div class="grit-row coarse"><b>P60</b><span>7,0 cm</span></div>
+            <div class="grit-row coarse"><b>P80</b><span>6,5 cm</span></div>
+            <div class="grit-row"><b>P100</b><span>5,6 cm</span></div>
+            <div class="grit-row"><b>P120</b><span>5,2 cm</span></div>
+            <div class="grit-row"><b>P150</b><span>5,0 cm</span></div>
+            <div class="grit-row"><b>P180</b><span>4,7 cm</span></div>
+            <div class="grit-row fine"><b>P240</b><span>4,4 cm</span></div>
+            <div class="grit-row fine"><b>P320</b><span>4,3 cm</span></div>
+            <div class="grit-row fine"><b>P400</b><span>4,0 cm</span></div>
+          </div>
+          <div class="grit-table">
+            <div class="grit-row grit-title"><span>Zrnitosť</span><span>výška otvoru</span></div>
+            <div class="grit-row coarse"><b>P40</b><span>7,0 cm</span></div>
+            <div class="grit-row coarse"><b>P60</b><span>7,0 cm</span></div>
+            <div class="grit-row coarse"><b>P80</b><span>6,5 cm</span></div>
+            <div class="grit-row"><b>P100</b><span>5,6 cm</span></div>
+            <div class="grit-row"><b>P120</b><span>5,2 cm</span></div>
+            <div class="grit-row"><b>P150</b><span>5,0 cm</span></div>
+            <div class="grit-row"><b>P180</b><span>4,7 cm</span></div>
+            <div class="grit-row fine"><b>P240</b><span>4,4 cm</span></div>
+            <div class="grit-row fine"><b>P320</b><span>4,3 cm</span></div>
+            <div class="grit-row fine"><b>P400</b><span>4,0 cm</span></div>
+          </div>
+        </div>
+        <p class="schedule-note">P302 z pôvodného popisu som interpretoval ako bežnú zrnitosť <strong>P320</strong>. Posledný priečinok je P400.</p>
+      </div>
+    </section>
+
+    <section class="prep-section rack-prep" id="material">
       <div class="section-head compact" data-reveal>
         <div>
           <p class="eyebrow dark">REZACÍ PLÁN</p>
-          <h2>Jedna doska.<br><em>Veľa poličiek.</em></h2>
+          <h2>Jedna hrúbka.<br><em>Minimum komplikácií.</em></h2>
         </div>
-        <p class="section-intro">Konštrukcia je zámerne jednoduchá. Všetky diely sú z 6 mm preglejky. Pri výške 120 cm musí byť stojan upevnený k stene alebo k susednému regálu.</p>
+        <p class="section-intro">
+          Celý hlavný korpus je zo 6 mm preglejky. Pri vonkajšej šírke 17 cm ostáva medzi bočnicami 15,8 cm,
+          čo pohodlne prijme aj 150 mm kotúč.
+        </p>
       </div>
 
-      <div class="cut-grid">
-        <article class="cut-card" data-reveal><span>2×</span><strong>Bočnica</strong><b>1200 × 150 × 6 mm</b><p>ľavá + pravá</p></article>
-        <article class="cut-card" data-reveal><span>21×</span><strong>Polica</strong><b>158 × 150 × 6 mm</b><p>dno, deliace police a vrch</p></article>
-        <article class="cut-card" data-reveal><span>2×</span><strong>Montážny pásik</strong><b>158 × 40 × 6 mm</b><p>voliteľne vzadu hore a dole</p></article>
-        <article class="cut-card accent" data-reveal><span>≈</span><strong>Plocha preglejky</strong><b>0,87 m²</b><p>plus rezerva na rezy a chyby</p></article>
+      <div class="cutlist-grid">
+        <article class="cut-card" data-reveal>
+          <span class="cut-count">2×</span>
+          <h3>Bočnice</h3>
+          <strong>120 × 15 cm</strong>
+          <p>6 mm preglejka. Tvoria celú výšku stojana.</p>
+        </article>
+        <article class="cut-card" data-reveal>
+          <span class="cut-count">21×</span>
+          <h3>Vodorovné police</h3>
+          <strong>15,8 × 15 cm</strong>
+          <p>Vrchná, spodná a 19 vnútorných deliacich políc.</p>
+        </article>
+        <article class="cut-card" data-reveal>
+          <span class="cut-count">20×</span>
+          <h3>Štítky</h3>
+          <strong>P40 → P400</strong>
+          <p>Dve rovnaké sady. Jedna pre Ø125, druhá pre Ø150 mm.</p>
+        </article>
       </div>
 
-      <div class="tool-strip" data-reveal>
-        <span>stolová / okružná píla</span><span>uholník</span><span>meter</span><span>lepidlo D3</span><span>svorky</span><span>brúska</span><span>štítky P40–P400</span>
+      <div class="prep-columns">
+        <article class="prep-card" data-reveal>
+          <div class="prep-icon">▰</div>
+          <p class="eyebrow dark">MATERIÁL</p>
+          <h3>Čo potrebuješ</h3>
+          <ul class="resource-list">
+            <li><strong>Preglejka 6 mm</strong><span>približne 0,9 m² čistého materiálu</span></li>
+            <li><strong>Lepidlo na drevo D3</strong><span>tenká súvislá vrstva v spojoch</span></li>
+            <li><strong>Kolíčky / brady 18–25 mm</strong><span>alebo veľmi jemné predvŕtané skrutky</span></li>
+            <li><strong>2–4 skrutky do steny</strong><span>podľa podkladu a spôsobu uchytenia</span></li>
+            <li><strong>Štítky zrnitostí</strong><span>20 kusov</span></li>
+          </ul>
+        </article>
+
+        <article class="prep-card steel-card" data-reveal>
+          <div class="prep-icon">⌁</div>
+          <p class="eyebrow dark">NÁRADIE</p>
+          <h3>Čo bude pracovať</h3>
+          <ul class="resource-list">
+            <li><strong>Stolová / okružná píla</strong><span>rovné a opakovateľné rezy</span></li>
+            <li><strong>Meter + uholník</strong><span>rozmeranie 20 otvorov</span></li>
+            <li><strong>Vŕtačka / skrutkovač</strong><span>uchytenie stojana na stenu</span></li>
+            <li><strong>Klincovačka alebo kladivko</strong><span>rýchle istenie tenkých políc</span></li>
+            <li><strong>Brúska</strong><span>zjemnenie rezných hrán P180–P240</span></li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section class="compartment-section" id="rozpis">
-      <div class="section-head compact" data-reveal>
-        <div>
-          <p class="eyebrow dark">PRESNÝ ROZPIS</p>
-          <h2>Hrubý papier potrebuje<br><em>viac priestoru.</em></h2>
-        </div>
-        <div class="diameter-switch" role="group" aria-label="Zvýrazniť priemer">
-          <button type="button" class="diameter-button active" data-diameter="125">Ø125 mm</button>
-          <button type="button" class="diameter-button" data-diameter="150">Ø150 mm</button>
-          <button type="button" class="diameter-button" data-diameter="all">Oboje</button>
-        </div>
-      </div>
-
-      <div class="grit-table" data-reveal>
-        <div class="grit-row head"><span>Zrnitosť</span><span>Čistá výška otvoru</span><span>Dôvod</span></div>
-        <div class="grit-row"><strong>P40</strong><b>7,0 cm</b><span>najhrubšie kotúče, najväčší balík</span></div>
-        <div class="grit-row"><strong>P60</strong><b>6,8 cm</b><span>veľká zásoba pracovnej zrnitosti</span></div>
-        <div class="grit-row"><strong>P80</strong><b>6,5 cm</b><span>často používaná hrubšia zrnitosť</span></div>
-        <div class="grit-row"><strong>P100</strong><b>6,0 cm</b><span>stredne veľká zásoba</span></div>
-        <div class="grit-row"><strong>P120</strong><b>5,5 cm</b><span>bežná medzizrnitost</span></div>
-        <div class="grit-row"><strong>P150</strong><b>5,0 cm</b><span>už menší počet kotúčov</span></div>
-        <div class="grit-row"><strong>P180</strong><b>4,7 cm</b><span>jemnejšie brúsenie</span></div>
-        <div class="grit-row"><strong>P240</strong><b>4,4 cm</b><span>menšia spotreba</span></div>
-        <div class="grit-row"><strong>P320</strong><b>4,0 cm</b><span>jemné dokončovanie</span></div>
-        <div class="grit-row"><strong>P400</strong><b>3,8 cm</b><span>najmenšia potrebná zásoba</span></div>
-      </div>
-
-      <p class="table-note" data-reveal>Táto desaťriadková sada sa zopakuje dvakrát: raz pre Ø125 mm a raz pre Ø150 mm. Súčet otvorov jednej sady je presne <strong>53,7 cm</strong>.</p>
-    </section>
-
-    <section class="steps-section" id="postup">
+    <section class="steps-section rack-steps" id="postup">
       <div class="steps-heading" data-reveal>
-        <p class="eyebrow dark">PRACOVNÝ POSTUP</p>
-        <h2>Najdôležitejší nástroj?<br><em>Rozmerová šablóna.</em></h2>
-        <p>Pri dvadsiatich priečinkoch sa chyba vie násobiť. Preto prv než začneš lepiť, prenes všetky výšky na jednu dlhú meraciu lištu a podľa nej montuj police.</p>
+        <p class="eyebrow dark">OBRAZOVÝ POSTUP · 6 KROKOV</p>
+        <h2>Od jednej dosky<br><em>k dvadsiatim priečinkom.</em></h2>
+        <p>
+          Fotografie slúžia ako pracovná orientácia, callouty zvýrazňujú kritické miesta.
+          Na mobile stačí na bod ťuknúť a poznámka sa otvorí pod prstom.
+        </p>
       </div>
 
-      <div class="steps-timeline tower-steps">
-        <article class="step-card" data-reveal>
+      <div class="steps-timeline">
+        <article class="step-card" data-step="01" data-reveal>
           <div class="step-photo">
-            <svg class="sprite-crop" viewBox="0 600 450 300" preserveAspectRatio="xMidYMid slice"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
-            <div class="photo-callout"><span></span><strong>2 × 120 cm</strong><small>bočnice narež ako prvé</small></div>
+            <svg class="sprite-crop" viewBox="0 600 450 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Rezanie dielov z preglejky"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
+            <button class="callout callout-right interactive-callout" type="button"><span class="callout-line"></span><strong>6 mm všade</strong><small>rovnaká hrúbka zjednoduší rezanie aj výpočet výšky</small></button>
           </div>
-          <div class="step-content"><span class="step-number">01</span><p class="eyebrow dark">REZANIE</p><h3>Narež bočnice a 21 políc</h3><p>Bočnice majú 120 × 15 cm. Všetky police rež na 15,8 × 15 cm podľa jednej nastavenej šírky dorazu.</p><div class="step-tip">Ak môžeš, police nerež po jednej s novým meraním. Jeden doraz = rovnaká šírka všetkých 21 kusov.</div></div>
+          <div class="step-content">
+            <span class="step-number">01</span><p class="eyebrow dark">REZANIE</p>
+            <h3>Narež bočnice a 21 políc</h3>
+            <p>Dve bočnice priprav na 120 × 15 cm. Všetkých 21 políc narež na 15,8 × 15 cm. Jeden presný doraz na píle ti ušetrí desiatky meraní.</p>
+            <div class="step-tip">Finta: police narež v jednej sérii bez prestavovania dorazu. Pri takomto vysokom stojane sa každá odchýlka násobí.</div>
+          </div>
         </article>
 
-        <article class="step-card reverse" data-reveal>
+        <article class="step-card reverse" data-step="02" data-reveal>
           <div class="step-photo">
-            <svg class="sprite-crop" viewBox="450 600 450 300" preserveAspectRatio="xMidYMid slice"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
-            <div class="photo-callout left"><span></span><strong>53,7 cm × 2</strong><small>rovnaký rytmus priečinkov</small></div>
+            <svg class="sprite-crop" viewBox="450 600 450 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Rozmeranie priečinkov"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
+            <button class="callout callout-left interactive-callout" type="button"><span class="callout-line"></span><strong>Meraj otvor, nie os police</strong><small>7,0 cm znamená čistú výšku medzi dvomi 6 mm policami</small></button>
           </div>
-          <div class="step-content"><span class="step-number">02</span><p class="eyebrow dark">ROZMERANIE</p><h3>Vyrob si meraciu lištu</h3><p>Na odrezok dlhej lišty prenes postupne 7,0 / 6,8 / 6,5 / 6,0 / 5,5 / 5,0 / 4,7 / 4,4 / 4,0 / 3,8 cm a medzi každú medzeru započítaj 6 mm policu. Po desiatom otvore sekvenciu zopakuj.</p></div>
+          <div class="step-content">
+            <span class="step-number">02</span><p class="eyebrow dark">ROZMERANIE</p>
+            <h3>Prenes výšky na obe bočnice naraz</h3>
+            <p>Bočnice polož vedľa seba a všetky úrovne znač cez uholník jedným ťahom. Začni zhora P40 a pokračuj po P400. Potom rovnakú sériu zopakuj pre druhý priemer.</p>
+            <div class="step-tip">Kontrola: súčet čistých otvorov je 107,4 cm a 21 vrstiev preglejky pridá 12,6 cm. Výsledok je presne 120 cm.</div>
+          </div>
         </article>
 
-        <article class="step-card" data-reveal>
+        <article class="step-card" data-step="03" data-reveal>
           <div class="step-photo">
-            <svg class="sprite-crop" viewBox="0 900 450 300" preserveAspectRatio="xMidYMid slice"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
-            <div class="photo-callout"><span></span><strong>90°</strong><small>každá polica musí zostať kolmá</small></div>
+            <svg class="sprite-crop" viewBox="0 900 450 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Montáž priečinkov"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
+            <button class="callout callout-right interactive-callout" type="button"><span class="callout-line"></span><strong>Uholník pri každej polici</strong><small>malý odklon hore spraví centimetrovú chybu dole</small></button>
           </div>
-          <div class="step-content"><span class="step-number">03</span><p class="eyebrow dark">LEPENIE</p><h3>Najprv jedna bočnica</h3><p>Polož jednu bočnicu naplocho. Police lepi postupne podľa meracej lišty a kontroluj kolmosť malým uholníkom. Po vytvrdnutí nasaď druhú bočnicu.</p></div>
+          <div class="step-content">
+            <span class="step-number">03</span><p class="eyebrow dark">MONTÁŽ</p>
+            <h3>Stavaj stojan postupne od jedného konca</h3>
+            <p>Police lepi a isť jemnými bradmi alebo klinčekmi. Každú policu pred zaistením pritlač k čiare a skontroluj pravý uhol.</p>
+            <div class="step-tip">Pri 6 mm preglejke sú klince alebo brady bezpečnejšie než hrubá skrutka do hrany. Ak skrutkuješ, vždy predvŕtaj.</div>
+          </div>
         </article>
 
-        <article class="step-card reverse" data-reveal>
+        <article class="step-card reverse" data-step="04" data-reveal>
           <div class="step-photo">
-            <svg class="sprite-crop" viewBox="450 900 450 300" preserveAspectRatio="xMidYMid slice"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
-            <div class="photo-callout left"><span></span><strong>P180</strong><small>zjemni predné hrany</small></div>
+            <svg class="sprite-crop" viewBox="450 900 450 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Kontrola priečinka brúsnym kotúčom"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
+            <button class="callout callout-left interactive-callout" type="button"><span class="callout-line"></span><strong>15,8 cm vo vnútri</strong><small>Ø150 mm kotúč ostane voľný, ale nebude sa prevracať</small></button>
           </div>
-          <div class="step-content"><span class="step-number">04</span><p class="eyebrow dark">DOKONČENIE</p><h3>Zabrús, označ, ukotvi</h3><p>Predné hrany zjemni, aby sa suchý zips kotúčov nezachytával. Priečinky označ veľkými štítkami a vysoký stojan pevne prichyť k stene alebo susednému regálu.</p></div>
+          <div class="step-content">
+            <span class="step-number">04</span><p class="eyebrow dark">KONTROLA</p>
+            <h3>Skús reálne kotúče skôr, než pokračuješ</h3>
+            <p>Po niekoľkých policiach vlož najväčší 150 mm kotúč aj hrubšiu kopu P40. Over, že sa papiere vyberajú pohodlne a nikde sa nezachytáva suchý zips.</p>
+            <div class="step-tip">Ak konkrétnej zrnitosti používaš výrazne viac, posuň ešte teraz ďalšiu policu. Webový plán je základ, tvoja dielňa je rozhodujúca.</div>
+          </div>
         </article>
 
-        <article class="step-card" data-reveal>
+        <article class="step-card" data-step="05" data-reveal>
           <div class="step-photo">
-            <svg class="sprite-crop" viewBox="0 1200 450 300" preserveAspectRatio="xMidYMid slice"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
-            <div class="photo-callout"><span></span><strong>125 ↑ / 150 ↓</strong><small>väčšie kotúče a hmotnosť dole</small></div>
+            <svg class="sprite-crop" viewBox="0 1200 450 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Montáž vysokého stojana na stenu"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
+            <button class="callout callout-right interactive-callout" type="button"><span class="callout-line"></span><strong>Uchyť hore aj dole</strong><small>120 cm vysoký úzky stojan nesmie pracovať pri vyberaní kotúčov</small></button>
           </div>
-          <div class="step-content"><span class="step-number">05</span><p class="eyebrow dark">NAPLNENIE</p><h3>Dve sady, rovnaké poradie</h3><p>Horných desať priečinkov naplň Ø125 mm, spodných desať Ø150 mm. V oboch blokoch zachovaj rovnaké poradie P40 → P400, aby ruka vždy vedela, kam siahnuť.</p></div>
+          <div class="step-content">
+            <span class="step-number">05</span><p class="eyebrow dark">UCHYTENIE</p>
+            <h3>Zakotvi ho do steny alebo pevného panelu</h3>
+            <p>Stojan je vysoký a úzky. Pri montáži na OSB alebo dielenskú stenu ho chyť minimálne v hornej a dolnej tretine, ideálne cez malé vnútorné montážne pásiky.</p>
+            <div class="step-tip">Pred konečným dotiahnutím polož na bočnicu vodováhu. Ak je stojan zvislý, kotúče sa budú opierať rovnomerne.</div>
+          </div>
+        </article>
+
+        <article class="step-card reverse" data-step="06" data-reveal>
+          <div class="step-photo">
+            <svg class="sprite-crop" viewBox="450 1200 450 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hotový stojan naplnený brúsnymi kotúčmi"><image class="disc-sprite-image" width="900" height="1500" preserveAspectRatio="none" /></svg>
+            <button class="callout callout-left interactive-callout" type="button"><span class="callout-line"></span><strong>Dve identické stupnice</strong><small>P40 → P400 pre Ø125 a potom znova pre Ø150 mm</small></button>
+          </div>
+          <div class="step-content">
+            <span class="step-number">06</span><p class="eyebrow dark">HOTOVO</p>
+            <h3>Označ a naplň podľa zrnitosti</h3>
+            <p>Hornú desiatku naplň kotúčmi Ø125 mm a spodnú Ø150 mm. Štítky umiestni vždy na rovnaké miesto, aby zrnitosť išla prečítať jedným pohľadom.</p>
+            <div class="step-tip">Najčastejšie používané zrnitosti môžeš v reálnej dielni presunúť do prirodzenej výšky ruky. Organizér má slúžiť tebe, nie tabuľke. 🙂</div>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="workshop-tip" id="tip" data-reveal>
+    <section class="workshop-tip rack-final-tip" id="tip" data-reveal>
       <div class="tip-number">FINTA / 01</div>
-      <div><p class="eyebrow">Z REÁLNEJ DIELNE</p><h2>Nechaj chrbát<br><em>otvorený.</em></h2></div>
-      <p>Pri hĺbke 15 cm potrebuje Ø150 mm kotúč každý milimeter. Namiesto plnej zadnej dosky použi iba úzke montážne pásiky alebo stojan priskrutkuj priamo k podkladu. Ak chceš plný 6 mm chrbát vo vnútri, zväčši celkovú hĺbku minimálne na 15,6 cm.</p>
+      <div>
+        <p class="eyebrow">NAJVÄČŠÍ TRIK JE V ROZOSTUPOCH</p>
+        <h2>Nechaj miesto tam,<br><em>kde ho reálne míňaš.</em></h2>
+      </div>
+      <p>
+        Pevné rovnaké priehradky vyzerajú uhladene, ale prakticky prehrávajú. P40, P60 a P80 sa
+        zvyknú hromadiť, preto dostali 7 až 6,5 cm. P400 potrebuje iba 4 cm. Vďaka tomu sa dvadsať
+        pozícií zmestí do 120-centimetrového stĺpca bez plytvania priestorom.
+      </p>
+    </section>
+
+    <section class="project-finale rack-finale" data-reveal>
+      <img class="finale-rack" src="assets/projects/sandpaper-rack-20.svg" alt="Hotový vertikálny stojan na 20 zrnitostí brúsnych kotúčov" />
+      <div class="finale-copy">
+        <p class="eyebrow">REFERENČNÝ PROJEKT HOTOVÝ</p>
+        <h2>17 centimetrov šírky.<br><em>Dvadsať priečinkov.</em></h2>
+        <p class="finale-lead">
+          Toto je smer Vychytávok: reálny nápad z dielne, presné rozmery, responzívny návod,
+          interaktívne poznámky a vizuál, ktorý nevyzerá ako päťminútová šablóna.
+        </p>
+        <a class="button button-primary" href="index.html">Späť na Vychytávky <span>↗</span></a>
+      </div>
     </section>
   </main>
 
   <button class="back-top" id="backTop" type="button" aria-label="Späť hore">↑</button>
   <footer class="site-footer">
     <a class="brand footer-brand" href="index.html"><span class="brand-icon">✕</span><strong>VYCHYTÁVKY</strong></a>
-    <p>Referenčný projekt podľa reálneho dielenského organizéra.</p>
+    <p>Referenčný projekt podľa reálneho riešenia z dielne.</p>
     <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Hore ↑</a>
   </footer>
   <script src="script.js"></script>
