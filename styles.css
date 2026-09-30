@@ -731,3 +731,6 @@ button.callout:focus-visible{
   .grit-row{grid-template-columns:72px 85px 1fr;font-size:.74rem}
   .grit-row span{font-size:.7rem}
 }
+
+.tower-slot.is-selected{outline:2px solid #e28b54;outline-offset:-2px;filter:brightness(1.18)!important;z-index:6}
+.tower-slot.is-selected b{background:#c06d40;border-color:#e2a27b}
