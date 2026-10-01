@@ -64,7 +64,10 @@
 .v2-next-intro h2{font-size:clamp(3.2rem,5.2vw,6.1rem);line-height:.98;margin:0}.v2-next-intro h2 i{color:#796657}
 .v2-next-intro p{max-width:240px;margin:0;font-size:.9rem}
 .v2-next-composition{display:grid;grid-template-columns:1.25fr .45fr .7fr;gap:clamp(10px,2vw,30px);align-items:start}
-.v2-project{min-width:0}.v2-project-art{background:#b8a58f;overflow:hidden;display:grid;place-items:center}
+.v2-project{min-width:0}
+.v2-project-link{display:block;color:inherit;text-decoration:none}
+.v2-project-link:focus-visible{outline:3px solid #a9643d;outline-offset:6px}
+.v2-project-link .v2-project-caption small{justify-self:end}.v2-project-art{background:#b8a58f;overflow:hidden;display:grid;place-items:center}
 .v2-project-art img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--v2-ease)}
 .v2-project:hover img{transform:scale(1.035)}
 .v2-project-wide .v2-project-art{aspect-ratio:1.1}.v2-project-narrow{margin-top:200px}.v2-project-narrow .v2-project-art{aspect-ratio:.64;background:#a88b72}.v2-project-low{margin-top:60px}.v2-project-low .v2-project-art{aspect-ratio:.9;background:#a59584}
