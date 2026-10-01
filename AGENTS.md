@@ -76,3 +76,43 @@ Required flow:
 For the key-shelf project, also follow `docs/key-shelf-master-plan.md`.
 
 Do not stop after producing a media asset when the user's task includes website implementation.
+
+
+## Vychytávky media-to-web workflow
+
+For tutorial/project work, `feature/redesign-v2` is the source-of-truth branch unless the user explicitly names another branch.
+
+When a task asks for a new tutorial visual, Higgsfield asset, image-to-video clip, or other media **and** asks to integrate it into the website, the task is not complete after generation.
+
+Required flow:
+
+1. Inspect the current target page and existing approved master visual.
+2. Create the minimum necessary media. Prefer Higgsfield MCP for workflows that must continue directly into repository edits.
+3. Keep product identity consistent with the approved master: geometry, wood, proportions, metal parts, hook count, tray, and magnet position.
+4. Store final website assets in this repository. Do not leave a temporary/external generation URL as the final site dependency.
+5. Update the relevant HTML and, only when needed, CSS/JS.
+6. Remove/replace the placeholder for that exact step.
+7. Validate paths, page structure, responsive behavior, and that previously approved steps still remain intact.
+8. Verify the real state on `feature/redesign-v2` after writes.
+9. Report the commit(s) and validation result.
+10. Do not start the next visual step until the current one is integrated and validated.
+
+### Definition of done for a tutorial step
+
+A tutorial step is DONE only when all applicable items are true:
+
+- approved image/video exists,
+- asset is stored in the repository,
+- target page references the new asset,
+- placeholder/external temporary asset is removed,
+- required controls (for example “▶ Pozrieť pohyb”) work,
+- desktop/mobile behavior is reasonable,
+- validation passes on `feature/redesign-v2`,
+- changes are committed.
+
+### Higgsfield credit discipline
+
+- Estimate cost before paid MCP generation when possible.
+- Start with one image generation and one short video generation.
+- Retry only after identifying a concrete defect worth spending more credits on.
+- Reuse the approved master/reference media instead of regenerating the product identity.
