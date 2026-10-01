@@ -32,3 +32,7 @@ A project step is complete only when its approved media is implemented in the we
 8. Add a responsive "▶ Pozrieť pohyb" video affordance; no audible autoplay, use `muted` and `playsinline`, and use the still as poster when practical.
 9. Verify paths, branch, desktop/mobile layout, and that Steps 1 and 2 remain unchanged.
 10. Commit all changes before reporting completion.
+
+## Execution gate
+
+When Step 6 is requested for implementation, first verify GitHub + Higgsfield connectors through Code Mode / `ALL_TOOLS`. If present, execute the whole Step 6 pipeline in one workflow and do not stop at image generation or at a mistaken "tools unavailable" response. A limitation may be reported only after an actual connector/API call fails.
