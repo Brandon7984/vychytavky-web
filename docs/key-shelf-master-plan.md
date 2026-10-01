@@ -14,10 +14,10 @@ A project step is complete only when its approved media is implemented in the we
 - [x] Approved master product visual is integrated.
 - [x] Step 1: paper planning / dimensions visual is integrated.
 - [x] Step 2: cut wooden parts visual is integrated.
-- [ ] Step 6: Higgsfield reference-based still image of hooks + magnetic section.
-- [ ] Step 6: Higgsfield 5–8 s image-to-video clip.
-- [ ] Step 6: still + video integrated into `key-shelf.html`.
-- [ ] Step 6: responsive video UI and "▶ Pozrieť pohyb" interaction verified.
+- [x] Step 6: Higgsfield reference-based still image of hooks + magnetic section.
+- [x] Step 6: Higgsfield 5–8 s image-to-video clip.
+- [x] Step 6: still + video integrated into `key-shelf.html`.
+- [x] Step 6: responsive video UI and "▶ Pozrieť pohyb" interaction verified.
 - [ ] Remaining steps 3, 4, 5, 7 produced and integrated with the same product identity.
 
 ## Step 6 acceptance criteria
