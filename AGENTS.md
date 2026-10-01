@@ -67,7 +67,7 @@ Required flow:
 
 1. Work only on the branch explicitly named by the user; for the current live redesign this is `feature/redesign-v2`.
 2. Generate the approved image/video with the requested media tool. Prefer Higgsfield when the goal is to demonstrate the Higgsfield workflow.
-3. Store the resulting asset in the repository or in the repository's existing chunked-media format.
+3. Store the resulting asset in the repository as a plain .webp file in `assets/img/`.
 4. Update the relevant HTML/CSS/JS so the asset is actually used on the site.
 5. Verify the target branch, asset paths, page references, responsive behavior when relevant, and that no replaced placeholder remains.
 6. Commit the implementation.

@@ -1,490 +1,391 @@
 <!doctype html>
 <html lang="sk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Vertikálny zakladač na brúsne kotúče Ø125 a Ø150 mm podľa reálneho riešenia z dielne. Rozmery, materiál a výrobný postup." />
-  <meta name="theme-color" content="#17130f" />
-  <title>Zakladač na brúsne kotúče | Vychytávky</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zakladač na brúsne kotúče – Vychytávky</title>
+  <meta name="description" content="Návod na úzky stojan z 6 mm preglejky na 20 druhov brúsnych kotúčov Ø125 a Ø150 mm. Rozmery, rezací plán a 6 krokov s fotkami.">
+  <meta name="theme-color" content="#f6f5f1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
 </head>
-<body class="project-page pilot-project-page">
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<body>
+  <a class="skip" href="#obsah">Preskočiť na obsah</a>
 
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="index.html" aria-label="Späť na Vychytávky">
-      <span class="brand-icon" aria-hidden="true">✕</span>
-      <span class="brand-copy"><strong>VYCHYTÁVKY</strong><small>urob · oprav · vylepši</small></span>
-    </a>
-    <nav class="desktop-nav" aria-label="Navigácia projektu">
-      <a href="#produkt">Výsledok</a>
-      <a href="#rozmery">Rozmery</a>
-      <a href="#material">Materiál</a>
-      <a href="#postup">Postup</a>
-    </nav>
-    <a class="header-cta" href="index.html">Všetky projekty <span>↗</span></a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html" aria-label="Vychytávky – domov">
+        <img class="logo-mark" src="assets/img/logo.svg" alt="" width="30" height="30">
+        Vychytávky
+      </a>
+      <nav class="site-nav" aria-label="Hlavná navigácia">
+        <a href="index.html#projekty">Všetky projekty</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="pilot-hero" id="produkt">
-      <div class="pilot-hero-copy" data-reveal>
-        <div class="breadcrumbs"><a href="index.html">Domov</a><span>›</span><span>Dielňa</span><span>›</span><strong>Brúsne kotúče</strong></div>
-        <p class="eyebrow">REFERENČNÝ PROJEKT · PODĽA REÁLNEHO STOJANA Z DIELNE</p>
-        <h1>Miesto pre každý<br><em>brúsny kotúč.</em></h1>
-        <p class="pilot-lead">
-          Úzky 120-centimetrový stojan z 6 mm preglejky. Dvadsať priečinkov,
-          dve veľkosti kotúčov a každá zrnitosť presne tam, kde ju čakáš.
-        </p>
-
-        <div class="pilot-facts">
-          <div><span>ROZMER</span><strong>17 × 15 × 120 cm</strong></div>
-          <div><span>PREHĽAD</span><strong>20 priečinkov</strong></div>
-          <div><span>KOTÚČE</span><strong>Ø125 + Ø150 mm</strong></div>
-          <div><span>MATERIÁL</span><strong>preglejka 6 mm</strong></div>
+  <main id="obsah">
+    <section class="guide-hero is-tall">
+      <div class="wrap">
+        <div>
+          <ol class="crumbs">
+            <li><a href="index.html">Domov</a></li>
+            <li><a href="index.html#projekty">Dielňa</a></li>
+            <li aria-current="page">Zakladač na brúsne kotúče</li>
+          </ol>
+          <h1>Zakladač na brúsne kotúče</h1>
+          <p class="lead">Úzky stojan z 6 mm preglejky, ktorý na 17 cm šírky odloží 20 druhov brúsnych kotúčov. Každá zrnitosť má svoj priečinok, takže správny kotúč vytiahneš jednou rukou.</p>
+          <dl class="facts">
+            <div><dt>Rozmer</dt><dd>17 × 15 × 120 cm</dd></div>
+            <div><dt>Priečinky</dt><dd>20 (Ø125 a Ø150 mm)</dd></div>
+            <div><dt>Čas</dt><dd>cca 4 hodiny</dd></div>
+            <div><dt>Náročnosť</dt><dd>stredná</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn" href="#postup">Začať postup</a>
+            <a class="btn btn-ghost" href="#rozmery">Rozmery</a>
+          </div>
         </div>
-
-        <div class="hero-actions">
-          <a class="button button-primary" href="#postup">Ako ho vyrobiť <span>↓</span></a>
-          <button class="save-button" id="saveProject" type="button"><span>♡</span> Uložiť projekt</button>
-        </div>
-      </div>
-
-      <div class="pilot-product-stage" data-reveal>
-        <img class="rack-product-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Fotorealistický hotový vertikálny zakladač na brúsne kotúče v dielni" />
-        <div class="pilot-photo-shade" aria-hidden="true"></div>
-        <span class="pilot-photo-label">HOTOVÝ PRODUKT · REÁLNY KONCEPT</span>
-
-        <div class="hero-hotspot pilot-hotspot h-height">
-          <button class="hotspot-dot" type="button" aria-label="Celková výška stojana">+</button>
-          <span class="hotspot-note"><strong>120 cm</strong> Celková výška. Stojan využíva vertikálny priestor namiesto pracovného stola.</span>
-        </div>
-
-        <div class="hero-hotspot pilot-hotspot h-width">
-          <button class="hotspot-dot" type="button" aria-label="Šírka stojana">+</button>
-          <span class="hotspot-note"><strong>17 cm</strong> Vonkajšia šírka. Pri 6 mm bočniciach ostáva 15,8 cm vo vnútri.</span>
-        </div>
-
-        <div class="hero-hotspot pilot-hotspot h-slots">
-          <button class="hotspot-dot" type="button" aria-label="Počet priečinkov">+</button>
-          <span class="hotspot-note"><strong>20 priečinkov</strong> Dve rovnaké série zrnitostí P40 až P400.</span>
-        </div>
-
-        <div class="hero-hotspot pilot-hotspot h-diameters">
-          <button class="hotspot-dot" type="button" aria-label="Priemery brúsnych kotúčov">+</button>
-          <span class="hotspot-note"><strong>Ø125 hore · Ø150 dole</strong> Jeden úzky stojan obslúži obe excentrické brúsky.</span>
-        </div>
+        <figure>
+          <img src="assets/img/sandpaper-rack.webp"
+               srcset="assets/img/sandpaper-rack-700.webp 700w, assets/img/sandpaper-rack.webp 1200w"
+               sizes="(max-width: 860px) 100vw, 45vw"
+               width="1200" height="1607"
+               alt="Hotový úzky stojan z brezovej preglejky na stene dielne, v každom priečinku stoh brúsnych kotúčov"
+               fetchpriority="high">
+        </figure>
       </div>
     </section>
 
-    <nav class="project-subnav" id="projectSubnav" aria-label="Obsah projektu">
-      <a href="#produkt">Výsledok</a>
-      <a href="#rozmery">Rozmery</a>
-      <a href="#material">Materiál</a>
-      <a href="#postup">Postup</a>
+    <nav class="guide-nav" aria-label="Časti návodu">
+      <div class="wrap">
+        <a href="#rozmery">Rozmery</a>
+        <a href="#material">Materiál a náradie</a>
+        <a href="#postup">Postup</a>
+        <a href="#hotovo">Hotovo</a>
+      </div>
     </nav>
 
-    <section class="pilot-story">
-      <div class="pilot-story-copy" data-reveal>
-        <p class="eyebrow dark">PREČO TENTO TVAR FUNGUJE</p>
-        <h2>Úzky na šírku.<br><em>Veľký kapacitou.</em></h2>
-        <p>
-          Koncept vychádza priamo z reálneho stojana v dielni. Namiesto dvoch širokých stĺpcov
-          ide všetko nad seba. Výsledkom je iba 17 cm široký kus nábytku, ktorý pojme dvadsať
-          samostatných zásobníkov na okrúhle brúsne papiere.
-        </p>
-        <div class="pilot-story-points">
-          <span><b>01</b> P40, P60 a P80 dostanú viac miesta</span>
-          <span><b>02</b> jemné zrná postupne menej</span>
-          <span><b>03</b> štítok je viditeľný bez prehrabávania</span>
-          <span><b>04</b> kotúč vytiahneš jednou rukou</span>
-        </div>
-      </div>
-
-      <div class="pilot-tech-card" id="rozmery" data-reveal>
-        <img src="assets/projects/sandpaper-rack-20.svg" width="520" height="1500" alt="Technická schéma stojana s 20 rozdielne vysokými priečinkami pre kotúče Ø125 a Ø150 mm" />
-        <div class="pilot-tech-caption">
-          <span>TECHNICKÝ POHĽAD</span>
-          <strong>17 × 15 × 120 cm</strong>
-          <small>preglejka 6 mm · vnútorná šírka 15,8 cm</small>
-        </div>
-      </div>
-    </section>
-
-    <section class="pilot-grits">
-      <div class="pilot-section-heading" data-reveal>
-        <p class="eyebrow">ROZLOŽENIE PRIEČINKOV</p>
-        <h2>Viac kotúčov?<br><em>Viac priestoru.</em></h2>
-        <p>Výšky otvorov sú rovnaké pre Ø125 aj Ø150 mm. Dve série sa za sebou presne zmestia do 120 cm.</p>
-      </div>
-
-      <div class="pilot-grit-board" data-reveal>
-        <div class="pilot-grit-column">
-          <div class="pilot-grit-head"><strong>Ø125 mm</strong><span>horných 10</span></div>
-          <div><b>P40</b><span>7,0 cm</span></div><div><b>P60</b><span>7,0 cm</span></div>
-          <div><b>P80</b><span>6,5 cm</span></div><div><b>P100</b><span>5,6 cm</span></div>
-          <div><b>P120</b><span>5,2 cm</span></div><div><b>P150</b><span>5,0 cm</span></div>
-          <div><b>P180</b><span>4,7 cm</span></div><div><b>P240</b><span>4,4 cm</span></div>
-          <div><b>P320</b><span>4,3 cm</span></div><div><b>P400</b><span>4,0 cm</span></div>
-        </div>
-        <div class="pilot-grit-column">
-          <div class="pilot-grit-head"><strong>Ø150 mm</strong><span>spodných 10</span></div>
-          <div><b>P40</b><span>7,0 cm</span></div><div><b>P60</b><span>7,0 cm</span></div>
-          <div><b>P80</b><span>6,5 cm</span></div><div><b>P100</b><span>5,6 cm</span></div>
-          <div><b>P120</b><span>5,2 cm</span></div><div><b>P150</b><span>5,0 cm</span></div>
-          <div><b>P180</b><span>4,7 cm</span></div><div><b>P240</b><span>4,4 cm</span></div>
-          <div><b>P320</b><span>4,3 cm</span></div><div><b>P400</b><span>4,0 cm</span></div>
-        </div>
-      </div>
-
-      <div class="pilot-equation" data-reveal>
-        <span>20 čistých otvorov <b>107,4 cm</b></span>
-        <i>+</i>
-        <span>21 × 6 mm preglejka <b>12,6 cm</b></span>
-        <i>=</i>
-        <span>celková výška <b>120,0 cm</b></span>
-      </div>
-    </section>
-
-    <section class="pilot-material" id="material">
-      <div class="pilot-section-heading dark-copy" data-reveal>
-        <p class="eyebrow dark">MATERIÁL & NÁRADIE</p>
-        <h2>Jednoduchý materiál.<br><em>Presnosť rozhoduje.</em></h2>
-      </div>
-
-      <div class="pilot-material-grid">
-        <article data-reveal>
-          <span class="pilot-resource-icon">▰</span>
-          <h3>Rezací plán</h3>
-          <ul>
-            <li><strong>2× bočnica</strong><span>120 × 15 cm</span></li>
-            <li><strong>21× polica</strong><span>15,8 × 15 cm</span></li>
-            <li><strong>preglejka</strong><span>6 mm</span></li>
+    <section class="section" id="rozmery" aria-labelledby="rozmery-title">
+      <div class="wrap split">
+        <div class="prose">
+          <h2 id="rozmery-title">Úzky na šírku, veľký kapacitou</h2>
+          <p>Namiesto dvoch širokých stĺpcov ide všetko nad seba. Vznikne iba 17 cm široký kus nábytku, ktorý sa zmestí aj do medzery vedľa pracovného stola.</p>
+          <p>Hore je desať priečinkov pre kotúče Ø125 mm, dole rovnakých desať pre Ø150 mm. Výšky otvorov sú v oboch sériách rovnaké.</p>
+          <ul class="ticks">
+            <li>Hrubé zrnitosti P40 až P80 sa míňajú najrýchlejšie, preto majú najvyššie priečinky.</li>
+            <li>Jemné zrná postupne menej, P400 stačia 4 cm.</li>
+            <li>Štítok na hrane police vidíš bez prehrabávania.</li>
+            <li>Kotúč vytiahneš jednou rukou, nič neohýbaš.</li>
           </ul>
-        </article>
-        <article data-reveal>
-          <span class="pilot-resource-icon">⌁</span>
-          <h3>Náradie</h3>
-          <ul>
-            <li><strong>stolová / okružná píla</strong><span>rovné rezy</span></li>
-            <li><strong>uholník + meter</strong><span>rozmeranie</span></li>
-            <li><strong>pneumatická klincovačka</strong><span>nástrelovacie klince 20–25 mm</span></li>
-          </ul>
-        </article>
-        <article data-reveal>
-          <span class="pilot-resource-icon">✦</span>
-          <h3>Upevnenie</h3>
-          <ul>
-            <li><strong>nástrelovacie klince 20–25 mm</strong><span>2–3 nastrelenia na hranu police</span></li>
-            <li><strong>bez lepidla</strong><span>spoj drží okamžite, bez čakania</span></li>
-            <li><strong>kotvenie</strong><span>stojan do steny hore aj dole</span></li>
-          </ul>
-        </article>
+
+          <h3 style="margin-top:32px">Výška otvorov</h3>
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th>Zrnitosť</th><th>Použitie</th><th>Čistá výška</th></tr></thead>
+              <tbody>
+                <tr><td><span class="grit">P40</span></td><td>hrubé brúsenie</td><td>7,0 cm</td></tr>
+                <tr><td><span class="grit">P60</span></td><td>hrubé brúsenie</td><td>7,0 cm</td></tr>
+                <tr><td><span class="grit">P80</span></td><td>vyrovnanie</td><td>6,5 cm</td></tr>
+                <tr><td><span class="grit">P100</span></td><td>vyrovnanie</td><td>5,6 cm</td></tr>
+                <tr><td><span class="grit">P120</span></td><td>príprava</td><td>5,2 cm</td></tr>
+                <tr><td><span class="grit">P150</span></td><td>príprava</td><td>5,0 cm</td></tr>
+                <tr><td><span class="grit">P180</span></td><td>jemné</td><td>4,7 cm</td></tr>
+                <tr><td><span class="grit">P240</span></td><td>jemné</td><td>4,4 cm</td></tr>
+                <tr><td><span class="grit">P320</span></td><td>medzivrstvy</td><td>4,3 cm</td></tr>
+                <tr><td><span class="grit">P400</span></td><td>medzivrstvy</td><td>4,0 cm</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Jedna séria (10 otvorov)</td><td>53,7 cm</td></tr></tfoot>
+            </table>
+          </div>
+          <p class="sum">2 × 53,7 cm otvory + 21 políc × 0,6 cm = 107,4 + 12,6 = <strong>120,0 cm</strong></p>
+        </div>
+        <figure class="drawing">
+          <svg viewBox="0 0 440 710" role="img" aria-labelledby="rackTitle rackDesc" font-family="Schibsted Grotesk, system-ui, sans-serif">
+<title id="rackTitle">Čelný pohľad na zakladač s rozmermi</title>
+<desc id="rackDesc">Stojan je 120 cm vysoký a 17 cm široký. Má 20 priečinkov v dvoch sériách po desať, hore pre kotúče 125 mm, dole pre 150 mm. Výšky otvorov klesajú od 7 cm pri P40 po 4 cm pri P400.</desc>
+<rect x="170" y="40" width="85" height="600" fill="#f3ecdc" stroke="#1d2321" stroke-width="1.5"/>
+<rect x="170" y="40" width="3" height="600" fill="#ebdfc6" stroke="#1d2321" stroke-width="1"/>
+<rect x="252" y="40" width="3" height="600" fill="#ebdfc6" stroke="#1d2321" stroke-width="1"/>
+<rect x="173" y="40" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="60.5" width="62.5" height="17.5" rx="2" fill="#a5574a"/>
+<line x1="259" y1="60.5" x2="269" y2="60.5" stroke="#dcd8cd"/>
+<text x="273" y="64.5" font-size="12" font-weight="600" fill="#1d2321">P40</text>
+<text x="317" y="64.5" font-size="12" fill="#2b56c9">7,0 cm</text>
+<rect x="173" y="78" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="98.5" width="62.5" height="17.5" rx="2" fill="#b8705f"/>
+<line x1="259" y1="98.5" x2="269" y2="98.5" stroke="#dcd8cd"/>
+<text x="273" y="102.5" font-size="12" font-weight="600" fill="#1d2321">P60</text>
+<text x="317" y="102.5" font-size="12" fill="#2b56c9">7,0 cm</text>
+<rect x="173" y="116" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="135.2" width="62.5" height="16.2" rx="2" fill="#c48a6f"/>
+<line x1="259" y1="135.2" x2="269" y2="135.2" stroke="#dcd8cd"/>
+<text x="273" y="139.2" font-size="12" font-weight="600" fill="#1d2321">P80</text>
+<text x="317" y="139.2" font-size="12" fill="#2b56c9">6,5 cm</text>
+<rect x="173" y="151.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="168.5" width="62.5" height="14" rx="2" fill="#8d8f8c"/>
+<line x1="259" y1="168.5" x2="269" y2="168.5" stroke="#dcd8cd"/>
+<text x="273" y="172.5" font-size="12" font-weight="600" fill="#1d2321">P100</text>
+<text x="317" y="172.5" font-size="12" fill="#2b56c9">5,6 cm</text>
+<rect x="173" y="182.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="198.5" width="62.5" height="13" rx="2" fill="#a2a39f"/>
+<line x1="259" y1="198.5" x2="269" y2="198.5" stroke="#dcd8cd"/>
+<text x="273" y="202.5" font-size="12" font-weight="600" fill="#1d2321">P120</text>
+<text x="317" y="202.5" font-size="12" fill="#2b56c9">5,2 cm</text>
+<rect x="173" y="211.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="227" width="62.5" height="12.5" rx="2" fill="#b5aa96"/>
+<line x1="259" y1="227" x2="269" y2="227" stroke="#dcd8cd"/>
+<text x="273" y="231" font-size="12" font-weight="600" fill="#1d2321">P150</text>
+<text x="317" y="231" font-size="12" fill="#2b56c9">5,0 cm</text>
+<rect x="173" y="239.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="254.2" width="62.5" height="11.8" rx="2" fill="#c9bb9c"/>
+<line x1="259" y1="254.2" x2="269" y2="254.2" stroke="#dcd8cd"/>
+<text x="273" y="258.2" font-size="12" font-weight="600" fill="#1d2321">P180</text>
+<text x="317" y="258.2" font-size="12" fill="#2b56c9">4,7 cm</text>
+<rect x="173" y="266" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="280" width="62.5" height="11" rx="2" fill="#d8cba9"/>
+<line x1="259" y1="280" x2="269" y2="280" stroke="#dcd8cd"/>
+<text x="273" y="284" font-size="12" font-weight="600" fill="#1d2321">P240</text>
+<text x="317" y="284" font-size="12" fill="#2b56c9">4,4 cm</text>
+<rect x="173" y="291" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="304.8" width="62.5" height="10.8" rx="2" fill="#e3d8bd"/>
+<line x1="259" y1="304.8" x2="269" y2="304.8" stroke="#dcd8cd"/>
+<text x="273" y="308.8" font-size="12" font-weight="600" fill="#1d2321">P320</text>
+<text x="317" y="308.8" font-size="12" fill="#2b56c9">4,3 cm</text>
+<rect x="173" y="315.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="181.2" y="328.5" width="62.5" height="10" rx="2" fill="#ece3cc"/>
+<line x1="259" y1="328.5" x2="269" y2="328.5" stroke="#dcd8cd"/>
+<text x="273" y="332.5" font-size="12" font-weight="600" fill="#1d2321">P400</text>
+<text x="317" y="332.5" font-size="12" fill="#2b56c9">4,0 cm</text>
+<rect x="173" y="338.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="359" width="75" height="17.5" rx="2" fill="#a5574a"/>
+<line x1="259" y1="359" x2="269" y2="359" stroke="#dcd8cd"/>
+<text x="273" y="363" font-size="12" font-weight="600" fill="#1d2321">P40</text>
+<text x="317" y="363" font-size="12" fill="#2b56c9">7,0 cm</text>
+<rect x="173" y="376.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="397" width="75" height="17.5" rx="2" fill="#b8705f"/>
+<line x1="259" y1="397" x2="269" y2="397" stroke="#dcd8cd"/>
+<text x="273" y="401" font-size="12" font-weight="600" fill="#1d2321">P60</text>
+<text x="317" y="401" font-size="12" fill="#2b56c9">7,0 cm</text>
+<rect x="173" y="414.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="433.8" width="75" height="16.2" rx="2" fill="#c48a6f"/>
+<line x1="259" y1="433.8" x2="269" y2="433.8" stroke="#dcd8cd"/>
+<text x="273" y="437.8" font-size="12" font-weight="600" fill="#1d2321">P80</text>
+<text x="317" y="437.8" font-size="12" fill="#2b56c9">6,5 cm</text>
+<rect x="173" y="450" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="467" width="75" height="14" rx="2" fill="#8d8f8c"/>
+<line x1="259" y1="467" x2="269" y2="467" stroke="#dcd8cd"/>
+<text x="273" y="471" font-size="12" font-weight="600" fill="#1d2321">P100</text>
+<text x="317" y="471" font-size="12" fill="#2b56c9">5,6 cm</text>
+<rect x="173" y="481" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="497" width="75" height="13" rx="2" fill="#a2a39f"/>
+<line x1="259" y1="497" x2="269" y2="497" stroke="#dcd8cd"/>
+<text x="273" y="501" font-size="12" font-weight="600" fill="#1d2321">P120</text>
+<text x="317" y="501" font-size="12" fill="#2b56c9">5,2 cm</text>
+<rect x="173" y="510" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="525.5" width="75" height="12.5" rx="2" fill="#b5aa96"/>
+<line x1="259" y1="525.5" x2="269" y2="525.5" stroke="#dcd8cd"/>
+<text x="273" y="529.5" font-size="12" font-weight="600" fill="#1d2321">P150</text>
+<text x="317" y="529.5" font-size="12" fill="#2b56c9">5,0 cm</text>
+<rect x="173" y="538" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="552.8" width="75" height="11.8" rx="2" fill="#c9bb9c"/>
+<line x1="259" y1="552.8" x2="269" y2="552.8" stroke="#dcd8cd"/>
+<text x="273" y="556.8" font-size="12" font-weight="600" fill="#1d2321">P180</text>
+<text x="317" y="556.8" font-size="12" fill="#2b56c9">4,7 cm</text>
+<rect x="173" y="564.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="578.5" width="75" height="11" rx="2" fill="#d8cba9"/>
+<line x1="259" y1="578.5" x2="269" y2="578.5" stroke="#dcd8cd"/>
+<text x="273" y="582.5" font-size="12" font-weight="600" fill="#1d2321">P240</text>
+<text x="317" y="582.5" font-size="12" fill="#2b56c9">4,4 cm</text>
+<rect x="173" y="589.5" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="603.2" width="75" height="10.8" rx="2" fill="#e3d8bd"/>
+<line x1="259" y1="603.2" x2="269" y2="603.2" stroke="#dcd8cd"/>
+<text x="273" y="607.2" font-size="12" font-weight="600" fill="#1d2321">P320</text>
+<text x="317" y="607.2" font-size="12" fill="#2b56c9">4,3 cm</text>
+<rect x="173" y="614" width="79" height="3" fill="#c9b48a"/>
+<rect x="175" y="627" width="75" height="10" rx="2" fill="#ece3cc"/>
+<line x1="259" y1="627" x2="269" y2="627" stroke="#dcd8cd"/>
+<text x="273" y="631" font-size="12" font-weight="600" fill="#1d2321">P400</text>
+<text x="317" y="631" font-size="12" fill="#2b56c9">4,0 cm</text>
+<rect x="173" y="637" width="79" height="3" fill="#c9b48a"/>
+<path d="M162 43 H156 V338.5 H162" fill="none" stroke="#2b56c9" stroke-width="1.5"/>
+<text transform="translate(148 190.8) rotate(-90)" text-anchor="middle" font-size="12" font-weight="600" fill="#2b56c9">Ø125 mm · 10 priečinkov</text>
+<path d="M162 341.5 H156 V637 H162" fill="none" stroke="#2b56c9" stroke-width="1.5"/>
+<text transform="translate(148 489.2) rotate(-90)" text-anchor="middle" font-size="12" font-weight="600" fill="#2b56c9">Ø150 mm · 10 priečinkov</text>
+<g stroke="#1d2321" stroke-width="1.2" fill="none"><line x1="70" y1="40" x2="70" y2="640.0"/><line x1="64" y1="40" x2="76" y2="40"/><line x1="64" y1="640.0" x2="76" y2="640.0"/></g>
+<text transform="translate(60 340) rotate(-90)" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2321">120 cm</text>
+<g stroke="#1d2321" stroke-width="1.2"><line x1="170" y1="666.0" x2="255" y2="666.0"/><line x1="170" y1="660.0" x2="170" y2="672.0"/><line x1="255" y1="660.0" x2="255" y2="672.0"/></g>
+<text x="212.5" y="688.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2321">17 cm</text>
+<text x="212.5" y="706.0" text-anchor="middle" font-size="11.5" fill="#6f7773">hĺbka 15 cm · vnútri 15,8 cm</text>
+</svg>
+          <figcaption>Čelný pohľad. Kotúče Ø125 mm hore, Ø150 mm dole, výšky otvorov sú čisté (bez police).</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="pilot-process" id="postup">
-      <div class="pilot-process-intro" data-reveal>
-        <p class="eyebrow">VÝROBNÝ POSTUP</p>
-        <h2>Šesť krokov.<br><em>Bez preskakovania.</em></h2>
-        <p>
-          Každý krok bude mať vlastný fotorealistický záber z rovnakého typu dielne, s rovnakou
-          preglejkou, svetlom a vizuálnym štýlom. Všetkých 6 krokov je spracovaných fotorealisticky, s praktickými detailmi a jemným pohybom pri scrollovaní.
-        </p>
-      </div>
-
-      <div class="pilot-roadmap">
-        <article class="pilot-step-feature" data-reveal data-step-expand>
-          <div class="step-one-media">
-            <div class="step-one-frame approved-tutorial-frame tutorial-motion-frame" data-tutorial-motion="step1">
-              <img class="approved-tutorial-image step1-tutorial-image" src="assets/photos/step1-tutorial-hq.webp" alt="Fotorealistický obrazový návod pre krok 1: rezanie bočníc a 21 políc zo 6 mm preglejky s rozmermi a vysvetlivkami" loading="lazy" decoding="async" />
-              <span class="tutorial-scroll-cue" aria-hidden="true">SCROLL <b>↓</b></span>
-            </div>
+    <section class="section section-alt" id="material" aria-labelledby="material-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="material-title">Materiál a náradie</h2>
+          <p>Odškrtávaj, čo už máš pripravené. Stav si zapamätá tento prehliadač.</p>
+        </div>
+        <div class="lists">
+          <div class="list-card">
+            <h3>Rezací plán (preglejka 6 mm)</h3>
+            <ul class="check" data-checklist="sandpaper-cut">
+              <li><label><input type="checkbox"><span class="what">Bočnica</span><span class="qty">2× 120 × 15 cm</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Zadná stena</span><span class="qty">1× 120 × 17 cm</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Polica</span><span class="qty">21× 15,8 × 15 cm</span></label></li>
+            </ul>
           </div>
-
-          <div class="step-one-copy">
-            <div class="step-one-progress"><span>01</span><i></i><small>06</small></div>
-            <p class="eyebrow">PRÍPRAVA A REZANIE</p>
-            <h3>Narež všetky diely pri jednom nastavení.</h3>
-            <p>
-              Najskôr priprav dve bočnice <strong>120 × 15 cm</strong> a potom sériovo narež
-              <strong>21 políc 15,8 × 15 cm</strong>. Pri policiach nastav doraz iba raz.
-              Čím presnejšie budú diely rovnaké, tým ľahšie sa bude vysoký stojan skladať.
-            </p>
-
-            <div class="step-one-cutlist">
-              <div><span>2×</span><strong>bočnica</strong><small>120 × 15 cm</small></div>
-              <div><span>21×</span><strong>polica</strong><small>15,8 × 15 cm</small></div>
-              <div><span>6 mm</span><strong>preglejka</strong><small>rovnaká hrúbka všade</small></div>
-            </div>
-
-            <aside class="step-one-tip">
-              <span>FINTA Z DIELNE</span>
-              <p>Po prvom presnom kuse už nemeraj každú policu nanovo. Použi doraz alebo prvý diel ako šablónu. Pri 21 policiach tým odstrániš väčšinu kumulatívnych chýb.</p>
-            </aside>
-
-            <div class="nailer-note">
-              <span class="nailer-icon">⌁</span>
-              <div><strong>Nasledujúci montážny krok bude bez lepidla.</strong><small>Police sa priložia na značku a z boku sa uchytia pneumatickou klincovačkou, nástrelovacími klincami 20–25 mm.</small></div>
-            </div>
+          <div class="list-card">
+            <h3>Spojovací materiál</h3>
+            <ul class="check" data-checklist="sandpaper-fix">
+              <li><label><input type="checkbox"><span class="what">Nástrelovacie klince</span><span class="qty">20–25 mm</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Vruty a hmoždinky podľa steny</span><span class="qty">2–4 ks</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Papierové štítky</span><span class="qty">20 ks</span></label></li>
+            </ul>
+            <p class="list-note">Bez lepidla. Nástrelovací spoj drží hneď a netreba čakať.</p>
           </div>
-        </article>
-        <article class="pilot-step-feature step-two-feature" data-reveal data-step2-expand>
-          <div class="step-two-copy">
-            <div class="step-one-progress step-two-progress"><span>02</span><i></i><small>06</small></div>
-            <p class="eyebrow">ROZMERANIE PRIEČINKOV</p>
-            <h3>Vyznač všetkých 20 úrovní ešte pred prvým nastrelením.</h3>
-            <p>
-              Obe bočnice polož vedľa seba, zarovnaj ich horné hrany a čiary prenášaj cez
-              <strong>uholník jedným ťahom</strong>. Začni zhora pri P40. Keď sú bočnice hotové,
-              tie isté úrovne prenes aj na zadnú stenu, aby si pri nastreľovaní videl presnú polohu police z troch strán.
-            </p>
-
-            <div class="step-two-sequence" aria-label="Výšky priečinkov pre jednu sadu zrnitostí">
-              <span><b>P40</b><small>7,0 cm</small></span>
-              <span><b>P60</b><small>7,0 cm</small></span>
-              <span><b>P80</b><small>6,5 cm</small></span>
-              <span><b>P100</b><small>5,6 cm</small></span>
-              <span><b>P120</b><small>5,2 cm</small></span>
-              <span><b>P150</b><small>5,0 cm</small></span>
-              <span><b>P180</b><small>4,7 cm</small></span>
-              <span><b>P240</b><small>4,4 cm</small></span>
-              <span><b>P320</b><small>4,3 cm</small></span>
-              <span><b>P400</b><small>4,0 cm</small></span>
-            </div>
-
-            <aside class="step-one-tip step-two-tip">
-              <span>DÔLEŽITÉ</span>
-              <p>Uvedená hodnota je čistá výška otvoru. Po každom otvore pripočítaj ešte 6 mm hrúbku nasledujúcej police. Rovnakú desiatku potom zopakuj druhýkrát pre druhý priemer kotúčov.</p>
-            </aside>
-
-            <div class="nailer-note step-two-note">
-              <span class="nailer-icon">⌗</span>
-              <div><strong>Značky rob na oboch bočniciach aj na zadnej stene.</strong><small>Pri montáži potom policu iba položíš na čiaru, pritlačíš uholníkom a z boku aj zozadu nastrelíš 20–25 mm nástrelovacie klince.</small></div>
-            </div>
+          <div class="list-card">
+            <h3>Náradie</h3>
+            <ul class="check" data-checklist="sandpaper-tools">
+              <li><label><input type="checkbox"><span class="what">Stolová alebo okružná píla s dorazom</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Uholník, meter a ceruzka</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Pneumatická klincovačka</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Vodováha a aku vŕtačka</span></label></li>
+            </ul>
           </div>
-
-          <div class="step-two-media">
-            <div class="step-two-frame approved-tutorial-frame tutorial-motion-frame" data-tutorial-motion="step2">
-              <img class="approved-tutorial-image step2-tutorial-image" src="assets/photos/step2-tutorial-hq.webp" alt="Fotorealistický obrazový návod pre krok 2: rozmeranie priečinkov P40 až P400 na bočniciach s tabuľkou výšok" loading="lazy" decoding="async" />
-              <span class="tutorial-scroll-cue" aria-hidden="true">SCROLL <b>↓</b></span>
-            </div>
-          </div>
-        </article>
-        <article class="pilot-step-feature step-three-feature" data-reveal>
-          <div class="step-three-media">
-            <div class="step-three-frame approved-tutorial-frame tutorial-motion-frame" data-tutorial-motion="step3">
-              <img class="approved-tutorial-image step3-tutorial-image" src="assets/photos/step3-tutorial-fixed.webp" alt="Obrazový návod pre krok 3: založenie prvej police do pravého uhla; fotografia bez klincovačky a ruky" loading="lazy" decoding="async" />
-              <span class="tutorial-scroll-cue" aria-hidden="true">SCROLL <b>↓</b></span>
-            </div>
-          </div>
-          <section class="step-three-compartments" aria-labelledby="stepThreeCompartmentsTitle">
-            <div class="step-three-compartments-heading">
-              <p class="eyebrow">ČISTÁ VÝŠKA OTVORU</p>
-              <h4 id="stepThreeCompartmentsTitle">Priečinky majú rôznu výšku.</h4>
-              <p>Rovnaké rozmerovanie platí pre obe série. Výška police navyše: 6 mm.</p>
-            </div>
-            <div class="step-three-slot-pair">
-              <div class="step-three-slot-series">
-                <h5>Ø125 mm <span>horných 10</span></h5>
-                <div class="step-three-slot" style="--slot-height:7"><b>P40</b><span>7,0 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:7"><b>P60</b><span>7,0 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:6.5"><b>P80</b><span>6,5 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:5.6"><b>P100</b><span>5,6 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:5.2"><b>P120</b><span>5,2 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:5"><b>P150</b><span>5,0 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:4.7"><b>P180</b><span>4,7 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:4.4"><b>P240</b><span>4,4 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:4.3"><b>P320</b><span>4,3 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:4"><b>P400</b><span>4,0 cm</span></div>
-              </div>
-              <div class="step-three-slot-series">
-                <h5>Ø150 mm <span>spodných 10</span></h5>
-                <div class="step-three-slot" style="--slot-height:7"><b>P40</b><span>7,0 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:7"><b>P60</b><span>7,0 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:6.5"><b>P80</b><span>6,5 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:5.6"><b>P100</b><span>5,6 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:5.2"><b>P120</b><span>5,2 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:5"><b>P150</b><span>5,0 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:4.7"><b>P180</b><span>4,7 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:4.4"><b>P240</b><span>4,4 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:4.3"><b>P320</b><span>4,3 cm</span></div>
-                <div class="step-three-slot" style="--slot-height:4"><b>P400</b><span>4,0 cm</span></div>
-              </div>
-            </div>
-          </section>
-
-          <div class="step-three-copy">
-            <div class="step-one-progress step-three-progress"><span>03</span><i></i><small>06</small></div>
-            <p class="eyebrow">MONTÁŽ PRVEJ POLICE</p>
-            <h3>Založ prvú policu presne na čiaru a nastreľ ju v pravom uhle.</h3>
-            <p>
-              Policu posaď na vyznačenú úroveň, pritlač ju tesárskym uholníkom a až potom ju zaisti.
-              Hlava pneumatickej nástreľovačky musí byť <strong>presne v rovine police</strong>, aby klinec
-              prešiel cez bočnicu priamo do hrany police. Rovnaký princíp platí aj zozadu:
-              klinec ide cez zadnú stenu do zadnej hrany police, nie vedľa nej.
-            </p>
-
-            <div class="step-three-points">
-              <div><span>01</span><strong>Polica presne na značku</strong><small>Nechaj ju sedieť na čiare bez zdvihnutia alebo prepadnutia.</small></div>
-              <div><span>02</span><strong>Uholník drží 90°</strong><small>Prvý kus rozhoduje o tom, ako rovno pôjde celý 120 cm vysoký stojan.</small></div>
-              <div><span>03</span><strong>Nástrel v osi police</strong><small>Z boku aj zozadu mieri hlava nástreľovačky priamo na stred hrany police.</small></div>
-            </div>
-
-            <aside class="step-one-tip step-three-tip">
-              <span>DÔLEŽITÝ DETAIL</span>
-              <p>Nestrieľaj mimo hrany police. Najprv si očami alebo prstom over polohu hrany a až potom prilož nástreľovaciu hlavu do tej istej výšky.</p>
-            </aside>
-
-            <div class="nailer-note step-three-note">
-              <span class="nailer-icon">⌁</span>
-              <div><strong>Bez lepidla, hneď pevné.</strong><small>Použi nástrelovacie klince 20–25 mm. Pri tenkej 6 mm preglejke pracuj kolmo a s citom, aby klinec nevyšiel bokom.</small></div>
-            </div>
-          </div>
-        </article>
-        <article class="pilot-step-feature step-four-feature" data-reveal>
-          <div class="step-four-media">
-            <div class="step-four-frame approved-tutorial-frame tutorial-motion-frame" data-tutorial-motion="step4">
-              <img class="approved-tutorial-image step4-tutorial-image" src="assets/photos/step4-tutorial-variable-heights.webp" alt="Fotorealistický obrazový návod pre krok 4: desať priečinkov s rozdielnymi čistými výškami od 7,0 cm po 4,0 cm podľa zrnitosti" loading="lazy" decoding="async" />
-              <span class="tutorial-scroll-cue" aria-hidden="true">SCROLL <b>↓</b></span>
-            </div>
-          </div>
-
-          <div class="step-four-copy">
-            <div class="step-four-intro">
-              <div class="step-one-progress step-four-progress"><span>04</span><i></i><small>06</small></div>
-              <p class="eyebrow">MONTÁŽ ĎALŠÍCH POLÍC</p>
-              <h3>Pokračuj podľa značiek a priebežne kontroluj rozstupy.</h3>
-              <p>
-                Keď prvá polica sedí presne, pokračuj rovnakým spôsobom smerom nahor.
-                Každú policu polož na vyznačenú čiaru, skontroluj <strong>90° uhol</strong>
-                a zaisti ju <strong>nástrelovacími klincami 20–25 mm</strong> z boku aj zozadu.
-                Nástrel rob vždy priamo v úrovni hrany police.
-              </p>
-
-              <aside class="step-one-tip step-four-tip">
-                <span>NEČAKAJ AŽ NA KONIEC</span>
-                <p>Po troch až štyroch priečinkoch vlož reálny Ø150 mm kotúč. Ak ide dnu a von bez drhnutia, môžeš pokračovať ďalej.</p>
-              </aside>
-            </div>
-
-            <div class="step-four-checks">
-              <div><span>01</span><strong>Drž sa vyznačených čiar</strong><small>Rozstupy už nemeraj nanovo. Použi pripravené značky z Kroku 2.</small></div>
-              <div><span>02</span><strong>Každú policu skontroluj uholníkom</strong><small>Malá odchýlka sa pri 120 cm výške násobí, preto ju oprav hneď.</small></div>
-              <div><span>03</span><strong>Testuj reálnym Ø150 mm kotúčom</strong><small>Vnútorná šírka je približne 15,8 cm a kotúč má 15,0 cm. Zostáva asi 8 mm celkovej bočnej vôle.</small></div>
-              <div><span>04</span><strong>Nástrel iba do hrany police</strong><small>Z boku aj zozadu musí klinec prejsť cez stenu priamo do dreva police, nie vedľa nej.</small></div>
-            </div>
-          </div>
-        </article>
-        <article class="pilot-step-feature step-five-feature" data-reveal>
-          <div class="step-five-copy">
-            <div class="step-one-progress step-five-progress"><span>05</span><i></i><small>06</small></div>
-            <p class="eyebrow">BEZPEČNÉ UKOTVENIE</p>
-            <h3>Vyrovnaj stojan a ukotvi ho hore aj dole.</h3>
-            <p>
-              Stojan má výšku <strong>120 cm</strong>, ale šírku iba <strong>17 cm</strong>.
-              Preto ho pred naplnením nenechávaj voľne stáť. Prilož ho na miesto,
-              skontroluj zvislosť vodováhou a upevni ho k stene v hornej aj dolnej časti.
-              Typ skrutky, hmoždinky alebo kotvy zvoľ podľa materiálu steny.
-            </p>
-
-            <div class="step-five-checks">
-              <div><span>01</span><strong>Najprv zvislosť</strong><small>Vodováhu prilož k bočnici a stojan vyrovnaj ešte pred prvým dotiahnutím.</small></div>
-              <div><span>02</span><strong>Horný kotviaci bod</strong><small>Horné uchytenie zabráni tomu, aby sa vysoký úzky stojan odkláňal od steny.</small></div>
-              <div><span>03</span><strong>Dolný kotviaci bod</strong><small>Druhé uchytenie dole stabilizuje spodok a obmedzí kývanie pri vyberaní kotúčov.</small></div>
-              <div><span>04</span><strong>Kotvu prispôsob stene</strong><small>Do dreva použi vhodný vrut; pri murive alebo dutých stenách zvoľ kotvu určenú pre daný podklad.</small></div>
-            </div>
-
-            <aside class="step-one-tip step-five-tip">
-              <span>NEPREŤAHUJ 6 MM PREGLEJKU</span>
-              <p>Ak skrutka prechádza zadnou stenou stojana, použi podložku alebo širšiu hlavu. Dotiahni ju tak, aby držala pevne, ale tenkú preglejku zbytočne nedeformovala.</p>
-            </aside>
-          </div>
-
-          <div class="step-five-media">
-            <div class="step-five-frame tutorial-motion-frame" data-tutorial-motion="step5">
-              <img class="rack-product-image step-five-product-image" alt="Hotový vysoký organizér na brúsne kotúče pripravený na vyrovnanie a ukotvenie k stene" />
-              <span class="step-five-shade" aria-hidden="true"></span>
-              <span class="step-five-level" aria-hidden="true"><i></i><b>ZVISLO</b></span>
-              <span class="step-five-anchor step-five-anchor-top"><i></i><b>HORE</b><small>kotviaci bod</small></span>
-              <span class="step-five-anchor step-five-anchor-bottom"><i></i><b>DOLE</b><small>kotviaci bod</small></span>
-              <span class="tutorial-scroll-cue" aria-hidden="true">SCROLL <b>↓</b></span>
-            </div>
-          </div>
-        </article>
-        <article class="pilot-step-feature step-six-feature" data-reveal>
-          <div class="step-six-media">
-            <div class="step-six-frame tutorial-motion-frame" data-tutorial-motion="step6">
-              <img class="rack-product-image step-six-product-image" alt="Hotový organizér naplnený brúsnymi kotúčmi zoradenými podľa priemeru a zrnitosti" />
-              <span class="step-six-shade" aria-hidden="true"></span>
-
-              <div class="step-six-finish-badge" aria-hidden="true">
-                <span>✓</span>
-                <div><b>HOTOVO</b><small>20 priečinkov · 2 priemery</small></div>
-              </div>
-
-              <div class="step-six-photo-bank step-six-bank-a" aria-hidden="true">
-                <b>Ø125 mm</b>
-                <small>P40 → P400</small>
-              </div>
-              <div class="step-six-photo-bank step-six-bank-b" aria-hidden="true">
-                <b>Ø150 mm</b>
-                <small>P40 → P400</small>
-              </div>
-
-              <span class="tutorial-scroll-cue" aria-hidden="true">SCROLL <b>↓</b></span>
-            </div>
-          </div>
-
-          <div class="step-six-copy">
-            <div class="step-one-progress step-six-progress"><span>06</span><i></i><small>06</small></div>
-            <p class="eyebrow">OZNAČENIE A NAPLNENIE</p>
-            <h3>Rozdeľ kotúče podľa priemeru a potom podľa zrnitosti.</h3>
-            <p>
-              Stojan je hotový. Zostáva mu dať systém. Jednu desiatku priečinkov použi pre
-              <strong>Ø125 mm</strong> a druhú pre <strong>Ø150 mm</strong>.
-              V oboch sadách drž rovnaké poradie od hrubého brúsenia po jemné:
-              <strong>P40 → P400</strong>. Vďaka tomu po správnom kotúči siahneš bez hľadania.
-            </p>
-
-            <div class="step-six-banks">
-              <section>
-                <div class="step-six-bank-head"><span>01</span><div><b>Ø125 mm</b><small>10 priečinkov</small></div></div>
-                <div class="step-six-grits"><span class="coarse">P40</span><span class="coarse">P60</span><span class="coarse">P80</span><span>P100</span><span>P120</span><span>P150</span><span>P180</span><span>P240</span><span>P320</span><span>P400</span></div>
-              </section>
-              <section>
-                <div class="step-six-bank-head"><span>02</span><div><b>Ø150 mm</b><small>10 priečinkov</small></div></div>
-                <div class="step-six-grits"><span class="coarse">P40</span><span class="coarse">P60</span><span class="coarse">P80</span><span>P100</span><span>P120</span><span>P150</span><span>P180</span><span>P240</span><span>P320</span><span>P400</span></div>
-              </section>
-            </div>
-
-            <div class="step-six-rules">
-              <div><span>01</span><strong>Jedna zrnitosť = jeden priečinok</strong><small>Nemiešaj P80 s P100. Pri práci sa tým úplne odstráni hádanie.</small></div>
-              <div><span>02</span><strong>Označ prednú hranu alebo bok</strong><small>Veľký čitateľný štítok P40, P60… P400 nájdeš očami skôr, než sa kotúča dotkneš.</small></div>
-              <div><span>03</span><strong>Neprepĺňaj priečinky</strong><small>Kotúče sa majú vyberať jednou rukou bez ohýbania a zachytávania o policu.</small></div>
-            </div>
-
-            <aside class="step-one-tip step-six-tip">
-              <span>FINÁLNA KONTROLA</span>
-              <p>Prejdi všetkých 20 priečinkov, vlož a vytiahni jeden kotúč. Ak nič nedrhne, stojan je pripravený na každodennú prevádzku.</p>
-            </aside>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="pilot-final-note" data-reveal>
-      <span>FINTA Z DIELNE</span>
-      <h2>Nerob všetky priečinky rovnaké.</h2>
-      <p>P40, P60 a P80 sa hromadia rýchlejšie. Práve preto je variabilná výška otvorov praktickejšia než dokonale pravidelná mriežka.</p>
+    <section class="section" id="postup" aria-labelledby="postup-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="postup-title">Postup v 6 krokoch</h2>
+          <p>Kroky nadväzujú. Najviac času ušetríš presným rezaním a rozmeraním na začiatku.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/sandpaper-step-1.webp" srcset="assets/img/sandpaper-step-1-800.webp 800w, assets/img/sandpaper-step-1.webp 1400w" sizes="(max-width: 860px) 100vw, 55vw" width="1400" height="1045" loading="lazy" alt="Rezanie malých štvorcových políc z preglejky na stolovej píle s dorazom">
+            </figure>
+            <div>
+              <span class="step-num"><b>1</b> z 6</span>
+              <h3>Narež všetky diely pri jednom nastavení</h3>
+              <p class="text">Najprv priprav dve bočnice <strong>120 × 15 cm</strong> a zadnú stenu <strong>120 × 17 cm</strong>. Potom sériovo narež <strong>21 políc 15,8 × 15 cm</strong>. Doraz na píle nastav iba raz a už ho nemeň.</p>
+              <p class="tip"><strong>Finta z dielne</strong>Po prvom presnom kuse už nemeraj každú policu nanovo. Použi doraz alebo prvý diel ako šablónu a odstrániš väčšinu chýb, ktoré by sa pri 21 kusoch sčítali.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/sandpaper-step-2.webp" srcset="assets/img/sandpaper-step-2-800.webp 800w, assets/img/sandpaper-step-2.webp 1400w" sizes="(max-width: 860px) 100vw, 55vw" width="1400" height="1045" loading="lazy" alt="Dve bočnice vedľa seba na stole, uholník prenáša čiaru cez obe naraz">
+            </figure>
+            <div>
+              <span class="step-num"><b>2</b> z 6</span>
+              <h3>Vyznač všetkých 20 úrovní ešte pred montážou</h3>
+              <p class="text">Obe bočnice polož vedľa seba, zarovnaj horné hrany a čiary prenášaj cez <strong>uholník jedným ťahom</strong>. Začni zhora pri P40 podľa tabuľky výšok. Rovnaké úrovne potom prenes aj na zadnú stenu.</p>
+              <ul class="points">
+                <li>Hodnota v tabuľke je čistá výška otvoru.</li>
+                <li>Po každom otvore pripočítaj 6 mm na policu.</li>
+                <li>Desať úrovní zopakuj druhýkrát pre Ø150 mm.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/sandpaper-step-3.webp" srcset="assets/img/sandpaper-step-3-800.webp 800w, assets/img/sandpaper-step-3.webp 1400w" sizes="(max-width: 860px) 100vw, 55vw" width="1400" height="1045" loading="lazy" alt="Prvá polica pritlačená uholníkom k bočnici, klincovačka mieri na výšku police">
+            </figure>
+            <div>
+              <span class="step-num"><b>3</b> z 6</span>
+              <h3>Prvú policu založ presne na čiaru a v pravom uhle</h3>
+              <p class="text">Policu posaď na vyznačenú úroveň, pritlač ju uholníkom a až potom zaisti. Hlava klincovačky musí byť <strong>presne v rovine police</strong>, aby klinec prešiel cez bočnicu do jej hrany. Rovnako zozadu cez zadnú stenu.</p>
+              <p class="tip"><strong>Prvý kus rozhoduje</strong>O tom, ako rovno pôjde celý 120 cm vysoký stojan, rozhoduje prvá polica. Daj si na nej záležať.</p>
+              <p class="tip warn"><strong>Pozor na 6 mm preglejku</strong>Nastreľuj kolmo a s citom. Najprv si prstom over, kde je hrana police, a až potom prilož klincovačku.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/sandpaper-step-4.webp" srcset="assets/img/sandpaper-step-4-800.webp 800w, assets/img/sandpaper-step-4.webp 1400w" sizes="(max-width: 860px) 100vw, 55vw" width="1400" height="1045" loading="lazy" alt="Rozpracovaný stojan ležiaci na stole, ruka skúša vložiť brúsny kotúč do priečinka">
+            </figure>
+            <div>
+              <span class="step-num"><b>4</b> z 6</span>
+              <h3>Pokračuj podľa značiek a skúšaj kotúčom</h3>
+              <p class="text">Ďalšie police montuj rovnakým spôsobom. Každú polož na čiaru, skontroluj <strong>90°</strong> a zaisti klincami z boku aj zozadu.</p>
+              <ul class="points">
+                <li>Rozstupy už nemeraj nanovo, drž sa značiek z kroku 2.</li>
+                <li>Malá odchýlka sa na 120 cm výšky násobí. Oprav ju hneď.</li>
+                <li>Vnútri je 15,8 cm, kotúč má 15 cm. Ostáva asi 8 mm vôle.</li>
+              </ul>
+              <p class="tip"><strong>Nečakaj až na koniec</strong>Po troch až štyroch priečinkoch vlož skutočný kotúč Ø150 mm. Ak ide dnu a von bez drhnutia, pokračuj.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/sandpaper-step-5.webp" srcset="assets/img/sandpaper-step-5-800.webp 800w, assets/img/sandpaper-step-5.webp 1400w" sizes="(max-width: 860px) 100vw, 55vw" width="1400" height="1045" loading="lazy" alt="Stojan pri stene, vodováha na bočnici a aku vŕtačka skrutkuje horný kotviaci bod">
+            </figure>
+            <div>
+              <span class="step-num"><b>5</b> z 6</span>
+              <h3>Vyrovnaj stojan a ukotvi ho hore aj dole</h3>
+              <p class="text">Stojan je vysoký 120 cm, ale široký iba 17 cm. Pred naplnením ho preto nenechávaj voľne stáť. Prilož ho k stene, vodováhou skontroluj zvislosť a upevni ho <strong>v hornej aj dolnej časti</strong>.</p>
+              <ul class="points">
+                <li>Horný bod drží stojan pri stene.</li>
+                <li>Dolný bod zastaví kývanie pri vyberaní kotúčov.</li>
+                <li>Do dreva vrut, do muriva alebo sadrokartónu kotvu pre daný materiál.</li>
+              </ul>
+              <p class="tip warn"><strong>Nepreťahuj</strong>Pod hlavu skrutky daj podložku. Tenká zadná stena sa inak ľahko zdeformuje.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/sandpaper-step-6.webp" srcset="assets/img/sandpaper-step-6-800.webp 800w, assets/img/sandpaper-step-6.webp 1400w" sizes="(max-width: 860px) 100vw, 55vw" width="1400" height="1045" loading="lazy" alt="Ruka vyťahuje jeden brúsny kotúč z naplneného priečinka">
+            </figure>
+            <div>
+              <span class="step-num"><b>6</b> z 6</span>
+              <h3>Označ priečinky a naplň ich</h3>
+              <p class="text">Hornú desiatku použi pre Ø125 mm, dolnú pre Ø150 mm. V oboch drž rovnaké poradie od hrubého po jemné: <strong>P40 → P400</strong>. Po správnom kotúči potom siahneš bez hľadania.</p>
+              <ul class="points">
+                <li>Jedna zrnitosť, jeden priečinok. P80 a P100 nemiešaj.</li>
+                <li>Štítok daj na prednú hranu police, nech je vidieť z diaľky.</li>
+                <li>Neprepĺňaj. Kotúč musí ísť von bez ohýbania.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="hotovo" aria-labelledby="hotovo-title">
+      <div class="wrap done">
+        <img src="assets/img/sandpaper-rack-700.webp" width="700" height="938" loading="lazy" alt="Hotový zakladač naplnený brúsnymi kotúčmi" style="object-position:center 40%">
+        <div class="prose">
+          <h2 id="hotovo-title">Hotovo. Posledná kontrola</h2>
+          <p>Prejdi všetkých 20 priečinkov, do každého vlož a vytiahni jeden kotúč. Ak nič nedrhne, stojan je pripravený na každodennú prácu.</p>
+          <a class="next-card" href="key-shelf.html">
+            <img src="assets/img/key-shelf-800.webp" width="800" height="597" alt="" loading="lazy">
+            <span><small>Ďalší návod</small><strong>Polička na kľúče pri dverách</strong></span>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <button class="back-top" id="backTop" type="button" aria-label="Späť hore">↑</button>
   <footer class="site-footer">
-    <a class="brand footer-brand" href="index.html"><span class="brand-icon">✕</span><strong>VYCHYTÁVKY</strong></a>
-    <p>Referenčný projekt podľa reálneho riešenia z dielne.</p>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Hore ↑</a>
+    <div class="wrap">
+      <span>Vychytávky – návody z domácej dielne</span>
+      <a href="#obsah">Späť hore</a>
+    </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="site.js" defer></script>
 </body>
 </html>

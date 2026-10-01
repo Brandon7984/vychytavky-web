@@ -1,245 +1,277 @@
 <!doctype html>
 <html lang="sk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Polička na kľúče pri vchodových dverách – drevený organizér s policou, miskou, háčikmi a magnetickým držiakom. Materiál, rozmery a pracovný postup." />
-  <meta name="theme-color" content="#17130f" />
-  <title>Polička na kľúče pri dverách | Vychytávky</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polička na kľúče pri dverách – Vychytávky</title>
+  <meta name="description" content="Návod na dubovú poličku na kľúče s piatimi háčikmi, poličkou, vaničkou a magnetickým pásom. Rozmery, materiál a 7 krokov s fotkami.">
+  <meta name="theme-color" content="#f6f5f1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
 </head>
-<body class="project-page key-shelf-page">
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<body>
+  <a class="skip" href="#obsah">Preskočiť na obsah</a>
 
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="index.html" aria-label="Späť na Vychytávky">
-      <span class="brand-icon" aria-hidden="true">✕</span>
-      <span class="brand-copy"><strong>VYCHYTÁVKY</strong><small>urob · oprav · vylepši</small></span>
-    </a>
-    <nav class="desktop-nav" aria-label="Navigácia projektu">
-      <a href="#vysledok">Výsledok</a>
-      <a href="#material">Materiál</a>
-      <a href="#postup">Postup</a>
-      <a href="#finale">Hotovo</a>
-    </nav>
-    <a class="header-cta" href="index.html">Všetky projekty <span>↗</span></a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html" aria-label="Vychytávky – domov">
+        <img class="logo-mark" src="assets/img/logo.svg" alt="" width="30" height="30">
+        Vychytávky
+      </a>
+      <nav class="site-nav" aria-label="Hlavná navigácia">
+        <a href="index.html#projekty">Všetky projekty</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="project-hero" id="vysledok">
-      <div class="project-hero-copy" data-reveal>
-        <div class="breadcrumbs"><a href="index.html">Domov</a><span>›</span><span>Domácnosť</span><span>›</span><strong>Polička na kľúče</strong></div>
-        <p class="eyebrow">NOVÝ PROJEKT · DOMÁCNOSŤ</p>
-        <h1>Polička na<br><em>kľúče pri dverách.</em></h1>
-        <p class="project-lead">
-          Kompaktný vstupný organizér z dreva a čierneho kovu. Päť háčikov, horná polička,
-          spodná vanička a skrytý magnetický bod na veci, ktoré chceš odložiť jedným pohybom.
-        </p>
-
-        <div class="project-stats">
-          <div><span>ROZMER</span><strong>32 × 10 × 55 cm</strong></div>
-          <div><span>HÁČIKY</span><strong>5 kusov</strong></div>
-          <div><span>ÚROVEŇ</span><strong>mierne pokročilý</strong></div>
+  <main id="obsah">
+    <section class="guide-hero is-wide">
+      <div class="wrap">
+        <div>
+          <ol class="crumbs">
+            <li><a href="index.html">Domov</a></li>
+            <li><a href="index.html#projekty">Dom</a></li>
+            <li aria-current="page">Polička na kľúče</li>
+          </ol>
+          <h1>Polička na kľúče pri dverách</h1>
+          <p class="lead">Malá stanica pri vchode: päť háčikov na kľúče, polička na okuliare, vanička na peňaženku a magnetický pás na kľúč, ktorý berieš najčastejšie.</p>
+          <dl class="facts">
+            <div><dt>Rozmer</dt><dd>30 × 40 × 10 cm</dd></div>
+            <div><dt>Háčiky</dt><dd>5 ks + magnet</dd></div>
+            <div><dt>Čas</dt><dd>cca 3 hodiny + schnutie</dd></div>
+            <div><dt>Náročnosť</dt><dd>stredná</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn" href="#postup">Začať postup</a>
+            <a class="btn btn-ghost" href="#material">Materiál</a>
+          </div>
         </div>
-
-        <div class="hero-actions">
-          <a class="button button-primary" href="#postup">Začať postup <span>↓</span></a>
-          <a class="text-link" href="#material">Pozrieť materiál</a>
-        </div>
-      </div>
-
-      <div class="project-hero-image" data-reveal>
-        <img class="sprite-crop key-shelf-master-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Hotová drevená polička na kľúče pri vchodových dverách s čiernymi háčikmi, hornou policou a spodnou vaničkou" />
-        <span class="project-hero-badge">SCHVÁLENÝ MASTER VIZUÁL</span>
+        <figure>
+          <img src="assets/img/key-shelf.webp"
+               srcset="assets/img/key-shelf-800.webp 800w, assets/img/key-shelf.webp 1400w"
+               sizes="(max-width: 860px) 100vw, 48vw"
+               width="1400" height="1045"
+               alt="Dubová polička pri vchodových dverách s piatimi čiernymi háčikmi, kľúčmi, vaničkou a magnetickým pásom"
+               fetchpriority="high">
+        </figure>
       </div>
     </section>
 
-    <nav class="project-subnav" id="projectSubnav" aria-label="Obsah projektu">
-      <a href="#vysledok">Výsledok</a>
-      <a href="#material">Materiál</a>
-      <a href="#postup">Postup</a>
-      <a href="#finale">Hotovo</a>
+    <nav class="guide-nav" aria-label="Časti návodu">
+      <div class="wrap">
+        <a href="#rozmery">Rozmery</a>
+        <a href="#material">Materiál a náradie</a>
+        <a href="#postup">Postup</a>
+        <a href="#hotovo">Hotovo</a>
+      </div>
     </nav>
 
-    <section class="result-section">
-      <div class="result-copy" data-reveal>
-        <p class="eyebrow dark">ČO MÁ VYRIEŠIŤ</p>
-        <h2>Jedno miesto.<br><em>Žiadne hľadanie kľúčov.</em></h2>
-        <p>
-          Projekt kombinuje odkladanie, zavesenie aj magnetické prichytenie. Cieľom nie je dekorácia,
-          ale malá stanica pri dverách, ktorú človek začne používať automaticky každý deň.
-        </p>
-        <ul class="feature-list">
-          <li><span>01</span>5 samostatných háčikov na zväzky kľúčov</li>
-          <li><span>02</span>horná polička na okuliare alebo drobnosti</li>
-          <li><span>03</span>spodná vanička na peňaženku, mince či slúchadlá</li>
-          <li><span>04</span>skrytý magnetický bod na rýchle odloženie</li>
-        </ul>
-      </div>
-
-      <div class="result-visual" data-reveal>
-        <img class="sprite-crop key-shelf-master-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Hotová drevená polička na kľúče s odkladacou plochou a kovovými háčikmi" />
-        <span class="scribble-note note-a">drevo + čierny kov</span>
-        <span class="scribble-note note-b">5 háčikov + magnet</span>
-      </div>
-    </section>
-
-    <section class="prep-section" id="material">
-      <div class="section-head" data-reveal>
-        <div>
-          <p class="eyebrow dark">MATERIÁL & NÁRADIE</p>
-          <h2>Najprv si priprav.<br><em>Potom rež.</em></h2>
+    <section class="section" id="rozmery" aria-labelledby="rozmery-title">
+      <div class="wrap split">
+        <div class="prose">
+          <h2 id="rozmery-title">Jedno miesto na všetko, čo berieš pri odchode</h2>
+          <p>Nejde o dekoráciu, ale o malú stanicu pri dverách, ktorú začneš používať automaticky. Každá časť má jednu úlohu.</p>
+          <ul class="ticks">
+            <li>Päť samostatných háčikov na zväzky kľúčov.</li>
+            <li>Horná polička na okuliare alebo drobnosti.</li>
+            <li>Spodná vanička na peňaženku, mince či slúchadlá.</li>
+            <li>Magnetický pás na kľúč, ktorý odkladáš jedným pohybom.</li>
+          </ul>
+          <p style="margin-top:20px">Rozmery sú navrhnuté pre bežnú stenu pri vchode. Ak máš viac kľúčov, predĺž dosku na 40 cm a pridaj dva háčiky.</p>
         </div>
-        <p class="section-intro">Rozmery ešte doladíme podľa finálneho master vizuálu. Konštrukčný princíp však zostane rovnaký.</p>
-      </div>
-
-      <div class="prep-columns">
-        <article class="prep-card" data-reveal>
-          <span class="prep-icon">▰</span>
-          <h3>Materiál</h3>
-          <ul class="resource-list">
-            <li><strong>zadná drevená doska</strong><span>cca 32 × 55 cm</span></li>
-            <li><strong>horná polička</strong><span>cca 28 × 8 cm</span></li>
-            <li><strong>diely spodnej vaničky</strong><span>drevo 10–18 mm</span></li>
-            <li><strong>čierne háčiky</strong><span>5 ks</span></li>
-            <li><strong>neodýmové magnety</strong><span>1–3 ks</span></li>
-            <li><strong>olej / matný lak</strong><span>povrchová úprava</span></li>
-          </ul>
-        </article>
-
-        <article class="prep-card steel-card" data-reveal>
-          <span class="prep-icon">⌁</span>
-          <h3>Náradie</h3>
-          <ul class="resource-list">
-            <li><strong>stolová alebo pokosová píla</strong><span>rezanie dielov</span></li>
-            <li><strong>aku vŕtačka</strong><span>otvory a montáž</span></li>
-            <li><strong>brúska</strong><span>príprava povrchu</span></li>
-            <li><strong>svorky</strong><span>lepenie vaničky</span></li>
-            <li><strong>meter + uholník</strong><span>presné rozmeranie</span></li>
-            <li><strong>fréza alebo Forstner vrták</strong><span>zapustenie magnetu</span></li>
-          </ul>
-        </article>
+        <figure class="drawing">
+          <svg viewBox="0 0 420 470" role="img" aria-labelledby="ksTitle ksDesc" font-family="Schibsted Grotesk, system-ui, sans-serif">
+<title id="ksTitle">Čelný pohľad na poličku s rozmermi</title>
+<desc id="ksDesc">Zadná doska 30 krát 40 cm. Horná polička 8 cm od vrchu, pod ňou pásmo s piatimi háčikmi vysoké 12 cm, dole vanička vysoká 8 cm. Vpravo zvislý čierny magnetický pás.</desc>
+<rect x="60" y="30" width="270" height="360" rx="3" fill="#ebdfc6" stroke="#1d2321" stroke-width="1.5"/>
+<rect x="68" y="102" width="230" height="16.2" fill="#c9a76f" stroke="#1d2321" stroke-width="1"/>
+<path d="M90 148.2 v26 a8 8 0 0 0 16 0" fill="none" stroke="#1d2321" stroke-width="4" stroke-linecap="round"/>
+<path d="M135 148.2 v26 a8 8 0 0 0 16 0" fill="none" stroke="#1d2321" stroke-width="4" stroke-linecap="round"/>
+<path d="M180 148.2 v26 a8 8 0 0 0 16 0" fill="none" stroke="#1d2321" stroke-width="4" stroke-linecap="round"/>
+<path d="M225 148.2 v26 a8 8 0 0 0 16 0" fill="none" stroke="#1d2321" stroke-width="4" stroke-linecap="round"/>
+<path d="M270 148.2 v26 a8 8 0 0 0 16 0" fill="none" stroke="#1d2321" stroke-width="4" stroke-linecap="round"/>
+<rect x="306" y="112" width="12" height="153" rx="2" fill="#1d2321"/>
+<rect x="68" y="298" width="230" height="72" fill="#c9a76f" stroke="#1d2321" stroke-width="1"/>
+<g stroke="#2b56c9" stroke-width="1.2"><line x1="36" y1="30" x2="36" y2="390"/><line x1="31" y1="30" x2="41" y2="30"/><line x1="31" y1="390" x2="41" y2="390"/></g>
+<text transform="translate(27 210) rotate(-90)" text-anchor="middle" font-size="12" font-weight="600" fill="#2b56c9">40 cm</text>
+<g stroke="#2b56c9" stroke-width="1.2"><line x1="366.0" y1="30" x2="366.0" y2="102"/><line x1="361.0" y1="30" x2="371.0" y2="30"/><line x1="361.0" y1="102" x2="371.0" y2="102"/></g>
+<text transform="translate(357.0 66) rotate(-90)" text-anchor="middle" font-size="12" font-weight="600" fill="#2b56c9">8 cm</text>
+<g stroke="#2b56c9" stroke-width="1.2"><line x1="366.0" y1="118.2" x2="366.0" y2="298"/><line x1="361.0" y1="118.2" x2="371.0" y2="118.2"/><line x1="361.0" y1="298" x2="371.0" y2="298"/></g>
+<text transform="translate(357.0 208.1) rotate(-90)" text-anchor="middle" font-size="12" font-weight="600" fill="#2b56c9">12 cm háčiky</text>
+<g stroke="#2b56c9" stroke-width="1.2"><line x1="366.0" y1="298" x2="366.0" y2="370"/><line x1="361.0" y1="298" x2="371.0" y2="298"/><line x1="361.0" y1="370" x2="371.0" y2="370"/></g>
+<text transform="translate(357.0 334) rotate(-90)" text-anchor="middle" font-size="12" font-weight="600" fill="#2b56c9">8 cm</text>
+<g stroke="#1d2321" stroke-width="1.2"><line x1="60" y1="414.0" x2="330" y2="414.0"/><line x1="60" y1="408.0" x2="60" y2="420.0"/><line x1="330" y1="408.0" x2="330" y2="420.0"/></g>
+<text x="195" y="436.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2321">30 cm</text>
+<text x="195" y="454.0" text-anchor="middle" font-size="11.5" fill="#6f7773">hĺbka s vaničkou 10 cm</text>
+</svg>
+          <figcaption>Čelný pohľad. Polička 8 cm od vrchu, pásmo háčikov 12 cm, vanička 8 cm.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="steps-section" id="postup">
-      <div class="steps-heading" data-reveal>
-        <p class="eyebrow dark">PRACOVNÝ POSTUP</p>
-        <h2>Sedem krokov.<br><em>Každý má vlastný vizuál.</em></h2>
-        <p>
-          Celý postup je už poskladaný do jednej konzistentnej série: od papierového návrhu až po
-          finálny olej a montáž. Pri kroku 06 pribudla aj krátka Higgsfield ukážka pohybu.
-        </p>
-      </div>
-
-      <div class="steps-timeline">
-        <article class="step-card" data-step="01" data-reveal>
-          <div class="step-photo"><img class="sprite-crop key-shelf-step-01-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Návrh poličky na kľúče nakreslený na papieri s rozmermi, metrom, ceruzkou a uholníkom" /><span class="image-pill">KROK 01 · NÁVRH</span></div>
-          <div class="step-content"><span class="step-number">01</span><p class="eyebrow dark">NÁVRH A ROZMERANIE</p><h3>Najprv si projekt načrtni na papier.</h3><p>Na jednoduchý náčrt si zakresli celkový rozmer, hornú poličku, päť háčikov, spodnú vaničku aj magnetickú zónu. Rozloženie si tak overíš ešte predtým, než začneš rezať drevo.</p><div class="step-tip">Tip: papier stojí pár centov. Chyba na doske môže stáť celý kus materiálu.</div></div>
-        </article>
-
-        <article class="step-card reverse" data-step="02" data-reveal>
-          <div class="step-photo"><img class="sprite-crop key-shelf-step-02-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Narezané drevené diely poličky na kľúče rozložené na pracovnom stole vedľa pokosovej píly, metra a uholníka" /><span class="image-pill">KROK 02 · REZANIE</span></div>
-          <div class="step-content"><span class="step-number">02</span><p class="eyebrow dark">REZANIE DIELOV</p><h3>Narež všetky drevené diely naraz.</h3><p>Podľa náčrtu si priprav zadný panel, hornú poličku, diely spodnej vaničky a bočný prvok. Keď sú všetky kusy narezané v jednej etape, ľahšie udržíš rovnaké rozmery a pravé uhly.</p><div class="step-tip">Tip: každý diel si hneď po reze jemne označ ceruzkou. Pri skladaní potom nebudeš hádať, čo kam patrí.</div></div>
-        </article>
-
-        <article class="step-card" data-step="03" data-reveal>
-          <div class="step-photo">
-            <img class="sprite-crop" src="assets/photos/key-shelf-step-03.webp" alt="Brúsenie hrán svetlých dubových dielov poličky na kľúče excentrickou brúskou" loading="lazy" />
-            <span class="image-pill">KROK 03 · BRÚSENIE</span>
+    <section class="section section-alt" id="material" aria-labelledby="material-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="material-title">Materiál a náradie</h2>
+          <p>Odškrtávaj, čo už máš pripravené. Stav si zapamätá tento prehliadač.</p>
+        </div>
+        <div class="lists">
+          <div class="list-card">
+            <h3>Drevo (dub alebo jaseň)</h3>
+            <ul class="check" data-checklist="keyshelf-wood">
+              <li><label><input type="checkbox"><span class="what">Zadná doska, 18 mm</span><span class="qty">30 × 40 cm</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Horná polička, 18 mm</span><span class="qty">28 × 8 cm</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Dno vaničky, 10–12 mm</span><span class="qty">26 × 8 cm</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Predok vaničky, 10–12 mm</span><span class="qty">26 × 6 cm</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Boky vaničky, 10–12 mm</span><span class="qty">2× 8 × 6 cm</span></label></li>
+            </ul>
           </div>
-          <div class="step-content"><span class="step-number">03</span><p class="eyebrow dark">BRÚSENIE</p><h3>Vyhlaď povrch a jemne zraz hrany.</h3><p>Po rezaní odstráň stopy po píle a nerovnosti. Najprv prebrús plochy, potom jemne zraz ostré hrany, aby sa organizér príjemne držal a povrchová úprava neskôr sadla rovnomerne.</p><div class="step-tip">Tip: brúsku netlač silou. Nech pracuje vlastnou váhou a na hranách zostaň len krátko, aby si ich zbytočne nezaoblil.</div></div>
-        </article>
-
-        <article class="step-card reverse" data-step="04" data-reveal>
-          <div class="step-photo key-shelf-step-four-photo" data-reveal>
-            <img class="sprite-crop" src="assets/photos/key-shelf-step-04.webp" alt="Lepenie a sťahovanie spodnej dubovej vaničky poličky na kľúče pomocou svoriek" loading="lazy" />
-            <span class="image-pill">KROK 04 · SPODNÁ VANIČKA</span>
-            <div class="callout callout-left"><strong>90° KONTROLA</strong><small>Uholník ešte pred dotiahnutím.</small><span class="callout-line"></span></div>
-            <div class="callout callout-right"><strong>LEPIDLO</strong><small>Tenká súvislá vrstva, nie kaluž.</small><span class="callout-line"></span></div>
+          <div class="list-card">
+            <h3>Kovanie a povrch</h3>
+            <ul class="check" data-checklist="keyshelf-hw">
+              <li><label><input type="checkbox"><span class="what">Čierne háčiky so skrutkami</span><span class="qty">5 ks</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Čierny kovový pás</span><span class="qty">3 × 17 cm</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Neodýmové magnety</span><span class="qty">2–3 ks</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Lepidlo na drevo</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Olej alebo tvrdý voskový olej</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Závesy alebo kotvy podľa steny</span><span class="qty">2 ks</span></label></li>
+            </ul>
           </div>
-          <div class="step-content"><span class="step-number">04</span><p class="eyebrow dark">SPODNÁ VANIČKA</p><h3>Zlep ju rovno. Svorky už len držia tvar.</h3><p>Najprv si vaničku poskladaj nasucho a skontroluj, že diely sedia bez pnutia. Potom nanes tenkú vrstvu lepidla, zrovnaj predný diel aj boky a až nakoniec ich stiahni svorkami.</p><div class="step-tip">Tip: pred úplným dotiahnutím polož do rohu uholník. Keď je roh 90°, zotri vytlačené lepidlo vlhkou handrou a nechaj spoj v pokoji vytvrdnúť.</div></div>
-        </article>
-
-        <article class="step-card" data-step="05" data-reveal>
-          <div class="step-photo">
-            <img class="sprite-crop" src="assets/photos/key-shelf-step-05.webp" alt="Montáž hornej dubovej poličky do pravého uhla pomocou uholníka, svoriek a skrytého spoja" loading="lazy" />
-            <span class="image-pill">KROK 05 · HORNÁ POLIČKA</span>
-            <span class="callout callout-right"><strong>SKRYTÝ SPOJ</strong><small>Skrutka ide zo zadnej strany.</small><i class="callout-line"></i></span>
+          <div class="list-card">
+            <h3>Náradie</h3>
+            <ul class="check" data-checklist="keyshelf-tools">
+              <li><label><input type="checkbox"><span class="what">Pokosová alebo stolová píla</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Aku vŕtačka a Forstnerov vrták</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Excentrická brúska, P120 a P180</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Svorky</span><span class="qty">4 ks</span></label></li>
+              <li><label><input type="checkbox"><span class="what">Uholník a meter</span></label></li>
+            </ul>
           </div>
-          <div class="step-content"><span class="step-number">05</span><p class="eyebrow dark">HORNÁ POLIČKA</p><h3>Vyrovnaj ju na 90° a upevni zozadu.</h3><p>Hornú poličku najprv usaď nasucho, pritiahni svorkami a uholníkom skontroluj pravý uhol. Až potom ju upevni skrytým spojom alebo skrutkami zo zadnej strany, aby čelná plocha ostala čistá.</p><div class="step-tip">Tip: pred definitívnym dotiahnutím polož na poličku malý predmet a skontroluj, či sa nikam nenakláňa.</div></div>
-        </article>
-
-        <article class="step-card reverse" data-step="06" data-reveal>
-          <div class="step-photo">
-            <img class="sprite-crop" src="assets/photos/key-shelf-step-06.webp" alt="Montáž piatich čiernych háčikov a magnetickej zóny na drevenej poličke na kľúče" loading="lazy" />
-            <span class="image-pill">KROK 06 · HÁČIKY + MAGNET</span>
-          </div>
-          <div class="step-content">
-            <span class="step-number">06</span>
-            <p class="eyebrow dark">KOV + MAGNET</p>
-            <h3>Namontuj päť háčikov a skrytý magnet.</h3>
-            <p>Rozmeraj päť rovnakých pozícií pre čierne háčiky a dotiahni ich v jednej línii. Magnetickú časť usaď tak, aby prirodzene nadväzovala na bočný čierny prvok a z čelnej strany nepôsobila rušivo.</p>
-            <div class="step-tip">🎬 Higgsfield ukážka: v pohybe vidíš zavesenie kľúčov aj funkciu magnetickej zóny.</div>
-            <details class="step-motion">
-              <summary>▶ Pozrieť pohyb <small>5 s · HIGGSFIELD</small></summary>
-              <div class="step-motion-player">
-                <video controls muted playsinline preload="metadata" poster="assets/photos/key-shelf-step-06.webp">
-                  <source src="assets/videos/key-shelf-step-06.mp4" type="video/mp4" />
-                  Tvoj prehliadač nepodporuje prehrávanie videa.
-                </video>
-                <p>Krátka image-to-video ukážka zachováva rovnaký výrobok a demonštruje, ako fungujú háčiky aj magnetická časť.</p>
-              </div>
-            </details>
-          </div>
-        </article>
-
-        <article class="step-card" data-step="07" data-reveal>
-          <div class="step-photo key-shelf-step-seven-photo" data-reveal>
-            <img class="sprite-crop" src="assets/photos/key-shelf-step-07.webp" alt="Nanášanie tenkej vrstvy oleja handričkou na hotový dubový organizér pred montážou na stenu" loading="lazy" />
-            <span class="image-pill">KROK 07 · OLEJ + MONTÁŽ</span>
-            <div class="callout callout-left"><strong>TENKÁ VRSTVA</strong><small>Olej rozotri rovnomerne, nie do kaluží.</small><span class="callout-line"></span></div>
-            <div class="callout callout-right"><strong>PO VLÁKNE</strong><small>Handričku veď v smere kresby dreva.</small><span class="callout-line"></span></div>
-          </div>
-          <div class="step-content"><span class="step-number">07</span><p class="eyebrow dark">POVRCH + MONTÁŽ</p><h3>Olej zvýrazní dub. Potom ho ukotvi napevno.</h3><p>Nanesi tenkú vrstvu oleja alebo tvrdého voskového oleja v smere vlákien, po chvíli zotri prebytok a nechaj povrch vytvrdnúť podľa návodu výrobcu. Až potom organizér ukotvi na stenu skrytým spôsobom a vyskúšaj ho s reálnymi kľúčmi a drobnosťami.</p><div class="step-tip">Tip: kotvu vždy vyber podľa podkladu steny. Iné upevnenie potrebuje sadrokartón, iné tehla a iné betón.</div></div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="workshop-tip" data-reveal>
-      <span class="tip-number">HIGGSFIELD TEST</span>
-      <h2>Statický obrázok ukáže tvar.<br><em>Pohyb ukáže funkciu.</em></h2>
-      <p>
-        Pri kroku 06 sme spojili schválený master vizuál s Higgsfield image-to-video: krátky pohyb
-        ukazuje zavesenie kľúčov aj magnetickú zónu bez toho, aby sa menil charakter výrobku.
-        Tento workflow sa osvedčil a môžeme ho použiť aj pri ďalších návodoch.
-      </p>
+    <section class="section" id="postup" aria-labelledby="postup-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="postup-title">Postup v 7 krokoch</h2>
+          <p>Najdlhšie trvá schnutie lepidla a oleja. Samotná práca zaberie jedno popoludnie.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/key-shelf-step-1.webp" width="1448" height="1086" loading="lazy" alt="Náčrt poličky s rozmermi 300 a 400 mm na papieri, vedľa uholník a ceruzka">
+            </figure>
+            <div>
+              <span class="step-num"><b>1</b> z 7</span>
+              <h3>Najprv si projekt načrtni na papier</h3>
+              <p class="text">Zakresli celkový rozmer, hornú poličku, päť háčikov, vaničku aj magnetický pás. Rozloženie si tak overíš skôr, než začneš rezať drevo.</p>
+              <p class="tip"><strong>Prečo papier</strong>Papier stojí pár centov. Chyba na dubovej doske môže stáť celý kus materiálu.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/key-shelf-step-2.webp" width="1448" height="1086" loading="lazy" alt="Narezané dubové diely na pracovnom stole: zadná doska, polička a diely vaničky">
+            </figure>
+            <div>
+              <span class="step-num"><b>2</b> z 7</span>
+              <h3>Narež všetky diely naraz</h3>
+              <p class="text">Podľa náčrtu priprav zadnú dosku, hornú poličku a diely vaničky. Keď režeš všetko v jednej etape, ľahšie udržíš rovnaké rozmery a pravé uhly.</p>
+              <p class="tip"><strong>Označ si diely</strong>Hneď po reze napíš na každý diel ceruzkou, čo je zač. Pri skladaní nebudeš hádať.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/key-shelf-step-3.webp" width="1400" height="792" loading="lazy" alt="Brúsenie dubovej dosky excentrickou brúskou">
+            </figure>
+            <div>
+              <span class="step-num"><b>3</b> z 7</span>
+              <h3>Vyhlaď povrch a jemne zraz hrany</h3>
+              <p class="text">Odstráň stopy po píle. Najprv prebrús plochy zrnitosťou P120, potom P180 a nakoniec jemne zraz ostré hrany. Olej potom sadne rovnomerne.</p>
+              <p class="tip"><strong>Netlač</strong>Nech brúska pracuje vlastnou váhou. Na hranách zostaň len krátko, aby si ich nezaoblil.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/key-shelf-step-4.webp" width="1400" height="930" loading="lazy" alt="Zlepená vanička stiahnutá svorkami, vedľa uholník">
+            </figure>
+            <div>
+              <span class="step-num"><b>4</b> z 7</span>
+              <h3>Zlep vaničku rovno, svorky len držia tvar</h3>
+              <p class="text">Vaničku najprv poskladaj nasucho a skontroluj, že diely sedia bez pnutia. Potom nanes tenkú vrstvu lepidla a stiahni ju svorkami.</p>
+              <p class="tip"><strong>Kontrola 90°</strong>Pred úplným dotiahnutím polož do rohu uholník. Vytlačené lepidlo hneď zotri vlhkou handrou.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/key-shelf-step-5.webp" width="1400" height="792" loading="lazy" alt="Horná polička pritiahnutá svorkami k zadnej doske, uholník kontroluje pravý uhol">
+            </figure>
+            <div>
+              <span class="step-num"><b>5</b> z 7</span>
+              <h3>Hornú poličku vyrovnaj na 90° a upevni zozadu</h3>
+              <p class="text">Poličku usaď nasucho, pritiahni svorkami a uholníkom skontroluj pravý uhol. Až potom ju priskrutkuj zo zadnej strany dosky, aby čelo ostalo čisté. Rovnako upevni aj vaničku.</p>
+              <p class="tip"><strong>Test</strong>Polož na poličku malý predmet. Ak sa nikam nekotúľa, je rovno.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media" data-video>
+              <img src="assets/img/key-shelf-step-6.webp" width="1400" height="792" loading="lazy" alt="Montáž čiernych háčikov skrutkovačom, vpravo magnetický pás s kľúčom">
+              <video src="assets/videos/key-shelf-step-6.mp4" poster="assets/img/key-shelf-step-6.webp" muted playsinline loop preload="none" hidden aria-label="Krátke video zavesenia kľúčov na háčiky a magnet"></video>
+              <button class="play" type="button">▶ Pozrieť pohyb</button>
+            </figure>
+            <div>
+              <span class="step-num"><b>6</b> z 7</span>
+              <h3>Namontuj päť háčikov a magnetický pás</h3>
+              <p class="text">Rozmeraj päť rovnakých rozstupov a háčiky dotiahni v jednej línii. Do bočnej hrany vyvŕtaj Forstnerovým vrtákom 2–3 plytké otvory na magnety, zalep ich a prekry čiernym kovovým pásom.</p>
+              <p class="tip"><strong>Jedna línia</strong>Natiahni si ceruzkou vodorovnú čiaru a háčiky dávaj na ňu. Krivý rad je vidieť z celej chodby.</p>
+            </div>
+          </li>
+
+          <li class="step">
+            <figure class="step-media">
+              <img src="assets/img/key-shelf-step-7.webp" width="1400" height="792" loading="lazy" alt="Nanášanie oleja handričkou na hotovú poličku">
+            </figure>
+            <div>
+              <span class="step-num"><b>7</b> z 7</span>
+              <h3>Naolejuj a ukotvi na stenu</h3>
+              <p class="text">Nanes tenkú vrstvu oleja v smere vlákien, po chvíli zotri prebytok a nechaj vytvrdnúť podľa návodu výrobcu. Potom poličku ukotvi skrytými závesmi.</p>
+              <p class="tip warn"><strong>Kotva podľa steny</strong>Sadrokartón, tehla a betón potrebujú každý iné upevnenie. S kľúčmi a vaničkou nesie polička viac, než sa zdá.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <section class="project-finale" id="finale">
-      <div class="finale-photo" data-reveal>
-        <img class="sprite-crop key-shelf-master-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Hotová polička na kľúče namontovaná pri vchodových dverách" />
-      </div>
-      <div class="finale-copy" data-reveal>
-        <p class="eyebrow">HOTOVÝ PROJEKT</p>
-        <h2>Sedem krokov.<br><em>Jeden hotový organizér.</em></h2>
-        <p>
-          Od papierového návrhu cez rezanie, brúsenie, lepenie a montáž až po olej a zavesenie na stenu.
-          Rovnaký master výrobok sme držali naprieč celým návodom a pri kroku 06 sme pridali aj krátku Higgsfield ukážku pohybu.
-        </p>
-        <a class="button button-primary" href="#postup">Prejsť si postup znova <span>↑</span></a>
+    <section class="section section-alt" id="hotovo" aria-labelledby="hotovo-title">
+      <div class="wrap done">
+        <img src="assets/img/key-shelf-800.webp" width="800" height="597" loading="lazy" alt="Hotová polička pri dverách s kľúčmi na háčikoch">
+        <div class="prose">
+          <h2 id="hotovo-title">Hotovo. Vyskúšaj ju naostro</h2>
+          <p>Zaves kľúče, polož okuliare a peňaženku. Ak po týždni všetko odkladáš automaticky na jedno miesto, polička robí, čo má.</p>
+          <a class="next-card" href="sandpaper.html">
+            <img src="assets/img/sandpaper-step-6-800.webp" width="800" height="597" alt="" loading="lazy">
+            <span><small>Ďalší návod</small><strong>Zakladač na brúsne kotúče</strong></span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
-  <button class="back-top" id="backTop" type="button" aria-label="Späť hore">↑</button>
-
   <footer class="site-footer">
-    <a class="brand footer-brand" href="index.html"><span class="brand-icon">✕</span><strong>VYCHYTÁVKY</strong></a>
-    <p>Druhý projekt webu Vychytávky · hotový návod krok po kroku.</p>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Hore ↑</a>
+    <div class="wrap">
+      <span>Vychytávky – návody z domácej dielne</span>
+      <a href="#obsah">Späť hore</a>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="site.js" defer></script>
 </body>
 </html>

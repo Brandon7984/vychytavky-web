@@ -113,15 +113,16 @@ Ak nová funkcia neprináša jasný praktický úžitok, nemusí byť súčasťo
 
 ## 8. Aktuálny stav
 
-Projekt je na úplnom začiatku.
+Hotové (vetva `feature/redesign-v2`):
 
-Hotové:
+- svetlý, prehľadný dizajn: jeden spoločný `site.css` a `site.js`, bez frameworkov,
+- hlavná stránka na 2–3 obrazovky: úvod, projekty s filtrom kategórií (Dom / Dielňa / Záhrada), čo obsahuje každý návod,
+- návod **Zakladač na brúsne kotúče**: výkres s presnými výškami, tabuľka, zoznam materiálu na odškrtnutie, 6 krokov s novými fotkami,
+- návod **Polička na kľúče**: zjednotené rozmery 30 × 40 × 10 cm, výkres, 7 krokov, video pri kroku 6,
+- obrázky sú bežné `.webp` súbory v `assets/img/` (žiadne base64 `.txt` kúsky).
 
-- GitHub repozitár,
-- základný README,
-- jednoduché pravidlá práce v AGENTS.md,
-- tento projektový rámec.
+Ako pridať nový návod:
 
-Ďalší krok:
-
-Navrhnúť čo najjednoduchšiu technickú architektúru prvej verzie webu a následne vytvoriť prvú funkčnú kostru stránky.
+1. skopírovať `key-shelf.html` ako šablónu,
+2. obrázky uložiť do `assets/img/` (webp, cca 1400 px na šírku),
+3. pridať kartu do `index.html` s `data-category` = `dom`, `dielna` alebo `zahrada` a upraviť počty vo filtroch.
