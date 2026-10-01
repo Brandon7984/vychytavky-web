@@ -3886,3 +3886,22 @@ button.callout:focus-visible{
   .step-three-slot b,.step-three-slot span{font-size:.5rem}
   .key-shelf-step-four-photo{aspect-ratio:1.38}
 }
+
+
+/* Key shelf — step 07 finish reveal. */
+.key-shelf-step-seven-photo{aspect-ratio:1.52}
+.key-shelf-step-seven-photo img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transform:scale(1.025);filter:saturate(.9) brightness(1.025);
+  transition:transform 1.05s cubic-bezier(.2,.75,.2,1),filter 1.05s ease;
+}
+.key-shelf-step-seven-photo::after{
+  content:"";position:absolute;inset:-20%;z-index:1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,236,202,.18) 50%,transparent 65%);
+  transform:translateX(-120%);transition:transform 1.25s .12s cubic-bezier(.2,.75,.2,1);
+}
+.key-shelf-step-seven-photo.is-visible img{transform:scale(1.065);filter:saturate(1.08) contrast(1.025)}
+.key-shelf-step-seven-photo.is-visible::after{transform:translateX(120%)}
+.key-shelf-step-seven-photo .image-pill,
+.key-shelf-step-seven-photo .callout{z-index:3}
+@media(max-width:560px){.key-shelf-step-seven-photo{aspect-ratio:1.38}}
