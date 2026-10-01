@@ -3868,6 +3868,14 @@ button.callout:focus-visible{
 .step-three-slot b{color:#ef9a59;font-size:.56rem}
 .step-three-slot span{white-space:nowrap;color:#e3d3c3;font-size:.55rem}
 
+/* Key shelf — step 04 detail reveal. */
+.key-shelf-step-four-photo{aspect-ratio:1.52}
+.key-shelf-step-four-photo img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transform:scale(1.025);transition:transform .9s cubic-bezier(.2,.75,.2,1);
+}
+.key-shelf-step-four-photo.is-visible img{transform:scale(1.075)}
+
 @media(max-width:560px){
   .pilot-tech-caption{width:100%;margin-top:10px}
   .step-three-compartments{padding:13px 10px}
@@ -3876,4 +3884,5 @@ button.callout:focus-visible{
   .step-three-slot-series h5 span{font-size:.46rem}
   .step-three-slot{padding-inline:4px;font-size:.52rem}
   .step-three-slot b,.step-three-slot span{font-size:.5rem}
+  .key-shelf-step-four-photo{aspect-ratio:1.38}
 }
