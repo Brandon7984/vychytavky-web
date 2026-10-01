@@ -170,7 +170,7 @@ p { margin: 0; }
 .card.is-soon h3 { font-size: 1.15rem; }
 .card p { margin-top: 6px; color: var(--ink-2); font-size: 0.97rem; }
 .card-link { text-decoration: none; }
-.card-link::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.card-link::after { content: ""; position: absolute; inset: 0; z-index: 3; border-radius: var(--radius); cursor: pointer; }
 .card-link:focus-visible { outline: none; }
 .card-link:focus-visible::after { outline: 3px solid var(--blue); outline-offset: 4px; }
 
