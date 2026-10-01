@@ -132,3 +132,15 @@ Use the Higgsfield connector for image/video generation when the output must con
 Higgsfield → repository asset → HTML/CSS/JS → validation → commit.
 
 If the required connector truly is missing after an `ALL_TOOLS` check, then report the limitation. Otherwise continue the implementation and do not stop after media generation.
+
+### Hard execution gate for master-workflow requests
+
+For requests such as `Implementuj ... podľa master workflowu`:
+
+1. The FIRST execution step must be a Code Mode `ALL_TOOLS` check for the required GitHub and Higgsfield connectors.
+2. Do not infer connector availability from the visible top-level tool list.
+3. If the required connectors are present, continue the implementation in the same task; do not return a capability-limit response.
+4. Do not call standalone ChatGPT ImageGen for this workflow. Use Higgsfield MCP for media that must continue into repository edits.
+5. Do not send the final user-facing completion message until either:
+   - the media is integrated, validated, and committed to the requested branch, or
+   - a real connector/API error has occurred after an attempted tool call, in which case report that concrete error.
