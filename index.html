@@ -1,145 +1,60 @@
 <!doctype html>
 <html lang="sk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Vychytávky – moderné DIY projekty do domu, dielne a záhrady s fotorealistickým obrazovým postupom." />
-  <meta name="theme-color" content="#17130f" />
-  <title>Vychytávky – praktické DIY, ktoré chceš naozaj spraviť</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vychytávky: praktické projekty do dielne, domu a záhrady. Pozri výsledok, pochop postup a vyrob si ho.">
+  <meta name="theme-color" content="#17130f"><title>Vychytávky — vidíš, rozumieš, spravíš</title>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="home-v2.css">
 </head>
-<body class="home-page">
+<body class="home-page v2-home">
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
   <header class="site-header" id="siteHeader">
-    <a class="brand" href="#top" aria-label="Vychytávky domov">
-      <span class="brand-icon" aria-hidden="true">✕</span>
-      <span class="brand-copy"><strong>VYCHYTÁVKY</strong><small>urob · oprav · vylepši</small></span>
-    </a>
-    <nav class="desktop-nav" aria-label="Hlavná navigácia">
-      <a href="#projekty">Projekty</a>
-      <a href="#princip">Ako na to</a>
-      <a href="sandpaper.html">Ukážkový návod</a>
-    </nav>
-    <a class="header-cta" href="sandpaper.html">Projekt týždňa <span>↗</span></a>
+    <a class="brand" href="#top" aria-label="Vychytávky — na začiatok"><span class="brand-icon" aria-hidden="true">✕</span><span class="brand-copy"><strong>VYCHYTÁVKY</strong><small>urob · oprav · vylepši</small></span></a>
+    <nav class="desktop-nav" aria-label="Hlavná navigácia"><a href="#projekty">Projekty</a><a href="#kategorie">Kategórie</a><a href="#postup">Ako vzniká</a></nav>
+    <a class="header-cta" href="sandpaper.html">Otvoriť návod <span>↗</span></a>
   </header>
-
   <main id="top">
-    <section class="home-hero">
-      <div class="hero-noise" aria-hidden="true"></div>
-      <div class="hero-copy" data-reveal>
-        <p class="eyebrow">DOM · DIELŇA · ZÁHRADA</p>
-        <h1>VYCHYTÁVKY<br><em>pre skutočný život.</em></h1>
-        <p class="hero-lead">
-          Nápady, ktoré nezostanú na papieri. Praktické projekty, riešenia a návody,
-          podľa ktorých si doma niečo vyrobíš, opravíš alebo zlepšíš.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projekty">Pozrieť projekty <span>↘</span></a>
-          <a class="text-link" href="sandpaper.html">Náhodná vychytávka ↗</a>
-        </div>
-        <div class="hero-proof">
-          <div><strong>01</strong><span>projekt spracovaný do detailu</span></div>
-          <div><strong>20</strong><span>priečinkov podľa zrnitosti</span></div>
-          <div><strong>125/150</strong><span>mm excentrické kotúče</span></div>
-        </div>
-      </div>
-
-      <a class="featured-visual" href="sandpaper.html" aria-label="Otvoriť projekt organizér na brúsne kotúče" data-reveal>
-        <img class="rack-mood-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Teplá fotorealistická dielňa s úzkym vertikálnym stojanom na brúsne kotúče" />
-        <span class="featured-kicker">PROJEKT TÝŽDŇA · DIELŇA</span>
-        <span class="featured-title">Zakladač na brúsne kotúče</span>
-        <span class="featured-meta">20 priečinkov · Ø125 / Ø150 mm · 17 × 15 × 120 cm</span>
-        <span class="featured-arrow">↗</span>
-      </a>
+    <section class="v2-hero" aria-labelledby="v2-title">
+      <img class="rack-mood-image v2-hero-photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Hotový organizér na brúsne kotúče v domácej dielni" fetchpriority="high">
+      <div class="v2-hero-wash" aria-hidden="true"></div>
+      <div class="v2-hero-top"><span>DOM / DIELŇA / ZÁHRADA</span><span>001 — VECI, KTORÉ FUNGUJÚ</span></div>
+      <div class="v2-hero-core"><p>Urob si miesto pre lepšie nápady.</p><h1 id="v2-title">VYCHY<span>TÁVKY</span></h1></div>
+      <div class="v2-hero-bottom"><a href="#manifest">OBJAV VIAC <span aria-hidden="true">↓</span></a><p>Praktické projekty, ktoré sa dajú naozaj dokončiť.</p><span>01 / 07</span></div>
     </section>
-
-    <section class="marquee" aria-label="Kategórie">
-      <div class="marquee-track">
-        <span>DREVO</span><i>✦</i><span>KOV</span><i>✦</i><span>DOMÁCNOSŤ</span><i>✦</i><span>DIELŇA</span><i>✦</i><span>ZÁHRADA</span><i>✦</i><span>TVORENIE</span><i>✦</i>
-        <span>DREVO</span><i>✦</i><span>KOV</span><i>✦</i><span>DOMÁCNOSŤ</span><i>✦</i><span>DIELŇA</span><i>✦</i><span>ZÁHRADA</span><i>✦</i><span>TVORENIE</span><i>✦</i>
+    <section class="v2-manifest" id="manifest" aria-labelledby="manifest-title">
+      <div class="v2-manifest-index">01 <span>/ MANIFEST</span></div>
+      <div class="v2-manifest-body"><p class="v2-overline">NÁPADY PRE SKUTOČNÝ ŽIVOT</p><h2 id="manifest-title">Veci nemusíš<br><i>vždy kupovať.</i><br>Niektoré si vieš<br><em>spraviť lepšie.</em></h2><div class="v2-manifest-foot"><span class="v2-asterisk" aria-hidden="true">✳</span><p>Bez hádania. S rozmermi, materiálom a postupom, ktorý môžeš vziať rovno do dielne.</p></div></div>
+    </section>
+    <section class="v2-feature" id="projekty" aria-labelledby="feature-title">
+      <div class="v2-feature-head"><p class="v2-overline">HOTOVÝ PROJEKT / 001</p><h2 id="feature-title">Poriadok má<br><em>svoj tvar.</em></h2><span class="v2-feature-num" aria-hidden="true">01</span></div>
+      <div class="v2-feature-media"><img class="rack-product-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Hotový vertikálny organizér na brúsne kotúče" loading="lazy"><span>ORGANIZÉR NA BRÚSNE KOTÚČE</span></div>
+      <div class="v2-feature-detail"><div><span class="v2-overline">DIELŇA / ORGANIZÁCIA</span><h3>Jeden úzky stojan.<br>Dvadsať priečinkov.</h3><p>Organizér z 6 mm preglejky pre dva priemery kotúčov. Od hrubého P40 po jemné P400, každý má svoje miesto.</p><a class="v2-arrow-link" href="sandpaper.html">Pozrieť celý návod <span aria-hidden="true">↗</span></a></div><dl><div><dt>VÝŠKA</dt><dd>120 cm</dd></div><div><dt>PRIEČINKY</dt><dd>20</dd></div><div><dt>KOTÚČE</dt><dd>Ø125 / Ø150 mm</dd></div><div><dt>MATERIÁL</dt><dd>6 mm preglejka</dd></div></dl></div>
+    </section>
+    <section class="v2-next" aria-labelledby="next-title">
+      <div class="v2-next-intro"><span>02 / V PRÍPRAVE</span><h2 id="next-title">Ďalšie veci,<br><i>ktoré dávajú zmysel.</i></h2><p>Prvý návod je hotový. Tieto projekty ukazujú, kam sa Vychytávky rozrastú.</p></div>
+      <div class="v2-next-composition">
+        <article class="v2-project v2-project-wide" id="dom"><div class="v2-project-art"><img src="assets/projects/entryway.svg" alt="Ilustrácia odkladacej stanice pri dverách" loading="lazy"></div><div class="v2-project-caption"><span>01 / DOM</span><h3>Odkladacia stanica<br>pri dverách</h3><small>PRIPRAVUJEME</small></div></article>
+        <article class="v2-project v2-project-narrow" id="zahrada"><div class="v2-project-art"><img src="assets/projects/herbs.svg" alt="Ilustrácia kompaktného stojana na bylinky" loading="lazy"></div><div class="v2-project-caption"><span>02 / ZÁHRADA</span><h3>Stojan na<br>bylinky</h3><small>PRIPRAVUJEME</small></div></article>
+        <article class="v2-project v2-project-low" id="dielna"><div class="v2-project-art"><img src="assets/projects/drills.svg" alt="Ilustrácia stojana na vrtáky" loading="lazy"></div><div class="v2-project-caption"><span>03 / DIELŇA</span><h3>Stojan na vrtáky</h3><small>PRIPRAVUJEME</small></div></article>
       </div>
     </section>
-
-    <section class="projects-section" id="projekty">
-      <div class="section-head" data-reveal>
-        <div>
-          <p class="eyebrow dark">VYBRANÉ VYCHYTÁVKY</p>
-          <h2>Nie katalóg.<br><em>Zbierka vecí, čo fungujú.</em></h2>
-        </div>
-        <p class="section-intro">Prvý projekt je spracovaný kompletne ako referencia. Ostatné zatiaľ ukazujú smer, ktorým môže web ďalej rásť.</p>
-      </div>
-
-      <div class="project-feature" data-reveal>
-        <a class="project-feature-image" href="sandpaper.html">
-          <img class="rack-mood-image project-mood-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Zakladač na brúsne kotúče zasadený do modernej domácej dielne" />
-          <span class="image-pill">KOMPLETNÝ NÁVOD</span>
-        </a>
-        <div class="project-feature-copy">
-          <span class="project-number">01 / REFERENČNÝ PROJEKT</span>
-          <h3>Organizér na<br>brúsne kotúče</h3>
-          <p>Úzky 120 cm vysoký organizér podľa reálneho dielenského kusu: 20 priečinkov, 6 mm preglejka, Ø125 aj Ø150 mm, presný rozpis zrnitostí a interaktívny pracovný postup.</p>
-          <div class="project-tags"><span>120 cm</span><span>20 priečinkov</span><span>Ø125 / Ø150</span><span>6 mm preglejka</span></div>
-          <a class="button button-dark" href="sandpaper.html">Otvoriť celý návod <span>↗</span></a>
-        </div>
-      </div>
-
-      <div class="coming-grid">
-        <article class="coming-card" data-reveal>
-          <img src="assets/projects/entryway.svg" alt="Odkladacia stanica pri dverách" />
-          <div><span>DOMÁCNOSŤ · PRIPRAVUJEME</span><h3>Odkladacia stanica pri dverách</h3></div>
-        </article>
-        <article class="coming-card" data-reveal>
-          <img src="assets/projects/herbs.svg" alt="Stojan na bylinky" />
-          <div><span>ZÁHRADA · PRIPRAVUJEME</span><h3>Kompaktný stojan na bylinky</h3></div>
-        </article>
-        <article class="coming-card" data-reveal>
-          <img src="assets/projects/drills.svg" alt="Stojan na vrtáky" />
-          <div><span>DIELŇA · PRIPRAVUJEME</span><h3>Prehľadný stojan na vrtáky</h3></div>
-        </article>
+    <section class="v2-categories" id="kategorie" aria-labelledby="category-title">
+      <div class="v2-categories-head"><p class="v2-overline">03 / VYBER SI SMER</p><h2 id="category-title">Čo chceš<br><em>vylepšiť?</em></h2></div>
+      <div class="v2-category-list"><a href="#dielna"><span>01</span><strong>Dielňa</strong><span aria-hidden="true">↗</span></a><a href="#projekty"><span>02</span><strong>Drevo</strong><span aria-hidden="true">↗</span></a><a href="#dielna"><span>03</span><strong>Kov</strong><span aria-hidden="true">↗</span></a><a href="#dom"><span>04</span><strong>Dom</strong><span aria-hidden="true">↗</span></a><a href="#zahrada"><span>05</span><strong>Záhrada</strong><span aria-hidden="true">↗</span></a><a href="#projekty"><span>06</span><strong>Organizácia</strong><span aria-hidden="true">↗</span></a><a href="#postup"><span>07</span><strong>Prípravky</strong><span aria-hidden="true">↗</span></a></div>
+      <p class="v2-categories-note">Kategórie smerujú na dostupné a pripravované projekty.</p>
+    </section>
+    <section class="v2-process" id="postup" aria-labelledby="process-title">
+      <div class="v2-process-heading"><span>04 / OD NÁPADU K HOTOVEJ VECI</span><h2 id="process-title">Takto vzniká<br><em>vychytávka.</em></h2><p>Šesť skutočných krokov z návodu na organizér. Každý krok má svoj obraz a konkrétny výsledok.</p></div>
+      <div class="v2-process-layout"><div class="v2-process-visual">
+        <img class="is-active" src="assets/photos/step1-tutorial-hq.webp" alt="Príprava dielov organizéra" loading="lazy"><img src="assets/photos/step2-tutorial-hq.webp" alt="Rozmeranie priečinkov organizéra" loading="lazy"><img src="assets/photos/step3-tutorial-fixed.webp" alt="Založenie prvej police organizéra" loading="lazy"><img src="assets/photos/step4-tutorial-variable-heights.webp" alt="Variabilné výšky priečinkov organizéra" loading="lazy"><img src="assets/photos/step4-tutorial-variable-heights.webp" alt="Kontrola zostavených priečinkov" loading="lazy"><img class="rack-product-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Hotový označený organizér" loading="lazy">
+        <span class="v2-process-image-label">KROK <b id="processCurrent">01</b> / 06</span></div>
+        <div class="v2-process-steps"><article class="is-active"><span>01</span><div><h3>Myšlienka a diely</h3><p>Čo má stojan vyriešiť a čo treba pripraviť.</p></div></article><article><span>02</span><div><h3>Rozmery</h3><p>Zrnitosti dostanú presne odmerané výšky.</p></div></article><article><span>03</span><div><h3>Prvá polica</h3><p>Pravý uhol určí presnosť celej zostavy.</p></div></article><article><span>04</span><div><h3>Priečinky</h3><p>Od hrubých kotúčov po jemné, s miestom podľa potreby.</p></div></article><article><span>05</span><div><h3>Kontrola</h3><p>Skontrolovať rovinu, uloženie a pevnosť.</p></div></article><article><span>06</span><div><h3>Štítky a hotovo</h3><p>Označiť P40 až P400 a uložiť kotúče.</p></div></article><a class="v2-arrow-link" href="sandpaper.html#postup">Prejsť na podrobný postup <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
-
-    <section class="project-showcase" data-reveal>
-      <div class="showcase-copy">
-        <p class="eyebrow">OD NÁPADU PO HOTOVÝ VÝROBOK</p>
-        <h2>Šesť krokov.<br><em>A vec má svoje miesto.</em></h2>
-        <p>Prvý kompletný návod prevedie výrobou organizéra od rozmerania až po finálnu kontrolu. Bez hádania a bez preskakovania dôležitých detailov.</p>
-        <div class="showcase-stats"><span><b>06</b> pracovných krokov</span><span><b>20</b> priečinkov</span><span><b>2</b> veľkosti kotúčov</span></div>
-        <a class="text-link" href="sandpaper.html">Pozrieť celý postup <span>↗</span></a>
-      </div>
-      <a class="showcase-image" href="sandpaper.html" aria-label="Otvoriť kompletný návod na organizér" data-reveal>
-        <img class="rack-product-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Hotový organizér na brúsne kotúče v dielni" loading="lazy" decoding="async" />
-        <span>01 / HOTOVÝ PROJEKT</span>
-      </a>
-    </section>
-
-    <section class="principle-section" id="princip">
-      <div class="principle-copy" data-reveal>
-        <p class="eyebrow">NÁVOD BEZ VATY</p>
-        <h2>Vidíš.<br>Rozumieš.<br><em>Spravíš.</em></h2>
-      </div>
-      <div class="principle-list">
-        <article data-reveal><span>01</span><div><h3>Výsledok ako prvý</h3><p>Veľká fotografia ti okamžite povie, či je projekt pre teba.</p></div></article>
-        <article data-reveal><span>02</span><div><h3>Realistická príprava</h3><p>Materiál, náradie, čas, cena a rozmery ešte pred prvým rezom.</p></div></article>
-        <article data-reveal><span>03</span><div><h3>Obrazový postup</h3><p>Každý krok má fotografiu, krátky popis a vizuálnu poznámku presne tam, kde ju potrebuješ.</p></div></article>
-        <article data-reveal><span>04</span><div><h3>Mobil v dielni</h3><p>Veľké dotykové prvky, čitateľný text a postup, ktorý sa dobre používa jednou rukou.</p></div></article>
-      </div>
-    </section>
-
-    <section class="closing-cta" data-reveal>
-      <p class="eyebrow dark">POZRIME SA DOVNÚTRA</p>
-      <h2>Jeden projekt.<br><em>Spracovaný poriadne.</em></h2>
-      <a class="button button-primary" href="sandpaper.html">Zakladač na brúsne kotúče <span>↗</span></a>
-    </section>
+    <section class="v2-poster" aria-labelledby="poster-title"><p>05 / JEDNODUCHO A PORIADNE</p><h2 id="poster-title">VIDÍŠ.<br><span>ROZUMIEŠ.</span><br>SPRAVÍŠ.</h2><div><span>OD PRVÉHO REZU PO POSLEDNÝ ŠTÍTOK</span><span aria-hidden="true">✳</span></div></section>
+    <section class="v2-finale" aria-labelledby="finale-title"><img class="rack-mood-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Organizér zasadený v dielni" loading="lazy"><div class="v2-finale-content"><p>06 / TERAZ SI NA RADE TY</p><h2 id="finale-title">Čo dnes<br><em>spravíš lepšie?</em></h2><a href="sandpaper.html">Začni hotovým návodom <span aria-hidden="true">↗</span></a></div><strong aria-hidden="true">VYCHYTÁVKY</strong></section>
   </main>
-
-  <footer class="site-footer">
-    <a class="brand footer-brand" href="#top"><span class="brand-icon">✕</span><strong>VYCHYTÁVKY</strong></a>
-    <p>Praktické DIY pre ľudí, ktorí chcú veci naozaj dokončiť.</p>
-    <a href="#top">Hore ↑</a>
-  </footer>
-
+  <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-icon" aria-hidden="true">✕</span><strong>VYCHYTÁVKY</strong></a><p>Praktické DIY pre ľudí, ktorí chcú veci naozaj dokončiť.</p><a href="#top">Hore ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>

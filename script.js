@@ -6,6 +6,24 @@ const saveProject = document.getElementById("saveProject");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 
+// Homepage process: keep the first frame visible without JavaScript, then follow the reading position.
+const processSteps = [...document.querySelectorAll(".v2-process-steps article")];
+const processFrames = [...document.querySelectorAll(".v2-process-visual > img")];
+const processCurrent = document.getElementById("processCurrent");
+if (processSteps.length && processFrames.length && "IntersectionObserver" in window) {
+  const showProcessStep = (index) => {
+    processSteps.forEach((step, stepIndex) => step.classList.toggle("is-active", stepIndex === index));
+    processFrames.forEach((frame, frameIndex) => frame.classList.toggle("is-active", frameIndex === index));
+    if (processCurrent) processCurrent.textContent = String(index + 1).padStart(2, "0");
+  };
+  const processObserver = new IntersectionObserver((entries) => {
+    const visible = entries.filter((entry) => entry.isIntersecting)
+      .sort((a, b) => Math.abs(a.boundingClientRect.top - window.innerHeight * .55) - Math.abs(b.boundingClientRect.top - window.innerHeight * .55));
+    if (visible.length) showProcessStep(processSteps.indexOf(visible[0].target));
+  }, { rootMargin: "-30% 0px -35% 0px" });
+  processSteps.forEach((step) => processObserver.observe(step));
+}
+
 async function loadChunkedWebp(paths, selector, readyClass) {
   const targets = [...document.querySelectorAll(selector)];
   if (!targets.length) return;
