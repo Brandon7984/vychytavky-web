@@ -57,3 +57,22 @@ If a larger or risky change is needed, stop and explain why before expanding the
 This repository should stay simpler than the problem it solves.
 
 Do not introduce new frameworks, services, abstractions, automation, or documentation layers unless they provide a clear practical benefit to the current project.
+
+
+## Media-to-web workflow
+
+When a task asks to generate or edit media **and** implement it into the website, the task is not complete at media generation.
+
+Required flow:
+
+1. Work only on the branch explicitly named by the user; for the current live redesign this is `feature/redesign-v2`.
+2. Generate the approved image/video with the requested media tool. Prefer Higgsfield when the goal is to demonstrate the Higgsfield workflow.
+3. Store the resulting asset in the repository or in the repository's existing chunked-media format.
+4. Update the relevant HTML/CSS/JS so the asset is actually used on the site.
+5. Verify the target branch, asset paths, page references, responsive behavior when relevant, and that no replaced placeholder remains.
+6. Commit the implementation.
+7. Only then report the step as complete.
+
+For the key-shelf project, also follow `docs/key-shelf-master-plan.md`.
+
+Do not stop after producing a media asset when the user's task includes website implementation.
