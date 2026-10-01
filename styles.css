@@ -347,6 +347,22 @@ h1,h2,h3,h4,p{margin-top:0}
 .step-content h3{margin:0 0 12px;font-size:clamp(2rem,3.8vw,3.7rem);line-height:.94;letter-spacing:-.05em}
 .step-content>p:not(.eyebrow){color:#6d5e52}
 .step-tip{margin-top:18px;padding:13px 14px;border-left:3px solid var(--orange);background:#e8d6c2;color:#5f4e42;font-size:.78rem;font-weight:750}
+.step-motion{
+  margin-top:16px;border:1px solid #8f735f;border-radius:13px;overflow:hidden;background:#2a211a;color:#f6eadf;
+}
+.step-motion summary{
+  min-height:48px;padding:12px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;list-style:none;
+  font-size:.76rem;font-weight:900;letter-spacing:.025em;user-select:none;
+}
+.step-motion summary::-webkit-details-marker{display:none}
+.step-motion summary small{margin-left:auto;color:#cdb8a8;font-size:.58rem;letter-spacing:.08em}
+.step-motion summary::after{content:"+";font-size:1.15rem;font-weight:700;color:#d78b58}
+.step-motion[open] summary::after{content:"−"}
+.step-motion-player{padding:0 12px 12px}
+.step-motion video{
+  display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid #644d3e;border-radius:10px;background:#120f0c;
+}
+.step-motion-player p{margin:10px 2px 0;color:#c9b7a8;font-size:.67rem;line-height:1.45}
 .callout{
   position:absolute;z-index:3;max-width:190px;padding:9px 11px;border-radius:11px;background:#fff8ef;color:#302219;
   box-shadow:0 12px 28px rgba(22,14,9,.24);font-size:.67rem;
@@ -477,6 +493,8 @@ h1,h2,h3,h4,p{margin-top:0}
   .step-photo{aspect-ratio:1.65}
   .callout{max-width:155px;font-size:.61rem}
   .step-content h3{font-size:2.35rem}
+  .step-motion summary small{display:none}
+  .step-motion-player{padding:0 8px 8px}
   .project-finale{min-height:auto}
   .finale-photo{aspect-ratio:1.12}
   .site-footer{grid-template-columns:1fr auto;padding:24px 16px}
