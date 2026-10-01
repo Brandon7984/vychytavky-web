@@ -144,3 +144,18 @@ For requests such as `Implementuj ... podľa master workflowu`:
 5. Do not send the final user-facing completion message until either:
    - the media is integrated, validated, and committed to the requested branch, or
    - a real connector/API error has occurred after an attempted tool call, in which case report that concrete error.
+
+
+## Connector availability invariant
+
+For this project, GitHub and Higgsfield MCP connectors are expected to be available unless an actual `ALL_TOOLS` check proves otherwise.
+
+Before any statement that these connectors are unavailable:
+1. inspect `ALL_TOOLS` through Code Mode,
+2. verify the exact required actions,
+3. if they are present, use them and continue the task,
+4. report a limitation only after a real connector/API call fails.
+
+For requests that say `implementuj`, `zapracuj`, or `podľa master workflowu`, connector preflight is mandatory and must happen before any user-facing capability claim.
+
+Do not rely on the visible top-level tool list as evidence of connector availability.
