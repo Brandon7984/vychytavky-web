@@ -23,7 +23,9 @@ A project step is complete only when its approved media is implemented in the we
 - [x] Step 4: lower tray assembly visual integrated.
 - [x] Step 4: Higgsfield image replaced with a reference-matched workshop photo; a subtle scroll push-in provides the mobile/desktop micro-demo.
 - Step 4 video: skipped after a 35-credit estimate (62% of the visible 56.5-credit balance); the still used 2.75 credits.
-- [ ] Remaining step 7 produced and integrated with the same product identity.
+- Step 7 video: intentionally not generated; the still + CSS finish reveal communicates the operation without another high-cost video.
+- [x] Step 7: finish + wall-mount visual integrated with the same product identity.
+- [x] All seven tutorial steps are now represented on the project page.
 
 ## Step 6 acceptance criteria
 
