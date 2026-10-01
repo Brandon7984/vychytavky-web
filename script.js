@@ -95,6 +95,28 @@ loadChunkedWebp(
   "rack-product-ready"
 );
 
+loadChunkedWebp(
+  [
+    "assets/photos/key-shelf-master-01.txt",
+    "assets/photos/key-shelf-master-02.txt",
+    "assets/photos/key-shelf-master-03.txt",
+    "assets/photos/key-shelf-master-04.txt"
+  ],
+  ".key-shelf-master-image",
+  "key-shelf-master-ready"
+);
+
+loadChunkedWebp(
+  [
+    "assets/photos/key-shelf-step-01-01.txt",
+    "assets/photos/key-shelf-step-01-02.txt",
+    "assets/photos/key-shelf-step-01-03.txt",
+    "assets/photos/key-shelf-step-01-04.txt"
+  ],
+  ".key-shelf-step-01-image",
+  "key-shelf-step-01-ready"
+);
+
 
 
 // Direct HQ tutorial images: keep the repository file as the source and mark it ready after decode/load.
