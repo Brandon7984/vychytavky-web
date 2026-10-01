@@ -10,22 +10,44 @@ const finePointer = window.matchMedia("(pointer: fine)").matches;
 const processSteps = [...document.querySelectorAll(".v2-process-steps article")];
 const processFrames = [...document.querySelectorAll(".v2-process-visual > img")];
 const processCurrent = document.getElementById("processCurrent");
-if (processSteps.length && processFrames.length && "IntersectionObserver" in window) {
+if (processSteps.length && processFrames.length) {
   const showProcessStep = (index) => {
     processSteps.forEach((step, stepIndex) => step.classList.toggle("is-active", stepIndex === index));
     processFrames.forEach((frame, frameIndex) => frame.classList.toggle("is-active", frameIndex === index));
     if (processCurrent) processCurrent.textContent = String(index + 1).padStart(2, "0");
   };
-  const processObserver = new IntersectionObserver((entries) => {
-    const visible = entries.filter((entry) => entry.isIntersecting)
-      .sort((a, b) => Math.abs(a.boundingClientRect.top - window.innerHeight * .55) - Math.abs(b.boundingClientRect.top - window.innerHeight * .55));
-    if (visible.length) showProcessStep(processSteps.indexOf(visible[0].target));
-  }, { rootMargin: "-30% 0px -35% 0px" });
-  processSteps.forEach((step) => processObserver.observe(step));
+  const updateProcessStep = () => {
+    const marker = window.innerHeight * .5;
+    let closest = 0;
+    let shortestDistance = Infinity;
+    processSteps.forEach((step, index) => {
+      const rect = step.getBoundingClientRect();
+      const distance = marker < rect.top ? rect.top - marker : marker > rect.bottom ? marker - rect.bottom : 0;
+      if (distance < shortestDistance) {
+        shortestDistance = distance;
+        closest = index;
+      }
+    });
+    showProcessStep(closest);
+  };
+  let processRaf = 0;
+  const queueProcessStep = () => {
+    if (processRaf) return;
+    processRaf = requestAnimationFrame(() => {
+      processRaf = 0;
+      updateProcessStep();
+    });
+  };
+  window.addEventListener("scroll", queueProcessStep, { passive: true });
+  window.addEventListener("resize", queueProcessStep);
+  updateProcessStep();
 }
 
 async function loadChunkedWebp(paths, selector, readyClass) {
-  const targets = [...document.querySelectorAll(selector)];
+  // The tutorial still uses placeholders; homepage photography has real src values.
+  const targets = [...document.querySelectorAll(selector)].filter((image) =>
+    !image.hasAttribute("src") || image.getAttribute("src").startsWith("data:image/gif")
+  );
   if (!targets.length) return;
 
   try {
