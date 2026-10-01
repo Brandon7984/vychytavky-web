@@ -19,6 +19,7 @@ A project step is complete only when its approved media is implemented in the we
 - [x] Step 6: still + video integrated into `key-shelf.html`.
 - [x] Step 6: responsive video UI and "▶ Pozrieť pohyb" interaction verified.
 - [x] Step 3: sanding / edge preparation visual integrated.
+- [x] Step 5: upper shelf assembly visual integrated.
 - [x] Step 4: lower tray assembly visual integrated.
 - [x] Step 4: Higgsfield image replaced with a reference-matched workshop photo; a subtle scroll push-in provides the mobile/desktop micro-demo.
 - Step 4 video: skipped after a 35-credit estimate (62% of the visible 56.5-credit balance); the still used 2.75 credits.
