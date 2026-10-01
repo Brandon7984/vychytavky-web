@@ -66,6 +66,17 @@ loadChunkedWebp(
   "key-shelf-master-ready"
 );
 
+loadChunkedWebp(
+  [
+    "assets/photos/key-shelf-step-01-01.txt",
+    "assets/photos/key-shelf-step-01-02.txt",
+    "assets/photos/key-shelf-step-01-03.txt",
+    "assets/photos/key-shelf-step-01-04.txt"
+  ],
+  ".key-shelf-step-01-image",
+  "key-shelf-step-01-ready"
+);
+
 
 
 loadChunkedWebp(
