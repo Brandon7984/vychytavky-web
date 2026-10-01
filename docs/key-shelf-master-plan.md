@@ -18,7 +18,8 @@ A project step is complete only when its approved media is implemented in the we
 - [x] Step 6: Higgsfield 5–8 s image-to-video clip.
 - [x] Step 6: still + video integrated into `key-shelf.html`.
 - [x] Step 6: responsive video UI and "▶ Pozrieť pohyb" interaction verified.
-- [ ] Remaining steps 3, 4, 5, 7 produced and integrated with the same product identity.
+- [x] Step 3: sanding / edge preparation visual integrated.
+- [ ] Remaining steps 4, 5, 7 produced and integrated with the same product identity.
 
 ## Step 6 acceptance criteria
 
