@@ -340,3 +340,16 @@ table.data { width: 100%; border-collapse: collapse; font-size: 0.95rem; font-va
 
 /* pripravované projekty sú menej výrazné ako hotové návody */
 .card.is-soon .card-media img { aspect-ratio: 16 / 9; }
+
+/* presná ilustrácia namiesto fotky (krok 4 zakladača) */
+.step.is-wide { grid-template-columns: 1fr; }
+.step.is-wide .step-media { order: 0; }
+.step4-fig { display: grid; gap: 14px; }
+.step4-fig svg { width: 100%; height: auto; }
+.rack-scroll, .step4-details > div { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
+.rack-scroll { overflow-x: auto; padding: 8px; }
+.step4-details { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 700px) {
+  .rack-scroll svg { min-width: 760px; }
+  .step4-details { grid-template-columns: 1fr; }
+}
