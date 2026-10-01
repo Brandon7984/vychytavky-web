@@ -116,3 +116,19 @@ A tutorial step is DONE only when all applicable items are true:
 - Start with one image generation and one short video generation.
 - Retry only after identifying a concrete defect worth spending more credits on.
 - Reuse the approved master/reference media instead of regenerating the product identity.
+
+
+### Tool availability preflight
+
+Before claiming that GitHub or Higgsfield tools are unavailable, the agent MUST inspect the deferred connector catalog through Code Mode (`ALL_TOOLS`) for:
+- `mcp__GitHub__*`
+- `mcp__Higgsfield__*`
+
+A shallow check of only the visible top-level tool list is not sufficient.
+
+For Vychytávky media-to-web tasks, do NOT use the standalone ChatGPT image generation tool as the first execution step when the same request also requires repository integration. That tool is a terminal-style image workflow and can interrupt the rest of the implementation chain.
+
+Use the Higgsfield connector for image/video generation when the output must continue into:
+Higgsfield → repository asset → HTML/CSS/JS → validation → commit.
+
+If the required connector truly is missing after an `ALL_TOOLS` check, then report the limitation. Otherwise continue the implementation and do not stop after media generation.
